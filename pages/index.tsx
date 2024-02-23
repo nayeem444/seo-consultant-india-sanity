@@ -1,45 +1,35 @@
-import IndexPage from 'components/IndexPage'
-import PreviewIndexPage from 'components/PreviewIndexPage'
-import { readToken } from 'lib/sanity.api'
-import { getAllPosts, getClient, getSettings } from 'lib/sanity.client'
-import { Post, Settings } from 'lib/sanity.queries'
-import { GetStaticProps } from 'next'
-import type { SharedPageProps } from 'pages/_app'
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Hero from '../components/HeroSection'
+import Header from '../components/Navbar'
+import About from '../components/About'
+import Contact from '../components/Contact'
+import Service from '../components/ServicesSection';
+import Testimonials from '../components/Testimonials';
+import Footer from '../components/Footer'
+import Courasal  from '../components/CaursalLogos';
+import Timeline from "../components/Timeline";
+import Accordion from "../components/FaqSection";
+import Content from "../components/ContentSection";
+import Calan from "../components/PopUp";
 
-interface PageProps extends SharedPageProps {
-  posts: Post[]
-  settings: Settings
+export default function Home() {
+  return (
+   <>
+   <SpeedInsights/>
+<Header/>
+<Hero/>
+<Courasal/>
+<About/>
+<Timeline/>
+<Calan/>
+<Content/>
+<Service/>
+<Accordion/>
+<Testimonials/>
+<Contact/>
+<Footer/>
+   </>
+  )
 }
 
-interface Query {
-  [key: string]: string
-}
 
-export default function Page(props: PageProps) {
-  const { posts, settings, draftMode } = props
-
-  if (draftMode) {
-    return <PreviewIndexPage posts={posts} settings={settings} />
-  }
-
-  return <IndexPage posts={posts} settings={settings} />
-}
-
-export const getStaticProps: GetStaticProps<PageProps, Query> = async (ctx) => {
-  const { draftMode = false } = ctx
-  const client = getClient(draftMode ? { token: readToken } : undefined)
-
-  const [settings, posts = []] = await Promise.all([
-    getSettings(client),
-    getAllPosts(client),
-  ])
-
-  return {
-    props: {
-      posts,
-      settings,
-      draftMode,
-      token: draftMode ? readToken : '',
-    },
-  }
-}

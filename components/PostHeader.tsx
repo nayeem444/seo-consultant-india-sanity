@@ -11,7 +11,7 @@ export default function PostHeader(
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <div className="hidden md:mb-12 md:block">
+      <div className="hidden md:mb-12 md:flex justify-center  mx-24">
         {author && <Avatar name={author.name} picture={author.picture} />}
       </div>
       <div className="mb-8 sm:mx-0 md:mb-16">

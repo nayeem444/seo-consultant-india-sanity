@@ -5,7 +5,7 @@ export default function MoreStories({ posts }: { posts: Post[] }) {
   return (
     <section className='mx-24'>
       <h2 className="mb-8 text-4xl font-bold leading-tight tracking-tighter md:text-4xl">
-        New Stories
+        Recent Blogs
       </h2>
       {/* Updated grid layout for two rows of three columns */}
       <div className="mb-32 grid grid-cols-1 gap-y-20 md:grid-cols-2 lg:grid-cols-3 md:gap-x-16 lg:gap-x-32 md:gap-y-32">

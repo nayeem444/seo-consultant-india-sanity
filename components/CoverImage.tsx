@@ -19,7 +19,7 @@ export default function CoverImage(props: CoverImageProps) {
       })}
     >
       <Image
-        className="h-auto w-3/4  "
+        className="h-auto w-full mx-48  "
         width={700}
         height={700}
         alt=""

@@ -6,6 +6,7 @@ import {
   settingsQuery,
 } from 'lib/sanity.queries'
 import { useLiveQuery } from 'next-sanity/preview'
+import React from 'react'
 
 export default function PreviewIndexPage(props: IndexPageProps) {
   const [posts, loadingPosts] = useLiveQuery<Post[]>(props.posts, indexQuery)
@@ -13,6 +14,11 @@ export default function PreviewIndexPage(props: IndexPageProps) {
     props.settings,
     settingsQuery,
   )
+React.useEffect(() => {
+  debugger;
+  console.log(indexQuery, 
+    "indexquwey");
+}, [])
 
   return (
     <IndexPage

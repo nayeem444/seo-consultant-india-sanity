@@ -12,7 +12,7 @@ const Hero = () => {
       <h1 className="block font-montserrat text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight ">Hi,
 I Am Shahid <span className="font-montserrat text-blue-600"> Expert SEO Consultant From India</span></h1>
       <p className="font-montserrat mt-3 text-lg text-gray-800 dark:text-gray-800">The fact that you have landed here is a testament to
-the effectiveness of my optimization strategies.</p>
+the effectiveness of the my optimization strategies.</p>
 
  
       <div className="mt-7 grid gap-3 w-full sm:inline-flex">

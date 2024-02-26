@@ -1,38 +1,32 @@
-export const useCdn = false
+export const useCdn: boolean = process.env.NODE_ENV === 'production'; // Use CDN for production for better performance
 
 /**
  * As this file is reused in several other files, try to keep it lean and small.
- * Importing other npm packages here could lead to needlessly increasing the client bundle size, or end up in a server-only function that don't need it.
+ * Importing other npm packages here could lead to needlessly increasing the client bundle size, or end up in server-only functions that don't need it.
  */
 
-export const dataset = assertValue(
-  process.env.NEXT_PUBLIC_SANITY_DATASET,
-  'Missing environment variable: NEXT_PUBLIC_SANITY_DATASET',
-)
-
-export const projectId = assertValue(
-  process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  'Missing environment variable: NEXT_PUBLIC_SANITY_PROJECT_ID',
-)
-
-export const readToken = process.env.SANITY_API_READ_TOKEN || ''
-
-// see https://www.sanity.io/docs/api-versioning for how versioning works
-export const apiVersion =
-  process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2023-06-21'
-
-// Used to generate URLs for previewing your content
-export const DRAFT_MODE_ROUTE = '/api/draft'
-
-/**
- * Used to configure edit intent links, for Presentation Mode, as well as to configure where the Studio is mounted in the router.
- */
-export const studioUrl = '/studio'
-
-function assertValue<T>(v: T | undefined, errorMessage: string): T {
-  if (v === undefined) {
-    throw new Error(errorMessage)
+// Ensure environment variables are set
+function assertValue(value: string | undefined, errorMessage: string): string {
+  if (typeof value === 'undefined') {
+    throw new Error(errorMessage);
   }
-
-  return v
+  return value;
 }
+
+export const dataset: string = assertValue(
+  process.env.NEXT_PUBLIC_SANITY_DATASET,
+  'Missing environment variable: NEXT_PUBLIC_SANITY_DATASET'
+);
+
+export const projectId: string = assertValue(
+  process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  'Missing environment variable: NEXT_PUBLIC_SANITY_PROJECT_ID'
+);
+
+export const readToken: string = process.env.SANITY_API_READ_TOKEN || ''; // Optional, as read tokens are not always needed
+
+export const apiVersion: string = process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2021-03-25'; // Default to a stable API version if not specified
+
+export const DRAFT_MODE_ROUTE: string = '/api/draft';
+
+export const studioUrl: string = '/studio';

@@ -7,67 +7,66 @@ type SitemapLocation = {
   lastmod?: Date;
 };
 
+// Manually add routes to the sitemap
 const defaultUrls: SitemapLocation[] = [
   {
     url: '/',
     changefreq: 'daily',
     priority: 1,
-    lastmod: new Date(), // This can be set to the build date if static or removed if not needed
+    lastmod: new Date(), // or a custom date: '2023-06-12T00:00:00.000Z',
   },
-  // Uncomment or add more URLs as needed
-  // { url: '/about', changefreq: 'monthly', priority: 0.7 },
-  // { url: '/blog', changefreq: 'weekly', priority: 0.8 },
+  // Uncomment or add more static routes as needed
+  // { url: '/about', priority: 0.5 },
+  // { url: '/blog', changefreq: 'weekly', priority: 0.7 },
 ];
 
 const createSitemap = (locations: SitemapLocation[]) => {
   const baseUrl = process.env.NEXT_PUBLIC_URL; // Ensure this is set in your environment
   return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${locations
-      .map(location => {
-        return `<url>
-                  <loc>${baseUrl}${location.url}</loc>
-                  <priority>${location.priority}</priority>
-                  ${location.lastmod ? `<lastmod>${location.lastmod.toISOString()}</lastmod>` : ''}
-                </url>`;
-      })
-      .join('')}
-</urlset>
-`;
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      ${locations
+        .map((location) => {
+          return `<url>
+                    <loc>${baseUrl}${location.url}</loc>
+                    <priority>${location.priority}</priority>
+                    ${
+                      location.lastmod
+                        ? `<lastmod>${location.lastmod.toISOString()}</lastmod>`
+                        : ''
+                    }
+                  </url>`;
+        })
+        .join('')}
+  </urlset>
+  `;
 };
 
+export default function SiteMap() {
+  // This function does not need to return anything for sitemap generation
+}
+
 export async function getServerSideProps({ res }) {
-  try {
-    const client = getClient();
-    const [posts = []] = await Promise.all([getAllPosts(client)]).catch(error => {
-      console.error('Error fetching posts:', error);
-      return [[]]; // Return an empty array if there is an error
-    });
+  const client = getClient();
 
-    const postUrls: SitemapLocation[] = posts
-      .filter(({ slug = '' }) => slug)
-      .map(post => ({
-        url: `/posts/${post.slug}`,
-        priority: 0.5,
-        lastmod: new Date(post._updatedAt),
-      }));
+  // Get list of Post urls
+  const posts = await getAllPosts(client);
+  const postUrls: SitemapLocation[] = posts
+    .filter(({ slug = '' }) => slug)
+    .map((post) => ({
+      url: `/posts/${post.slug}`,
+      priority: 0.5,
+      lastmod: new Date(post._updatedAt),
+    }));
 
-    const locations = [...defaultUrls, ...postUrls];
+  // Combine the default urls with dynamic post urls
+  const locations = [...defaultUrls, ...postUrls];
 
-    res.setHeader('Content-Type', 'text/xml');
-    res.write(createSitemap(locations));
-    res.end();
-  } catch (error) {
-    console.error('Sitemap generation failed:', error);
-    res.status(500).send('Internal Server Error');
-  }
+  // Set response to XML
+  res.setHeader('Content-Type', 'text/xml');
+  res.write(createSitemap(locations));
+  res.end();
 
   return {
     props: {},
   };
-}
-
-// Placeholder for default function to avoid Next.js errors
-export default function SiteMap() {
-  // This function is not used but is required by Next.js for this page
 }

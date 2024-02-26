@@ -34,6 +34,7 @@
     "@vercel/speed-insights": "^1.0.5",
     "classnames": "2.5.1",
     "date-fns": "2.30.0",
+    "dotenv": "^16.3.1",
     "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
     "intl-segmenter-polyfill": "0.4.4",

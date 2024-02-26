@@ -1,7 +1,7 @@
 // components/Navbar.js
 import { useEffect } from 'react';
 import Image from 'next/image';
-import img1 from '../public/Logos/ss (1).png';
+import img1 from '../public/Images/Logos/ss (1).png';
 
 const Navbar = () => {
   useEffect(() => {

@@ -1,3 +1,6 @@
+
+
+
 export const useCdn: boolean = process.env.NODE_ENV === 'production'; // Use CDN for production for better performance
 
 /**
@@ -14,7 +17,7 @@ function assertValue(value: string | undefined, errorMessage: string): string {
 }
 
 export const dataset: string = assertValue(
-  process.env.NEXT_PUBLIC_SANITY_DATASET,
+  "production",
   'Missing environment variable: NEXT_PUBLIC_SANITY_DATASET'
 );
 

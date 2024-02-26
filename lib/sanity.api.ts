@@ -22,11 +22,11 @@ export const dataset: string = assertValue(
 );
 
 export const projectId: string = assertValue(
-  process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  "xeej86go",
   'Missing environment variable: NEXT_PUBLIC_SANITY_PROJECT_ID'
 );
 
-export const readToken: string = process.env.SANITY_API_READ_TOKEN || ''; // Optional, as read tokens are not always needed
+export const readToken: string = "skFPvYbQLnUL0mkfAGWgihvBYVYxSmBLVIUQdBRA5Qk71sO0cZqskxFYXwppcGzv628uZjnvHXo14GHxK3AQSsdWyfTmceQErFEthMcfbVHaBcQLKoGlOzlAMO0G3B5QcTRcYNCc54TqovS8TelEKcWpgrpMlpvAPRUwpQa1f3986pW8bkY2" || ''; // Optional, as read tokens are not always needed
 
 export const apiVersion: string = process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2021-03-25'; // Default to a stable API version if not specified
 

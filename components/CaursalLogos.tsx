@@ -4,13 +4,13 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Image from 'next/image';
 
-import img1 from '../public/Logos/Apexure (1).png';
-import img2 from '../public/logos/Beaconstac.png';
-import img3 from '../public/logos/DOOR3.png';
-import img4 from '../public/logos/Infuse-Media (2).png';
-import img5 from '../public/logos/LeadGen-App.png';
-import img6 from '../public/logos/Taxmann.png';
-import img7 from '../public/logos/Untitled-1-1.png';
+import img1 from '../public/Apexure (1).png';
+import img2 from '../public/Beaconstac.png';
+import img3 from '../public/DOOR3.png';
+import img4 from '../public/Infuse-Media (2).png';
+import img5 from '../public/LeadGen-App.png';
+import img6 from '../public/Taxmann.png';
+import img7 from '../public/Untitled-1-1.png';
 
 const CustomNextArrow = (props) => (
   <div {...props} className="slick-arrow next-arrow">

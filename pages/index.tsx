@@ -6,7 +6,7 @@ import Contact from '../components/Contact'
 import Service from '../components/ServicesSection';
 import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer'
-
+import Caursal from '../components/CaursalLogos'
 import Timeline from "../components/Timeline";
 import Accordion from "../components/FaqSection";
 import Content from "../components/ContentSection";
@@ -18,7 +18,7 @@ export default function Home() {
    <SpeedInsights/>
 <Header/>
 <Hero/>
-
+<Caursal/>
 <About/>
 <Timeline/>
 <Calan/>

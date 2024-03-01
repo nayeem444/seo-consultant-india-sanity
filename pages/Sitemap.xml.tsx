@@ -44,40 +44,32 @@ const createSitemap = (locations: SitemapLocation[]) => {
   `;
 };
 
-export default function SiteMap() {
-  return null; // This function does not need to return anything for sitemap generation
+export default function siteMap() {
+  // This function does not need to return anything for sitemap generation
 }
 
-export async function getServerSideProps({ res, params }) {
-  const { slug } = params || {};
-  
-  if (slug === 'sitemap.xml') {
-    const client = getClient();
+export async function getServerSideProps({ res }) {
+  const client = getClient();
 
-    // Get list of Post urls
-    const posts = await getAllPosts(client);
-    const postUrls: SitemapLocation[] = posts
-      .filter(({ slug = '' }) => slug)
-      .map((post) => ({
-        url: `/posts/${post.slug}`,
-        priority: 0.5,
-        lastmod: new Date(post._updatedAt),
-      }));
+  // Get list of Post urls
+  const posts = await getAllPosts(client);
+  const postUrls: SitemapLocation[] = posts
+    .filter(({ slug = '' }) => slug)
+    .map((post) => ({
+      url: `/posts/${post.slug}`,
+      priority: 0.5,
+      lastmod: new Date(post._updatedAt),
+    }));
 
-    // Combine the default urls with dynamic post urls
-    const locations = [...defaultUrls, ...postUrls];
+  // Combine the default urls with dynamic post urls
+  const locations = [...defaultUrls, ...postUrls];
 
-    // Set response to XML
-    res.setHeader('Content-Type', 'text/xml');
-    res.write(createSitemap(locations));
-    res.end();
+  // Set response to XML
+  res.setHeader('Content-Type', 'text/xml');
+  res.write(createSitemap(locations));
+  res.end();
 
-    return {
-      props: {},
-    };
-  } else {
-    return {
-      notFound: true,
-    };
-  }
+  return {
+    props: {},
+  };
 }

@@ -13,7 +13,7 @@ const Calan = () => {
     <div className="App">
       {isClient && (
         <PopupWidget
-          url="https://calendly.com/nayeem-j94"
+          url="https://calendly.com/shahmirishahid/seo-consultation"
           rootElement={document.getElementById("__next")}
           text="Book SEO Consultation Call!​!"
           textColor="#ffffff"

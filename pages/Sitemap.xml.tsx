@@ -7,13 +7,12 @@ type SitemapLocation = {
   lastmod?: Date;
 };
 
-// Manually add routes to the sitemap
 const defaultUrls: SitemapLocation[] = [
   {
     url: '/',
     changefreq: 'daily',
     priority: 1,
-    lastmod: new Date(), // or a custom date: '2023-06-12T00:00:00.000Z',
+    lastmod: new Date(),
   },
   {
     url: '/posts',
@@ -24,7 +23,7 @@ const defaultUrls: SitemapLocation[] = [
 ];
 
 const createSitemap = (locations: SitemapLocation[]) => {
-  const baseUrl = "https://www.seoconsultantindia.in"; // Ensure this is set in your environment
+  const baseUrl = "https://www.seoconsultantindia.in";
   return `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       ${locations
@@ -44,33 +43,33 @@ const createSitemap = (locations: SitemapLocation[]) => {
   `;
 };
 
-export default function SiteMap() {
+const SiteMap = ({ locations }) => {
   return (
     <html>
       <head>
         <title>Site Map</title>
-        <link href="/styles.css" rel="stylesheet" />
       </head>
       <body className="bg-gray-100">
         <div className="container mx-auto p-8">
           <h1 className="text-2xl font-bold text-center mb-8">Site Map</h1>
           <ul className="list-none">
-            <li className="mb-4"><a href="/" className="text-blue-500 hover:underline">Home</a></li>
-            <li className="mb-4"><a href="/posts" className="text-blue-500 hover:underline">Posts</a></li>
-            {/* Add other links here */}
+            {locations.map((location, index) => (
+              <li key={index} className="mb-4"><a href={location.url} className="text-blue-500 hover:underline">{location.url}</a></li>
+            ))}
           </ul>
         </div>
       </body>
     </html>
   );
-}
+};
+
+export default SiteMap;
 
 export async function getServerSideProps({ res }) {
   const client = getClient();
 
-  // Get list of Post urls
   const posts = await getAllPosts(client);
-  const postUrls: SitemapLocation[] = posts
+  const postUrls = posts
     .filter(({ slug = '' }) => slug)
     .map((post) => ({
       url: `/posts/${post.slug}`,
@@ -78,15 +77,13 @@ export async function getServerSideProps({ res }) {
       lastmod: new Date(post._updatedAt),
     }));
 
-  // Combine the default urls with dynamic post urls
   const locations = [...defaultUrls, ...postUrls];
 
-  // Set response to XML
   res.setHeader('Content-Type', 'text/xml');
   res.write(createSitemap(locations));
   res.end();
 
   return {
-    props: {},
+    props: { locations },
   };
 }

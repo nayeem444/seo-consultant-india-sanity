@@ -43,55 +43,19 @@ const createSitemap = (locations: SitemapLocation[]) => {
   </urlset>
   `;
 };
-
 export default function SiteMap() {
   return (
     <html>
       <head>
         <title>Site Map</title>
-        <style>
-          {`
-            body {
-              font-family: Arial, sans-serif;
-              margin: 0;
-              padding: 0;
-              background-color: #f8f8f8;
-            }
-            h1 {
-              text-align: center;
-              padding: 20px 0;
-              background-color: #333;
-              color: #fff;
-              margin: 0;
-            }
-            .container {
-              max-width: 800px;
-              margin: 0 auto;
-              padding: 20px;
-            }
-            ul {
-              list-style-type: none;
-              padding: 0;
-            }
-            li {
-              margin-bottom: 10px;
-            }
-            a {
-              color: #333;
-              text-decoration: none;
-            }
-            a:hover {
-              text-decoration: underline;
-            }
-          `}
-        </style>
+        <link href="/styles.css" rel="stylesheet" />
       </head>
-      <body>
-        <div className="container">
-          <h1>Site Map</h1>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/posts">Posts</a></li>
+      <body className="bg-gray-100">
+        <div className="container mx-auto p-8">
+          <h1 className="text-2xl font-bold text-center mb-8">Site Map</h1>
+          <ul className="list-none">
+            <li className="mb-4"><a href="/" className="text-blue-500 hover:underline">Home</a></li>
+            <li className="mb-4"><a href="/posts" className="text-blue-500 hover:underline">Posts</a></li>
             {/* Add other links here */}
           </ul>
         </div>

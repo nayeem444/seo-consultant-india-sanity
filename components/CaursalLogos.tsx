@@ -31,7 +31,7 @@ const CaurosalLogo = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 4, // Show 4 logos on large screens
     slidesToScroll: 1,
     centerMode: true,
     nextArrow: <CustomNextArrow />,
@@ -40,13 +40,13 @@ const CaurosalLogo = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1, // Show 1 logo on small screens
         },
       },
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4, // Reset to show 4 logos on larger screens
         },
       },
     ],

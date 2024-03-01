@@ -9,6 +9,7 @@ import type { DefaultDocumentNodeResolver } from 'sanity/structure'
 import { Iframe, IframeOptions } from 'sanity-plugin-iframe-pane'
 import authorType from 'schemas/author'
 import postType from 'schemas/post'
+import commentType from 'schemas/comments'
 
 import AuthorAvatarPreviewPane from './AuthorAvatarPreviewPane'
 

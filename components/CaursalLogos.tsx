@@ -55,23 +55,21 @@ const CaurosalLogo = () => {
   return (
     <section>
       <div>
-        <h2 className="font-montserrat mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-dark md:text-4xl   ">
+        <h2 className="font-montserrat mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-dark md:text-4xl">
           Associated And Featured In:
         </h2>
         <Slider {...settings} className="slick-slider md:h-48">
           {logos.map((logo, index) => (
             <div key={index} className="flex justify-center items-center">
               <div className="flex">
-                {[0, 1, 2, 3].map((i) => (
-                  <div key={i} className="mr-4">
-                    <Image
-                      src={logos[(index + i) % logos.length]}
-                      alt={`logo-${i}`}
-                      width={400}
-                      height={400}
-                    />
-                  </div>
-                ))}
+                <div className="mr-4">
+                  <Image
+                    src={logo}
+                    alt={`logo-${index}`}
+                    width={400}
+                    height={400}
+                  />
+                </div>
               </div>
             </div>
           ))}

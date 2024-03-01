@@ -45,7 +45,59 @@ const createSitemap = (locations: SitemapLocation[]) => {
 };
 
 export default function SiteMap() {
-  // This function does not need to return anything for sitemap generation
+  return (
+    <html>
+      <head>
+        <title>Site Map</title>
+        <style>
+          {`
+            body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #f8f8f8;
+            }
+            h1 {
+              text-align: center;
+              padding: 20px 0;
+              background-color: #333;
+              color: #fff;
+              margin: 0;
+            }
+            .container {
+              max-width: 800px;
+              margin: 0 auto;
+              padding: 20px;
+            }
+            ul {
+              list-style-type: none;
+              padding: 0;
+            }
+            li {
+              margin-bottom: 10px;
+            }
+            a {
+              color: #333;
+              text-decoration: none;
+            }
+            a:hover {
+              text-decoration: underline;
+            }
+          `}
+        </style>
+      </head>
+      <body>
+        <div className="container">
+          <h1>Site Map</h1>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/posts">Posts</a></li>
+            {/* Add other links here */}
+          </ul>
+        </div>
+      </body>
+    </html>
+  );
 }
 
 export async function getServerSideProps({ res }) {

@@ -21,7 +21,7 @@ const defaultUrls: SitemapLocation[] = [
 ];
 
 const createSitemap = (locations: SitemapLocation[]) => {
-  const baseUrl = process.env.NEXT_PUBLIC_URL; // Ensure this is set in your environment
+  const baseUrl = "https://www.seoconsultantindia.in/"; // Ensure this is set in your environment
   return `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       ${locations

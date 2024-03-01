@@ -44,7 +44,7 @@ const createSitemap = (locations: SitemapLocation[]) => {
   `;
 };
 
-export default function SiteMap() {
+export default function siteMap() {
   // This function does not need to return anything for sitemap generation
 }
 

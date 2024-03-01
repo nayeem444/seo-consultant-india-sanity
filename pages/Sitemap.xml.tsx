@@ -25,27 +25,24 @@ const defaultUrls: SitemapLocation[] = [
 
 const createSitemap = (locations: SitemapLocation[]) => {
   const baseUrl = "https://www.seoconsultantindia.in"; // Ensure this is set in your environment
-  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" class="bg-gray-100">\n`;
-
-  sitemap += locations
-    .map((location) => {
-      return `
-        <div class="mb-4">
-          <div class="text-blue-500 hover:underline">${baseUrl}${location.url}</div>
-          <div class="text-sm text-gray-500">Priority: ${location.priority}</div>
-          <div class="text-sm text-gray-500">
-            Last Modified: ${location.lastmod ? location.lastmod.toISOString() : 'Not specified'}
-          </div>
-        </div>\n`;
-    })
-    .join('');
-
-  sitemap += `</urlset>`;
-  
-  return sitemap;
+  return `<?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      ${locations
+        .map((location) => {
+          return `<url>
+                    <loc>${baseUrl}${location.url}</loc>
+                    <priority>${location.priority}</priority>
+                    ${
+                      location.lastmod
+                        ? `<lastmod>${location.lastmod.toISOString()}</lastmod>`
+                        : ''
+                    }
+                  </url>`;
+        })
+        .join('')}
+  </urlset>
+  `;
 };
-
 
 export default function SiteMap() {
   // This function does not need to return anything for sitemap generation

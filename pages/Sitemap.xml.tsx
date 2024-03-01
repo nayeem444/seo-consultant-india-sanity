@@ -7,12 +7,13 @@ type SitemapLocation = {
   lastmod?: Date;
 };
 
+// Manually add routes to the sitemap
 const defaultUrls: SitemapLocation[] = [
   {
     url: '/',
     changefreq: 'daily',
     priority: 1,
-    lastmod: new Date(),
+    lastmod: new Date(), // or a custom date: '2023-06-12T00:00:00.000Z',
   },
   {
     url: '/posts',
@@ -23,53 +24,39 @@ const defaultUrls: SitemapLocation[] = [
 ];
 
 const createSitemap = (locations: SitemapLocation[]) => {
-  const baseUrl = "https://www.seoconsultantindia.in";
-  return `<?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      ${locations
-        .map((location) => {
-          return `<url>
-                    <loc>${baseUrl}${location.url}</loc>
-                    <priority>${location.priority}</priority>
-                    ${
-                      location.lastmod
-                        ? `<lastmod>${location.lastmod.toISOString()}</lastmod>`
-                        : ''
-                    }
-                  </url>`;
-        })
-        .join('')}
-  </urlset>
-  `;
+  const baseUrl = "https://www.seoconsultantindia.in"; // Ensure this is set in your environment
+  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" class="bg-gray-100">\n`;
+
+  sitemap += locations
+    .map((location) => {
+      return `
+        <div class="mb-4">
+          <div class="text-blue-500 hover:underline">${baseUrl}${location.url}</div>
+          <div class="text-sm text-gray-500">Priority: ${location.priority}</div>
+          <div class="text-sm text-gray-500">
+            Last Modified: ${location.lastmod ? location.lastmod.toISOString() : 'Not specified'}
+          </div>
+        </div>\n`;
+    })
+    .join('');
+
+  sitemap += `</urlset>`;
+  
+  return sitemap;
 };
 
-const SiteMap = ({ locations }) => {
-  return (
-    <html>
-      <head>
-        <title>Site Map</title>
-      </head>
-      <body className="bg-gray-100">
-        <div className="container mx-auto p-8">
-          <h1 className="text-2xl font-bold text-center mb-8">Site Map</h1>
-          <ul className="list-none">
-            {locations.map((location, index) => (
-              <li key={index} className="mb-4"><a href={location.url} className="text-blue-500 hover:underline">{location.url}</a></li>
-            ))}
-          </ul>
-        </div>
-      </body>
-    </html>
-  );
-};
 
-export default SiteMap;
+export default function SiteMap() {
+  // This function does not need to return anything for sitemap generation
+}
 
 export async function getServerSideProps({ res }) {
   const client = getClient();
 
+  // Get list of Post urls
   const posts = await getAllPosts(client);
-  const postUrls = posts
+  const postUrls: SitemapLocation[] = posts
     .filter(({ slug = '' }) => slug)
     .map((post) => ({
       url: `/posts/${post.slug}`,
@@ -77,13 +64,15 @@ export async function getServerSideProps({ res }) {
       lastmod: new Date(post._updatedAt),
     }));
 
+  // Combine the default urls with dynamic post urls
   const locations = [...defaultUrls, ...postUrls];
 
+  // Set response to XML
   res.setHeader('Content-Type', 'text/xml');
   res.write(createSitemap(locations));
   res.end();
 
   return {
-    props: { locations },
+    props: {},
   };
 }

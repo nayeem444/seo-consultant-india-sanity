@@ -1,6 +1,6 @@
 import { getAllPosts, getClient } from 'lib/sanity.client';
 
-type SitemapLocation = {
+type sitemapLocation = {
   url: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority: number;
@@ -8,7 +8,7 @@ type SitemapLocation = {
 };
 
 // Manually add routes to the sitemap
-const defaultUrls: SitemapLocation[] = [
+const defaultUrls: sitemapLocation[] = [
   {
     url: '/',
     changefreq: 'daily',
@@ -23,7 +23,7 @@ const defaultUrls: SitemapLocation[] = [
   },
 ];
 
-const createSitemap = (locations: SitemapLocation[]) => {
+const Createsitemap = (locations: sitemapLocation[]) => {
   const baseUrl = "https://www.seoconsultantindia.in"; // Ensure this is set in your environment
   return `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -53,7 +53,7 @@ export async function getServerSideProps({ res }) {
 
   // Get list of Post urls
   const posts = await getAllPosts(client);
-  const postUrls: SitemapLocation[] = posts
+  const postUrls: sitemapLocation[] = posts
     .filter(({ slug = '' }) => slug)
     .map((post) => ({
       url: `/posts/${post.slug}`,
@@ -66,7 +66,7 @@ export async function getServerSideProps({ res }) {
 
   // Set response to XML
   res.setHeader('Content-Type', 'text/xml');
-  res.write(createSitemap(locations));
+  res.write(Createsitemap(locations));
   res.end();
 
   return {

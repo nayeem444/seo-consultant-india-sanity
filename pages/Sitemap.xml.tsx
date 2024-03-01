@@ -25,12 +25,14 @@ const defaultUrls: SitemapLocation[] = [
 
 const createSitemap = (locations: SitemapLocation[]) => {
   const baseUrl = "https://www.seoconsultantindia.in"; // Ensure this is set in your environment
+const baseUrlWithLowerCaseS = baseUrl.replace("/Sitemap.xml", "/sitemap.xml");
+
   return `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       ${locations
         .map((location) => {
           return `<url>
-                    <loc>${baseUrl}${location.url}</loc>
+                    <loc>${baseUrlWithLowerCaseS}${location.url}</loc>
                     <priority>${location.priority}</priority>
                     ${
                       location.lastmod

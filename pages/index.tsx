@@ -11,14 +11,11 @@ import Timeline from "../components/Timeline";
 import Accordion from "../components/FaqSection";
 import Content from "../components/ContentSection";
 import Calan from "../components/PopUp";
-import { Analytics } from "@vercel/analytics/react"
-
 
 export default function Home() {
   return (
    <>
    <SpeedInsights/>
-   <Analytics />
 <Header/>
 <Hero/>
 <Caursal/>

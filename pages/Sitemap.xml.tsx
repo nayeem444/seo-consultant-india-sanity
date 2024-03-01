@@ -43,6 +43,7 @@ const createSitemap = (locations: SitemapLocation[]) => {
   </urlset>
   `;
 };
+
 export default function SiteMap() {
   return (
     <html>

@@ -15,13 +15,16 @@ const defaultUrls: SitemapLocation[] = [
     priority: 1,
     lastmod: new Date(), // or a custom date: '2023-06-12T00:00:00.000Z',
   },
-  // Uncomment or add more static routes as needed
-  // { url: '/about', priority: 0.5 },
-  // { url: '/blog', changefreq: 'weekly', priority: 0.7 },
+  {
+    url: '/posts',
+    changefreq: 'weekly',
+    priority: 0.7,
+    lastmod: new Date(),
+  },
 ];
 
 const createSitemap = (locations: SitemapLocation[]) => {
-  const baseUrl = "https://www.seoconsultantindia.in/"; // Ensure this is set in your environment
+  const baseUrl = "https://www.seoconsultantindia.in"; // Ensure this is set in your environment
   return `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       ${locations

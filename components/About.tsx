@@ -1,6 +1,7 @@
 
 import React from "react";
 import Image from "next/image";
+import CustomButton from '../components/CustomButton'
 import img2 from '../public/Images/Screenshot-2024-02-06-at-12.06.25 PM-1-2048x843.webp';
 import img3 from '../public/Images/Screenshot-2024-02-06-at-12.04.00 PM-2048x804.webp';
 
@@ -47,12 +48,12 @@ const About = () => {
                 <p className="mb-8 text-base text-body-color dark:text-dark-6 text-black">
                   I regularly provide recommendations and advice to some of the biggest SEO communities, groups, and social media platforms to keep up with the highly competitive search ecosystem and the latest SEO strategies. I also share many of these insights on my blog in great detail to ensure that my readers don’t miss out on anything important.
                 </p>
-                <a className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="/#contact">
-                  Get in Touch
+                <div className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="/#contact">
+                <CustomButton/>
                   <svg className="rtl:rotate-180 w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                   </svg>
-                </a>
+                </div>
               </div>
             </div>
           </div>

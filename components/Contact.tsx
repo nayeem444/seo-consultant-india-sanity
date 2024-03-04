@@ -173,7 +173,7 @@ const Contact = () => {
 
          <div className="relative">
             <button
-              className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none"
+              className="hover:shadow-form rounded-md bg-blue-600 py-3 px-8 text-base font-semibold text-white outline-none"
               onClick={(e) => handleSubmit(e)}
               disabled={loading}
             >

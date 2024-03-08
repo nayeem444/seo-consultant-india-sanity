@@ -3,6 +3,7 @@ import 'tailwindcss/tailwind.css'
 import { VisualEditing } from '@sanity/visual-editing/next-pages-router'
 import { AppProps } from 'next/app'
 import dynamic from 'next/dynamic'
+import '../styles/globals.css';
 
 export interface SharedPageProps {
   draftMode: boolean

@@ -3,7 +3,7 @@ import { InlineWidget } from "react-calendly";
 
 const calendly = () => {
   return (
-    <div className="App">
+    <div className="App bg-blue-600">
       <InlineWidget url="https://calendly.com/nayeem-j94" />
     </div>
   );

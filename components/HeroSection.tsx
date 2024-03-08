@@ -98,8 +98,8 @@ the effectiveness of my optimization strategies.</p>
       </div>
 
     </div>
-  <div className="relative ms-4 mt-12">
-      <Image width={400} height={400} className="w-full rounded-md" src={Img1} alt="Image Description"/>
+  <div className="relative ms-4 ">
+      <Image width={400} height={400} className="w-3/4 rounded-md" src={Img1} alt="Image Description"/>
       <div className="absolute inset-0 -z-[1] bg-gradient-to-tr from-gray-200 via-white/0 to-white/0 w-full h-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6 dark:from-slate-800 dark:via-slate-900/0 dark:to-slate-900/0"></div>
   <div className="absolute bottom-0 start-0">
     

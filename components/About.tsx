@@ -8,7 +8,7 @@ import img3 from '../public/Images/Screenshot-2024-02-06-at-12.04.00 PM-2048x8
 const About = () => {
   return (
     <>
-      <section id="about" className="font-montserrat overflow-hidden pt-20 pb-4 lg:pt-[120px] lg:pb-[10px] bg-white dark:bg-dark">
+      <section id="about" className=" overflow-hidden pt-20 pb-4 lg:pt-[120px] lg:pb-[10px] bg-white dark:bg-dark">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between">
             {/* Images Section - Full width on mobile, adjust on larger screens */}

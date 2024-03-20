@@ -130,6 +130,43 @@ const Cards2 = ({ settings }) => {
         imgSrc: 'https://marketinglad.io/wp-content/uploads/2022/06/Add-a-subheading-9-768x432.png',
         link: 'https://marketinglad.io/best-marketing-and-linkbuilding-communities/',
       },
+      {
+        title: 'SEMScoop Review: A Keyword Research Tool In 2024',
+        keyword: 'Semscoop Review',
+        imgSrc: 'https://marketinglad.io/wp-content/uploads/2022/07/Add-a-subheading-8-768x432.png',
+        link: 'https://marketinglad.io/semscoop-review-a-keyword-research-tool/',
+      },
+      {
+        title: 'Link Building For Startups – 4 Best Ways To Get Started.',
+        keyword: 'Link Building for startups',
+        imgSrc: 'https://marketinglad.io/wp-content/uploads/2022/04/Add-a-subheading-13-768x432.png',
+        link: 'https://marketinglad.io/link-building-startups/',
+      },
+      {
+        title: '15 Education Marketing Trends In 2024',
+        keyword: 'Education marketing trends',
+        imgSrc: 'https://marketinglad.io/wp-content/uploads/2021/08/Deeba-13-768x432.png',
+        link: 'https://marketinglad.io/education-marketing-trends/',
+      },
+      {
+        title: 'The Role Of Link Juice In SEO: Tips For Building Better Backlinks',
+        keyword: 'Role of link juice',
+        imgSrc: 'https://marketinglad.io/wp-content/uploads/2022/04/Add-a-subheading-13-768x432.png',
+        link: 'https://marketinglad.io/the-role-of-link-juice-in-seo-for-building-better-backlinks/',
+      },
+      {
+        title: 'The Power Of Pillow Links: Building Better Backlinks For SEO',
+        keyword: 'Power of pillow links',
+        imgSrc: 'https://marketinglad.io/wp-content/uploads/2022/04/Add-a-subheading-13-768x432.png',
+        link: 'https://marketinglad.io/the-power-of-pillow-links-building-better-backlinks-for-seo/',
+      },
+      {
+        title: 'Role Of Niche Relevant Backlinks In Digital Marketing',
+        keyword: 'Role of niche relevant backlinks',
+        imgSrc: 'https://marketinglad.io/wp-content/uploads/2023/05/Add-a-subheading-1-3-300x169.png',
+        link: 'https://marketinglad.io/role-of-niche-relevant-backlinks-in-digital-marketing/',
+      },
+   
   ];
 
   return (

@@ -13,6 +13,8 @@ import Timeline from "../components/Timeline";
 import Accordion from "../components/FaqSection";
 import Content from "../components/ContentSection";
 import Calan from "../components/PopUp";
+import Popular from "../components/PopularArticles";
+import Heading  from "../components/Headline";
 
 export default function Home() {
   return ( 
@@ -28,6 +30,8 @@ export default function Home() {
 <Hero/>
 <Caursal/>
 <About/>
+<Heading/>
+<Popular/>
 <Timeline/>
 <Calan/>
 <Content/>

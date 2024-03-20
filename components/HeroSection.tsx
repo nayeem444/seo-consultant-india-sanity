@@ -108,7 +108,6 @@ the effectiveness of my optimization strategies.</p>
     </div>
 
   </div>
- 
 </div>   
   )
 }

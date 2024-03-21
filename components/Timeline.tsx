@@ -5,7 +5,7 @@ import img1 from '../public/Images/IMG_3627-min-1536x1104.jpg';
 
 const Timeline = () => {
   return (
-    <div className=" font-montserrat py-10 container mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+    <div className="py-10 container mx-auto px-4 sm:px-6 lg:px-8 mt-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="relative">
           <div className="border-r-4 border-blue-600 absolute h-full top-0" style={{ left: '10px', transform: 'translateX(-50%)' }}></div>
@@ -22,7 +22,7 @@ const Timeline = () => {
                                     <h3 className="mb-3 font-bold text-white text-2xl">Aqua Chill Systems</h3>
                                     <p className="pb-4 text-sm text-gray-100">(2017-2018)</p>
                                     <hr />
-                                    <p className="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">Marketing Executive at Aqua Chill Systems Started my Marketing Journey.</p>
+                                    <p className="text-sm font-normal leading-snug tracking-wide text-white text-opacity-100">Marketing Executive at Aqua Chill Systems Started my Marketing Journey.</p>
                                 </div>
                             </div>
                         </div>
@@ -37,7 +37,7 @@ const Timeline = () => {
                                     <h3 className="mb-3 font-bold text-white text-2xl">Digital Marketer at Leadcube Media.</h3>
                                     <p className="pb-4 text-sm text-gray-100">(2018 - 2019)</p>
                                     <hr />
-                                    <p className="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">Worked with many clients like AMEX GBT, LeadGen App, IEC Abroad to improve their SEO performance and lead generation.</p>
+                                    <p className="text-sm font-normal leading-snug tracking-wide text-white text-opacity-100">Worked with many clients like AMEX GBT, LeadGen App, IEC Abroad to improve their SEO performance and lead generation.</p>
                                 </div>
                             </div>
                             
@@ -53,7 +53,7 @@ const Timeline = () => {
                                     <h3 className="mb-3 font-bold text-white text-2xl">Digital Marketer at LeadGen App.</h3>
                                     <p className="pb-4 text-sm text-gray-100">(2019 - 2020)</p>
                                     <hr />
-                                    <p className="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">Collaborated with LeadGen App to improve their search engine ranking, clicks, and online presence, and continue to work towards advancing their SEO performance. Later onboarded them as my client.</p>
+                                    <p className="text-sm font-normal leading-snug tracking-wide text-white text-opacity-100">Collaborated with LeadGen App to improve their search engine ranking, clicks, and online presence, and continue to work towards advancing their SEO performance. Later onboarded them as my client.</p>
                                 </div>
                             </div>
                             
@@ -69,7 +69,7 @@ const Timeline = () => {
                                     <h3 className="mb-3 font-bold text-white text-2xl">Marketing Specialist at Unacademy.</h3>
                                     <p className="pb-4 text-sm text-gray-100">(2020 - 2021)</p>
                                     <hr />
-                                    <p className="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">Worked with Unacademy - India's Largest Edtech platform to improve their YouTube SEO and subscriptions. Hosted many episodes on CTwT Show.</p>
+                                    <p className="text-sm font-normal leading-snug tracking-wide text-white text-opacity-100">Worked with Unacademy - India's Largest Edtech platform to improve their YouTube SEO and subscriptions. Hosted many episodes on CTwT Show.</p>
                                 </div>
                             </div>
                             
@@ -86,7 +86,7 @@ const Timeline = () => {
                                     <h3 className="mb-3 font-bold text-white text-2xl">SEO Manager at Taxmann Group.</h3>
                                     <p className="pb-4 text-sm text-gray-100"> (2021 - 2022)</p>
                                     <hr />
-                                    <p className="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">Developed and implemented effective search engine optimization (SEO) strategies.
+                                    <p className="text-sm font-normal leading-snug tracking-wide text-white text-opacity-100">Developed and implemented effective search engine optimization (SEO) strategies.
 
 Helped in coordinating content, design, social media, pay-per-click (PPC) marketing and other activities</p>
                                 </div>
@@ -104,7 +104,7 @@ Helped in coordinating content, design, social media, pay-per-click (PPC) market
                                     <h3 className="mb-3 font-bold text-white text-2xl">Founder of Marketing Lad.</h3>
                                     <p className="pb-4 text-sm text-gray-100">(Currently)</p>
                                     <hr />
-                                    <p className="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">Team management, research, KPI analysis, SEO planning, networking.
+                                    <p className="text-sm font-normal leading-snug tracking-wide text-white text-opacity-100">Team management, research, KPI analysis, SEO planning, networking.
 
 Workspace Owner at Slack Community (ML-Slack)
 SEO Consultant at Zoomifier

@@ -11,7 +11,7 @@ const testimonials = () => {
   <div className="mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8">
     <div className="flex flex-col items-center">
       <div className="text-center">
-        <p className="text-lg font-medium text-black">As An SEO Consultant My Competence Speaks For Itself - But My Clients Can Vouch For Me Too!</p>
+        <p className=" text-lg font-medium text-black">As An SEO Consultant My Competence Speaks For Itself - But My Clients Can Vouch For Me Too!</p>
         <h2 className="mt-4 text-3xl font-bold text-blue-900 sm:text-4xl xl:text-5xl">Client Testimonials</h2>
       </div>
 

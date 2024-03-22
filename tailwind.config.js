@@ -17,6 +17,9 @@ module.exports = {
         'blue-500': '#2276FC',
         'yellow-100': '#fef7da',
       },
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
       spacing: {
         28: '7rem',
       },

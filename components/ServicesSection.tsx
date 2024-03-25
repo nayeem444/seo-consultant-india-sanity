@@ -10,7 +10,7 @@ const Service = () => {
               <span className="mb-2 block text-lg font-semibold text-black">
                 My Services
               </span>
-              <h2 className="mb-3 text-3xl font-bold leading-[1.2] text-blue-900 sm:text-4xl md:text-[40px]">
+              <h2 className="mb-3 text-3xl font-bold leading-[1.2]  sm:text-4xl md:text-[40px]">
                 What I Offer
               </h2>
               

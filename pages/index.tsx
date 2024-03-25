@@ -15,6 +15,8 @@ import Content from "../components/ContentSection";
 import Calan from "../components/PopUp";
 import Popular from "../components/PopularArticles";
 import Heading  from "../components/Headline";
+import Hero2 from "components/Hero2";
+import About2 from "components/About2";
 
 export default function Home() {
   return ( 
@@ -34,12 +36,15 @@ export default function Home() {
 <Popular/>
 <Timeline/>
 <Calan/>
+<About2/>
 <Content/>
 <Service/>
 <Accordion/>
 <Testimonials/>
 <Contact/>
 <Footer/>
+{/* <Hero2/> */}
+
    </>
   )
 }

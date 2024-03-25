@@ -7,12 +7,12 @@ import img3 from '../public/Images/pic-1.jpg'
 
 const testimonials = () => {
   return (
-    <section className=" bg-white py-12 text-blue-900 sm:py-16 lg:py-20">
+    <section className=" bg-white py-12  sm:py-16 lg:py-20">
   <div className="mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8">
     <div className="flex flex-col items-center">
       <div className="text-center">
         <p className=" text-lg font-medium text-black">As An SEO Consultant My Competence Speaks For Itself - But My Clients Can Vouch For Me Too!</p>
-        <h2 className="mt-4 text-3xl font-bold text-blue-900 sm:text-4xl xl:text-5xl">Client Testimonials</h2>
+        <h2 className="mt-4 text-3xl font-bold sm:text-4xl xl:text-5xl">Client Testimonials</h2>
       </div>
 
     
@@ -30,7 +30,7 @@ const testimonials = () => {
            />
             </span>
             <div className="flex-1">
-              <p className="border-blue-500 px-10 text-xl font-black">Absolutely recommended!</p>
+              <p className="border-blue-500 text-blue-900 px-10 text-xl font-black">Absolutely recommended!</p>
 
               <blockquote className="mt-8 flex-1">
                 <p className="leading-relaxed text-black">Shahid provided exceptional link building services and helped increase our domain ranking significantly. His expertise professionalism and clear communication made the process seamless and his efforts have established our brand as a reputable authority in our industry. We highly recommend Shahid for his outstanding service.</p>
@@ -39,7 +39,7 @@ const testimonials = () => {
 
             <div className="-mx-5 mt-8 px-8 py-1">
               <div className="">
-                <p className="text-base font-bold">Jeremiah O Brian Emerge</p>
+                <p className="text-base text-blue-900 font-bold">Jeremiah O Brian Emerge</p>
                 <p className="mt-0.5 text-sm">Founder Emerge Global</p>
               </div>
             </div>
@@ -58,7 +58,7 @@ const testimonials = () => {
            />
             </span>
             <div className="flex-1">
-              <p className="border-blue-600 px-10 text-xl font-black">Service was amazing!</p>
+              <p className="border-blue-600 text-blue-900 px-10 text-xl font-black">Service was amazing!</p>
 
               <blockquote className="mt-8 flex-1">
                 <p className="leading-relaxed text-black">Shahid have a deep knowledge of SEO and content marketing. Its been a complete pleasure working with him. He is proactive contributors who would make a great addition to any business. Communications are clear & frequent.</p>
@@ -67,8 +67,8 @@ const testimonials = () => {
 
             <div className="-mx-5 mt-8 px-8 py-1">
               <div className="">
-                <p className="text-base font-bold">Arusik Ghambaryan</p>
-                <p className="text-blue-900 mt-0.5 text-sm">Marketer at Crowdfunding</p>
+                <p className="text-base text-blue-900 font-bold">Arusik Ghambaryan</p>
+                <p className=" mt-0.5 text-sm">Marketer at Crowdfunding</p>
               </div>
             </div>
           </div>
@@ -86,7 +86,7 @@ const testimonials = () => {
            />
             </span>
             <div className="flex-1">
-              <p className="border-blue-600 px-10 text-xl font-black">Saved me 1000s of hours</p>
+              <p className="border-blue-600  text-blue-900 px-10 text-xl font-black">Saved me 1000s of hours</p>
 
               <blockquote className="mt-8 flex-1">
                 <p className="leading-relaxed text-black">Shahid has been a pleasure to work with! He provide quality high DR websites within our niche. Never low quality spammy sites or news sites which publish countless topics and have zero SEO value. His prices are also quite reasonable for what you are getting</p>
@@ -95,7 +95,7 @@ const testimonials = () => {
 
             <div className="-mx-5 mt-8 px-8 py-1">
               <div className="">
-                <p className="text-base font-bold">	
+                <p className="text-base text-blue-900 font-bold">	
                 
 Justin Lubomirsky</p>
                 <p className="text-blue-90 mt-0.5 text-sm">SEO Expert at INFUSEmedia</p>

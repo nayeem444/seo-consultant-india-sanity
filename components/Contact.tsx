@@ -65,8 +65,8 @@ const Contact = () => {
     
   return (
     <>
-     <div className='font-montserrat flex justify-center text-4xl' id='contact'><h3>Get In Touch </h3></div>
-      <section className="relative z-10 overflow-hidden bg-white py-20 dark:bg-dark lg:py-[120px]   flex justify-center">
+     <div className=' font-bold flex justify-center text-4xl' id='contact'><h3>Get In Touch </h3></div>
+      <section className="relative z-10 overflow-hidden bg-white py-12 dark:bg-dark    flex justify-center">
        
         
               <div className="font-montserrat relative w-9/12  rounded-lg bg-white p-8 shadow-lg dark:bg-dark-2 sm:p-12">

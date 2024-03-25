@@ -18,7 +18,7 @@ const content = () => {
     <div className="flex flex-wrap items-center mt-16">
       <div className="w-full md:w-1/2 px-4 mr-auto ml-auto">
         
-        <h3 className="text-3xl mb-2 font-semibold leading-normal">
+        <h3 className="text-4xl mb-2 font-bold leading-normal">
         Trusted SEO Consultant in India
         </h3>
         <p className="  leading-relaxed mt-4 mb-4 ">

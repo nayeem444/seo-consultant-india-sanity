@@ -45,7 +45,7 @@ const About = () => {
                 <p className="mb-5 text-base text-body-color dark:text-dark-6 text-black">
                 As an experienced SEO consultant from India, I am specialized in driving organic growth and visibility for businesses of all sizes. With a focus on ethical SEO practices, I help businesses thrive online through sustainable and long-term strategies. I am readily available to address any questions or concerns you may have. Let me help your business succeed online.
                 </p>
-                <p className="mb-8 text-base text-body-color dark:text-dark-6 text-black">
+                <p className="mb-8 ">
                 I regularly provide recommendations and advice to some of the biggest <a href="https://marketinglad.io/link-building-slack-community/" className="text-blue-600 font-bold" >SEO communities</a> , groups, and social media platforms to keep up with the highly competitive search ecosystem and the latest SEO strategies. I also share many of these insights on my blog in great detail to ensure that my readers don’t miss out on anything important.
                 </p>
                 <div className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="/#contact">

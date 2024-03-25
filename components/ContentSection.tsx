@@ -21,10 +21,10 @@ const content = () => {
         <h3 className="text-3xl mb-2 font-semibold leading-normal">
         Trusted SEO Consultant in India
         </h3>
-        <p className="text-lg  leading-relaxed mt-4 mb-4 ">
+        <p className="  leading-relaxed mt-4 mb-4 ">
         As an SEO specialist, I understand that it can be difficult to trust someone on the internet claiming to be an expert. However, I have a proven track record of helping businesses develop successful digital strategies that increase rankings, drive quality traffic, and generate revenue.
         </p>
-        <p className="text-lg  leading-relaxed mt-0 mb-4 ">
+        <p className="  leading-relaxed mt-0 mb-4 ">
         My understanding of evolving search intent and data-driven approach helps me avoid penalties from core updates. I actively participate in industry events, webinars, and podcasts to share my knowledge and stay up-to-date on the latest SEO techniques and insights.
         </p>
         <div className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" href="/#contact">

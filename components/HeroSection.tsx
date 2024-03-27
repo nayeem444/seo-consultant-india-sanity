@@ -10,9 +10,9 @@ const Hero = () => {
 <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 mt-24 mb-24 ">
 <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
     <div>
-      <h1 className="block font-montserrat text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight ">Hi,
-I Am Shahid <span className="font-montserrat text-blue-600"> Expert SEO Consultant From India</span></h1>
-      <p className="font-montserrat mt-3 text-lg text-gray-800 dark:text-gray-800">The fact that you have landed here is a testament to
+      <h1 className="block  text-3xl font-bold  sm:text-4xl lg:text-6xl lg:leading-tight ">Hi,
+I Am Shahid <span className="text-blue-600"> Expert SEO Consultant From India</span></h1>
+      <p className=" mt-3 ">The fact that you have landed here is a testament to
 the effectiveness of my optimization strategies.</p>
 
  

@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import CustomButton from '../components/CustomButton'
-import img1 from '../public/Images/WhatsApp Image 2024-02-14 at 3.19.00 PM.jpeg';
+import img1 from '../public/Images/Neutral Minimalist Elegant Interior Zoom Virtual Background.png';
 
 const content = () => {
   return (

@@ -15,7 +15,7 @@ const Calan = () => {
         <PopupWidget
           url="https://calendly.com/shahmirishahid/seo-consultation"
           rootElement={document.getElementById("__next")}
-          text="Book SEO Consultation Call ​!"
+          text="Free SEO Consultation Call ​!"
           textColor="#ffffff"
           color="#2463eb"
         />

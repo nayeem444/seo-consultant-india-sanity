@@ -33,7 +33,7 @@ const CalendlyPopupButton = () => {
 
     return (
         <div>
-            <button onClick={openCalendlyPopup}>Schedule a Meeting</button>
+            <button onClick={openCalendlyPopup}>Book A Free Consultation Call</button>
         </div>
     );
 };

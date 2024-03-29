@@ -17,6 +17,7 @@ import Popular from "../components/PopularArticles";
 import Heading  from "../components/Headline";
 import Hero2 from "components/Hero2";
 import About2 from "components/About2";
+import ExitPopup from "components/Banner";
 
 export default function Home() {
   return ( 
@@ -30,6 +31,7 @@ export default function Home() {
    <SpeedInsights/>
 <Header/>
 <Hero/>
+<ExitPopup/>
 <Caursal/>
 <About/>
 <Heading/>
@@ -43,6 +45,7 @@ export default function Home() {
 <Testimonials/>
 <Contact/>
 <Footer/>
+
 {/* <Hero2/> */}
 
    </>

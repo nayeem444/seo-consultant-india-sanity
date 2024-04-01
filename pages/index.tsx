@@ -33,7 +33,7 @@ export default function Home() {
    <SpeedInsights/>
 <Header/>
 <Hero/>
-{/* <ExitPopup/> */}
+<ExitPopup/>
 <Caursal/>
 <About/>
 <Heading/>

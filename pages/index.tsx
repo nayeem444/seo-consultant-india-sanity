@@ -18,6 +18,8 @@ import Heading  from "../components/Headline";
 import Hero2 from "components/Hero2";
 import About2 from "components/About2";
 import ExitPopup from "components/Banner";
+import CaseStudy from "../components/caseStudy"
+
 
 export default function Home() {
   return ( 
@@ -31,7 +33,7 @@ export default function Home() {
    <SpeedInsights/>
 <Header/>
 <Hero/>
-<ExitPopup/>
+{/* <ExitPopup/> */}
 <Caursal/>
 <About/>
 <Heading/>
@@ -41,6 +43,7 @@ export default function Home() {
 <About2/>
 <Content/>
 <Service/>
+<CaseStudy/>
 <Accordion/>
 <Testimonials/>
 <Contact/>

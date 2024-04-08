@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 
-import img from '../public/Screenshot 2024-03-28 at 10.58.42 AM.png';
-import img1 from '../public/LeadGen-App.png';
+import img from '../public/prospeo.png';
+import img1 from '../public/leadgen.png';
 import img2 from '../public/apexure.png';
 
 const caseStudy = () => {
@@ -39,7 +39,7 @@ const caseStudy = () => {
 </div>
 
 <div className=" mb-24 max-w-sm bg-white border border-gray-200 rounded-lg shadow  dark:border-gray-700 mx-4">
-    <a href="https://marketinglad.io/case-study/leadgenapp/">
+    <a href="/case-study/leadgenapp/">
         <div className="rounded h-56">
             <Image
             className='rounded-lg'
@@ -50,11 +50,11 @@ const caseStudy = () => {
             </div>
     </a>
     <div className="p-5">
-        <a href="https://marketinglad.io/case-study/leadgenapp/">
+        <a href="/case-study/leadgenapp/">
             <h5 className="mb-2 text-2xl font-bold ">Leadgen App</h5>
         </a>
         <p className="mb-3 font-normal ">Increasing LeadGenApp's Search Impressions By 834% Overall and DR to 69</p>
-        <a href="https://marketinglad.io/case-study/leadgenapp/" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        <a href="/case-study/leadgenapp/" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Read more
              <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
@@ -65,7 +65,7 @@ const caseStudy = () => {
 
 
 <div className=" mb-24 max-w-sm bg-white border border-gray-200 rounded-lg shadow  dark:border-gray-700 mx-4">
-    <a href="https://marketinglad.io/case-study/leadgenapp/">
+    <a href="/case-study/apexure/">
         <div className="rounded ">
             <Image
             className='rounded-lg'
@@ -76,11 +76,11 @@ const caseStudy = () => {
             </div>
     </a>
     <div className="p-5">
-        <a href="https://marketinglad.io/case-study/leadgenapp/">
+        <a href="/case-study/apexure/">
             <h5 className="mb-2 text-2xl font-bold ">Apexure</h5>
         </a>
         <p className="mb-3 font-normal ">Increasing APEXURE's Search Clicks By 310% and DR to 52</p>
-        <a href="https://marketinglad.io/case-study/leadgenapp/" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        <a href="/case-study/apexure/" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Read more
              <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>

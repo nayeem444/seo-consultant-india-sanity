@@ -2,8 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 
 import img from '../public/Screenshot 2024-03-28 at 10.58.42 AM.png';
-import img1 from '../public/Screenshot 2024-03-28 at 11.03.02 AM.png';
-import img2 from '../public/Screenshot 2024-03-28 at 11.07.33 AM.png';
+import img1 from '../public/LeadGen-App.png';
+import img2 from '../public/apexure.png';
 
 const caseStudy = () => {
   return (
@@ -14,7 +14,7 @@ const caseStudy = () => {
 <div className='flex justify-center flex-wrap'>
 
 <div className=" mb-24 max-w-sm bg-white border border-gray-200 rounded-lg shadow  dark:border-gray-700 mx-4">
-    <a href="https://marketinglad.io/case-study/prospeo/">
+    <a href="/case-study/prospeo/">
         <div className="rounded h-56">
             <Image
             className='rounded-3xl'
@@ -25,11 +25,11 @@ const caseStudy = () => {
             </div>
     </a>
     <div className="p-5">
-        <a href="https://marketinglad.io/case-study/prospeo/">
+        <a href="/case-study/prospeo/">
             <h5 className="mb-2 text-2xl font-bold ">Prospeo</h5>
         </a>
         <p className="mb-3 font-normal ">Skyrocketing Prospeo’s Traffic And Domain Rating Through Strategic SEO</p>
-        <a href="https://marketinglad.io/case-study/prospeo/" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        <a href="/case-study/prospeo/" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Read more
              <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
@@ -66,7 +66,7 @@ const caseStudy = () => {
 
 <div className=" mb-24 max-w-sm bg-white border border-gray-200 rounded-lg shadow  dark:border-gray-700 mx-4">
     <a href="https://marketinglad.io/case-study/leadgenapp/">
-        <div className="rounded h-56">
+        <div className="rounded ">
             <Image
             className='rounded-lg'
             src={img2}

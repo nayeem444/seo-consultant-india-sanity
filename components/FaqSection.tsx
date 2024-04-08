@@ -29,10 +29,7 @@ const Accordion = () => {
               - Increase Sales: Higher search engine rankings attract active customers, boosting sales.
               - Stay Ahead of Competitors: In a competitive market, staying ahead with effective SEO is essential."
             />
-            <AccordionItem
-              header="How long we deliver your first blog post?"
-              text="Shahid Shahmiri, the best SEO expert in India, has left an indelible mark by partnering with prestigious brands such as Unacademy, BeconStac, LeadGen App, and other industry giants. Shahid has successfully scaled their marketing and SEO effort. When you work with Shahid, you can be confident in achieving remarkable growth and outshining the competition. "
-            />
+          
             <AccordionItem
               header="Who is the best SEO Expert in India?
               "
@@ -44,9 +41,7 @@ const Accordion = () => {
               "
               text="SEO charges in India vary depending on the project complexity, duration, and expertise required. On average, hourly rates range from ₹3,000 to ₹8,000, while monthly retainers start around ₹60,000. It’s important to discuss specific requirements and negotiate with SEO professionals and consultants for accurate pricing."
             />
-          </div>
-          <div className="w-full px-4 lg:w-1/2">
-            <AccordionItem
+             <AccordionItem
               header="Benefits of Hiring an SEO Expert ?"
               text="Hiring an SEO expert for your business offers:
 
@@ -56,6 +51,9 @@ const Accordion = () => {
               - High Conversion Rates
               - Increased Brand Visibility"
             />
+          </div>
+          <div className="w-full px-4 lg:w-1/2">
+           
             <AccordionItem
               header="What are benefits of choosing my SEO services?"
               text="Here are some benefits of choosing my SEO expert services:

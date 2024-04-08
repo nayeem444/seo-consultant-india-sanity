@@ -1,6 +1,5 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Head from 'next/head';
-import Link from 'next/link'
 import Hero from '../components/HeroSection'
 import Header from '../components/Navbar'
 import About from '../components/About'

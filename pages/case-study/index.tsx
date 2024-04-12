@@ -23,6 +23,7 @@ export default () => {
     rating: '5.0',
     description: 'Prospeo is the most accurate email finder. Find emails from everywhere on the internet with our toolbox. Try it for free now.',
     buttonText: 'Read More',
+    buttonLink: '/case-study/prospeo'
         },
         {
             imageUrl: img2,
@@ -30,6 +31,7 @@ export default () => {
     rating: '5.0',
     description: 'Since October 2020, we have boosted LeadGenApp search traffic from 677K to 1.2M per month and increased domain rating (DR) from 10 to 68 through Blog Partnerships and PR/backlink efforts.',
     buttonText: 'Read More',
+    buttonLink: '/leadgen'
         },
     
       
@@ -39,6 +41,7 @@ export default () => {
     rating: '5.0',
     description: 'Apexure online presence has soared with our successful link building campaign. We achieved a DR 48 Domain Rating and an impressive 83% growth in search impressions using high authority link building.',
     buttonText: 'Read More',
+    buttonLink: '/apexure'
         },
     //     {
     //         imageUrl: img5,
@@ -133,18 +136,24 @@ export default () => {
 
 
 
-const Card = ({ imageUrl, title, rating, description, buttonText }) => {
+const Card = ({ imageUrl, title, rating, description, buttonText, buttonLink }) => {
     return (
       <div className="relative mx-4 sm:mx-12 md:mx-24 lg:mx-48 flex flex-col sm:flex-row my-12 rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
         <div className="relative mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40 sm:w-1/2">
-          <Image src={imageUrl} width={800} height={800} alt="image"  className="sm:h-[400px] lg:h-[280px] object-cover" />
+          <Image
+            src={imageUrl}
+            width={800}
+            height={800}
+            alt="image"
+            className="sm:h-[400px] lg:h-[280px] object-cover"
+          />
         </div>
         <div className="p-6 sm:w-1/2">
           <div className="flex items-center justify-between mb-3">
-            <h5 className="block  text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
+            <h5 className="block text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
               {title}
             </h5>
-            <p className="flex items-center gap-1.5  text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
+            <p className="flex items-center gap-1.5 text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -160,22 +169,23 @@ const Card = ({ imageUrl, title, rating, description, buttonText }) => {
               {rating}
             </p>
           </div>
-          <p className="block  text-base antialiased  leading-relaxed text-gray-700">
+          <p className="block text-base antialiased leading-relaxed text-gray-700">
             {description}
           </p>
           <div className="inline-flex flex-wrap items-center gap-3 mt-8 group">
-            <button
-              className="block w-full select-none rounded-lg bg-gray-900 py-3.5 px-7 text-center align-middle  text-sm font-bold captilize text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-              type="button"
+            <a
+              href={buttonLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full select-none rounded-lg bg-gray-900 py-3.5 px-7 text-center align-middle text-sm font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
             >
               {buttonText}
-            </button>
+            </a>
           </div>
         </div>
       </div>
     );
   };
-
 
 
 

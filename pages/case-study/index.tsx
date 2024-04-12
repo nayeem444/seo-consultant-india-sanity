@@ -31,7 +31,7 @@ export default () => {
     rating: '5.0',
     description: 'Since October 2020, we have boosted LeadGenApp search traffic from 677K to 1.2M per month and increased domain rating (DR) from 10 to 68 through Blog Partnerships and PR/backlink efforts.',
     buttonText: 'Read More',
-    buttonLink: '/leadgen'
+    buttonLink: '/case-study/leadgen'
         },
     
       
@@ -41,7 +41,7 @@ export default () => {
     rating: '5.0',
     description: 'Apexure online presence has soared with our successful link building campaign. We achieved a DR 48 Domain Rating and an impressive 83% growth in search impressions using high authority link building.',
     buttonText: 'Read More',
-    buttonLink: '/apexure'
+    buttonLink: '/case-study/apexure'
         },
     //     {
     //         imageUrl: img5,
@@ -121,7 +121,7 @@ export default () => {
         title={card.title}
         rating={card.rating}
         description={card.description}
-        
+        buttonLink={card.buttonLink}
         buttonText={card.buttonText}
         />
     )

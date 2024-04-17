@@ -81,7 +81,7 @@ const Navbar = () => {
 				</svg>
 			</li>
 			
-			<li><a className="text-sm text-gray-800 font-bold hover:text-blue-600 hover:font-bold" href="/#contact">Contact</a>
+			<li><a className="text-sm text-gray-800 font-bold hover:text-blue-600 hover:font-bold" href="/contact">Contact</a>
 		
 				</li>
 				<li className="text-gray-300">

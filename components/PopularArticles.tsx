@@ -203,7 +203,7 @@ const Cards3 = ({ settings }) => {
   
       {
           title: 'Why Is Being A Realtor Stressful? The Toll Of Selling Homes',
-          keyword: 'Why Is Being a Realtor Stressful',
+          keyword: 'Why is Being a Realtor Stressful',
           imgSrc: 'https://www.fullfeel.io/wp-content/uploads/2023/02/stressful.jpg',
           link: 'https://www.fullfeel.io/why-is-being-a-realtor-stressful/',
         },
@@ -264,18 +264,18 @@ const PopularArticles = () => {
 
   return (
     <div>
-      <div className="w-1/6 ml-4 lg:ml-24">
+      <div className="w-1/2  lg:w-1/6 ml-4 lg:ml-24  ">
         <Image layout="responsive" width={100} height={100} src={img1} alt="image" />
       </div>
 
       <Cards1 settings={settings} />
 
-      <div className="w-1/6 ml-4 lg:ml-24">
+      <div className="w-1/2 lg:w-1/6 ml-4 lg:ml-24">
         <Image layout="responsive" width={100} height={100} src={img2} alt="image" />
       </div>
       <Cards2 settings={settings} />
 
-      <div className="w-1/6 ml-4 lg:ml-24">
+      <div className="w-1/2  lg:w-1/6 ml-4 lg:ml-24">
         <Image layout="responsive" width={100} height={100} src={img3} alt="image" />
       </div>
       <Cards3 settings={settings} />

@@ -84,8 +84,8 @@ const Timeline = () => {
 
   return (
     <div className="container mx-auto px-4 py-8 relative">
-      <h1 className="text-4xl font-bold mb-8 text-center">Work History</h1>
-      <h2 className="text-2xl font-semibold mb-6 text-center">From Vision to Success</h2>
+      <h2 className="text-4xl font-bold mb-8 text-center">Work History</h2>
+      <h3 className="text-2xl font-semibold mb-6 text-center">From Vision to Success</h3>
       {/* Middle line */}
       {/* <div className="absolute left-1/2 top-64 transform -translate-x-1/2 w-0.5 h-full bg-gray-300"></div> */}
       {/* Dots on the middle line */}

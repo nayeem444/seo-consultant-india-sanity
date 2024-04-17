@@ -1,6 +1,6 @@
  # Block all crawlers for /studio
 User-agent: *
-Disallow:https://www.seoconsultantindia.in/studio
+Disallow:https://shahidshahmiri.com/studio
 
 # Allow all crawlers
 User-agent: *

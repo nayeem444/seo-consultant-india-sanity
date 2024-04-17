@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
 
+
 const Index = () => {
   // State to store form data
   const [formData, setFormData] = useState({
@@ -139,6 +140,32 @@ const handleSubmit = async (e) => {
             </div>
           </div>
         </div>
+
+        <section className="bg-gray-50">
+  <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-1/2 lg:items-center">
+    <div className="mx-auto max-w-xl text-center">
+      <h1 className="text-3xl font-extrabold sm:text-5xl">
+      Explore My Expertise in
+        <strong className="font-extrabold text-blue-600 sm:block mt-4">   SEO and Link Building </strong>
+      </h1>
+
+      <p className="mt-4 sm:text-xl/relaxed">
+      Scale up organic traffic and domain rating with ethical link building & SEO solutions. Get Started here and receive a free quote for SEO/link building.
+      </p>
+
+      <div className="mt-8 flex flex-wrap justify-center gap-4">
+        <div
+          className="block w-full rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
+          
+        >
+        <CalendlyPopupButton/>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
       </div>
       <Footer/>
     </>
@@ -146,3 +173,41 @@ const handleSubmit = async (e) => {
 }
 
 export default Index;
+
+
+
+
+// Extend the Window interface to include Calendly
+const CalendlyPopupButton = () => {
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const togglePopup = () => {
+      setIsOpen(!isOpen);
+    };
+  
+    return (
+      <div>
+        <button onClick={togglePopup}>Book A Free Consultation Call</button>
+        {isOpen && (
+          <div className="fixed inset-0 flex items-center justify-center z-50">
+            <div className="absolute inset-0 bg-black opacity-50"></div>
+            <div className="relative bg-white p-8 rounded-lg shadow-lg z-10">
+              <button
+                className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+                onClick={togglePopup}
+              >
+                &times;
+              </button>
+              <iframe
+                src="https://calendly.com/shahmirishahid/seo-consultation"
+                width="100%"
+                height="600"
+              
+              ></iframe>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  };
+

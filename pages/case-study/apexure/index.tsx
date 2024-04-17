@@ -25,9 +25,9 @@ const index = () => {
               <div className="mt-4 sm:mt-6 text-lg sm:text-xl font-light text-true-gray-500 antialiased">
               Search Clicks By 310%
               </div>
-              <div className="mt-6  sm:w-2/3 px-4 sm:px-8 py-4 rounded-full font-normal tracking-wide bg-gradient-to-b from-blue-600 to-blue-700 text-white outline-none focus:outline-none hover:shadow-lg">
-                <CustomButton />
-              </div>
+              <div  className="hidden lg:inline-block py-3 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200 mr-16 mt-4">            
+                <a  href="/contact">Book a Free Consultation Call</a>
+                </div>
             </div>
             <div className="mt-8 sm:mt-24 sm:ml-20 text-left">
               <Image

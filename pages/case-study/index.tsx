@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Navbar from "components/Navbar"
+import Footer from "components/Footer"
 import CustomButton from "../../components/CustomButton"
 import img1 from '../../public/prospeo.png'
 import img2 from '../../public/leadgen1.png'
@@ -85,10 +86,9 @@ export default () => {
                         Boosting online visibility and driving targeted traffic to your website through effective SEO strategies.
                         </p>
                         <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
-                            <div  className="block py-2 px-4 text-center text-white font-medium bg-blue-600 duration-150 hover:bg-blue-500 active:bg-blue-700 rounded-lg shadow-lg hover:shadow-none">
-                               <CustomButton/>
-                               
-                            </div>
+                        <div  className="hidden lg:inline-block py-3 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200 mr-16">            
+                <a  href="/contact">Book a Free Consultation Call</a>
+                </div>
                           
                         </div>
                     </div>
@@ -112,6 +112,7 @@ export default () => {
                     </div>
                 </div>
             </section>
+         
 
 <div>
     {data.map((card, index) => (
@@ -129,7 +130,7 @@ export default () => {
 </div>
 
   
-
+<Footer/>
         </>
     )
 }
@@ -220,6 +221,7 @@ const Card = ({ imageUrl, title, rating, description, buttonText, buttonLink }) 
     };
   
     return (
+      <>
       <div className="container mx-auto">
         <Slider {...settings}>
           <div className="flex justify-center items-center px-4">
@@ -365,6 +367,8 @@ const Card = ({ imageUrl, title, rating, description, buttonText, buttonLink }) 
           </div>
         </Slider>
       </div>
+     
+      </>
     );
   };
   

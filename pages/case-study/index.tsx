@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Navbar from "components/Navbar"
-import CustomButton from "components/CustomButton"
+import CustomButton from "../../components/CustomButton"
 import img1 from '../../public/prospeo.png'
 import img2 from '../../public/leadgen1.png'
 import img3 from '../../public/apexure.png'

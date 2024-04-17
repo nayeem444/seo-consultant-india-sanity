@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import CustomButton from '../components/CustomButton'
 
-import Img1 from '../public//Images/IMG_4264-scaled-compressed (1).webp'
+import Img1 from '../public/Images/IMG_4264-scaled-compressed (1).webp'
 import Img2 from '../public/Screenshot 2024-03-22 at 3.14.21 PM.png';
 
 const Hero = () => {

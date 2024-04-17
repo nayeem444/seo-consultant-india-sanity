@@ -99,7 +99,7 @@ const footer = () => {
   <div
     className="w-full p-4 text-center"
     >
-    SEO Consultant India © 2024 Copyright
+  © 2024 Shahid Shahmiri. All rights reserved.
   
   </div>
 </footer>

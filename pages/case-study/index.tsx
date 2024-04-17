@@ -77,7 +77,7 @@ export default () => {
                 <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">
                     <div className="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
                         <h1 className="text-sm text-blue-600 font-medium">
-                            Over 20+ successful deals
+                            Over 20+ successful projects.
                         </h1>
                         <h2 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
                             I help startups to grow and make money

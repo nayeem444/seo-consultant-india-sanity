@@ -27,6 +27,7 @@ export default function Home() {
     <link rel="icon" href="/favicon.ico" sizes="any" />
             <title>Shahid Shahmiri - Your Expert SEO Consultant in India</title>
         <meta name="description" content=" Looking for the #1 SEO consultant in India? My proven tactics drive traffic and increase revenue. Schedule a Free consultation." />
+        <link rel="canonical" href="https://shahidshahmiri.com/" />
         
       </Head>
    <SpeedInsights/>

@@ -45,7 +45,7 @@ export default function Home() {
 <CaseStudy/>
 <Accordion/>
 <Testimonials/>
-<Contact/>
+{/* <Contact/> */}
 <Footer/>
 
 {/* <Hero2/> */}

@@ -93,7 +93,7 @@ const Navbar = () => {
 </li>
 		</ul>
 
-		<a className="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200 mr-16" href="/#contact">Get In Touch</a>
+		<a className="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200 mr-16" href="/contact">Get In Touch</a>
 
    
     <div className="navbar-menu relative z-50 hidden">
@@ -124,7 +124,7 @@ const Navbar = () => {
 						<a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/posts">Blog</a>
 					</li>
 					<li className="mb-1">
-						<a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/#contact">Contact</a>
+						<a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/contact">Contact</a>
 					</li>
 				</ul>
 			</div>

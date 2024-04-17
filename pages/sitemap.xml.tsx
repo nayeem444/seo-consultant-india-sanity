@@ -1,4 +1,4 @@
-import { getAllPosts, getClient } from 'lib/sanity.client';
+import { getClient } from 'lib/sanity.client';
 
 type SitemapLocation = {
   url: string;
@@ -10,17 +10,48 @@ type SitemapLocation = {
 // Manually add routes to the sitemap
 const defaultUrls: SitemapLocation[] = [
   {
-    url: '/',
+    url: '',
     changefreq: 'daily',
     priority: 1,
     lastmod: new Date(), // or a custom date: '2023-06-12T00:00:00.000Z',
   },
   {
-    url: '/posts',
+    url: 'contact',
     changefreq: 'weekly',
     priority: 0.7,
     lastmod: new Date(),
   },
+  {
+    url: 'posts',
+    changefreq: 'weekly',
+    priority: 0.7,
+    lastmod: new Date(),
+  },
+  {
+    url: 'case-study',
+    changefreq: 'weekly',
+    priority: 0.5,
+    lastmod: new Date(),
+  },
+  {
+    url: 'case-study/prospeo',
+    changefreq: 'weekly',
+    priority: 0.5,
+    lastmod: new Date(),
+  },
+  {
+    url: 'case-study/leadgen',
+    changefreq: 'weekly',
+    priority: 0.7,
+    lastmod: new Date(),
+  },
+  {
+    url: 'case-study/apexure',
+    changefreq: 'weekly',
+    priority: 0.5,
+    lastmod: new Date(),
+  },
+
 ];
 
 const createSitemap = (locations: SitemapLocation[]) => {
@@ -46,23 +77,12 @@ const createSitemap = (locations: SitemapLocation[]) => {
 
 export default function SiteMap() {
   // This function does not need to return anything for sitemap generation
+  return null;
 }
 
 export async function getServerSideProps({ res }) {
-  const client = getClient();
-
-  // Get list of Post urls
-  const posts = await getAllPosts(client);
-  const postUrls: SitemapLocation[] = posts
-    .filter(({ slug = '' }) => slug)
-    .map((post) => ({
-      url: `/posts/${post.slug}`,
-      priority: 0.5,
-      lastmod: new Date(post._updatedAt),
-    }));
-
-  // Combine the default urls with dynamic post urls
-  const locations = [...defaultUrls, ...postUrls];
+  // Get list of default URLs
+  const locations = defaultUrls;
 
   // Set response to XML
   res.setHeader('Content-Type', 'text/xml');

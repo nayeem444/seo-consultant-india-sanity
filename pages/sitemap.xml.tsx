@@ -22,7 +22,7 @@ const defaultUrls: SitemapLocation[] = [
     lastmod: new Date(),
   },
   {
-    url: 'posts',
+    url: 'blog',
     changefreq: 'weekly',
     priority: 0.7,
     lastmod: new Date(),

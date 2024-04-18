@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image"
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -14,7 +15,7 @@ import img7 from '../../public/Images/infuse.png'
 import img5 from '../../public/Images/emerge.png'
 import img4 from '../../public/Images/Untitled design (1).svg'
 
-export default () => {
+const index=  ({description , title}) => {
 
 
     const data = [
@@ -129,11 +130,50 @@ export default () => {
     )}
 </div>
 
-  
+<section className="bg-gradient-to-b  from-blue-600  to-black  text-white h-2/3">
+  <div className="mx-auto max-w-screen-xl px-4 py-24 lg:flex lg:h-4/3 lg:items-center">
+    <div className="mx-auto max-w-3xl text-center ">
+      <h1
+        className=" text-white leading-10  text-3xl font-bold text-transparent sm:text-5xl"
+      >
+       Don't Let Poor SEO Hold You Back.
+
+
+        <span className="sm:block">Contact Us Today To See How We Can Help</span>
+      </h1>
+
+      <p className="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
+      Maximise Your Online Potential With Our Custom SEO Solutions
+      </p>
+
+      <div className="mt-8 flex flex-wrap justify-center gap-4">
+        <div
+          className="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto">
+         <CalendlyPopupButton/>
+        </div>
+
+       
+      </div>
+    </div>
+  </div>
+</section>
 <Footer/>
         </>
     )
 }
+
+export async function getStaticProps(){
+  const description = " Learn from proven tactics that have already driven results and see how you can apply similar strategies to boost your own rankings. Get inspired and start optimizing today!";
+  const title = "SEO Case Studies - Get similar results with my proven tactics.";
+  return{
+    props: { description ,title }
+  };
+   
+}
+
+export default index;
+
+
 
 
 
@@ -374,5 +414,38 @@ const Card = ({ imageUrl, title, rating, description, buttonText, buttonLink }) 
   
   
 
+// Extend the Window interface to include Calendly
+const CalendlyPopupButton = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
 
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  };
 
+  return (
+    <div>
+      <button onClick={togglePopup}>Book A Free Consultation Call</button>
+      {isOpen && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="relative bg-white p-8 rounded-lg shadow-lg z-10">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+              onClick={togglePopup}
+            >
+              &times;
+            </button>
+            <iframe
+              src="https://calendly.com/shahmirishahid/seo-consultation"
+              width="100%"
+              height="600"
+            
+            ></iframe>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+  

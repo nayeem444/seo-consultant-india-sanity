@@ -20,7 +20,7 @@ import ExitPopup from "components/Banner";
 import CaseStudy from "../components/caseStudy"
 
 
-export default function Home() {
+export default function Home({discription}) {
   return ( 
    <>
     <Head>
@@ -53,6 +53,13 @@ export default function Home() {
 
    </>
   )
-}
 
+  
+}
+export async function getStaticProps() {
+  const description = " Looking for the #1 SEO consultant in India? My proven tactics drive traffic and increase revenue. Schedule a Free consultation.";
+  return {
+      props: { description }, // Pass the description to the component
+    };
+  }
 

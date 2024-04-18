@@ -6,6 +6,7 @@ import { getAllPosts, getClient, getSettings } from 'lib/sanity.client';
 import { Post, Settings } from 'lib/sanity.queries';
 import { GetStaticProps } from 'next';
 import type { SharedPageProps } from 'pages/_app';
+import Footer from '../../components/Footer';
 
 interface PageProps extends SharedPageProps {
   posts: Post[];
@@ -30,6 +31,7 @@ export default function Page(props: PageProps) {
         <meta name="SEO Blogs" content="" />
       </Head>
       <IndexPage posts={posts} settings={settings} />
+      <Footer/>
     </>
   );
 }
@@ -37,6 +39,7 @@ export default function Page(props: PageProps) {
 export const getStaticProps: GetStaticProps<PageProps, Query> = async (ctx) => {
   const { draftMode = false } = ctx;
   const client = getClient(draftMode ? { token: readToken } : undefined);
+  const discription = "Seo and Link Building Posts"
 
   const [settings, posts = []] = await Promise.all([
     getSettings(client),
@@ -48,6 +51,7 @@ export const getStaticProps: GetStaticProps<PageProps, Query> = async (ctx) => {
       posts,
       settings,
       draftMode,
+      discription,
       token: draftMode ? readToken : '',
     },
   };

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Navbar from 'components/Navbar'
 import CustomButton from 'components/CustomButton'
 import img from '../../../public/leadgen.png'
+import Footer from '../../../components/Footer'
 const index = ({description,title}) => {
   return (
    
@@ -124,6 +125,7 @@ As a result, LeadGen App saw a significant improvement in their search engine ra
     </div>
   </div>
 </section>
+<Footer/>
   </div>
    
   )

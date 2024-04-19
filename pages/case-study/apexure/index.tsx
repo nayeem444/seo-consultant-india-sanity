@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image'
 import Navbar from 'components/Navbar'
 import img from '../../../public/apexure.png'
+import Footer from '../../../components/Footer'
 
 
 
@@ -129,6 +130,7 @@ The increase in traffic and clicks translated into more leads and conversions, w
     </div>
   </div>
 </section>
+<Footer/>
   </div>
    
   )

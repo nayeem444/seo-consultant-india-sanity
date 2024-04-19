@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import Image from 'next/image';
+import { InlineWidget } from "react-calendly";
 import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
+import img from '../../public/Google-Meet-How-to-See-Everyone-at-the-Same-TIme.webp'
 
 
-const Index = () => {
+const Index = ({discription ,title}) => {
   // State to store form data
   const [formData, setFormData] = useState({
     name: '',
@@ -76,17 +79,21 @@ const handleSubmit = async (e) => {
   };
   
 
+ 
+
+
   return (
+    
     <>
       <Navbar/>
-      <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
-        <div className="relative py-3 sm:max-w-xl md:max-w-4xl mx-auto">
+      <div className="min-h-screen bg-gray-10  flex flex-col justify-center ">
+        <div className="relative py-3 sm:max-w-xl md:max-w-4xl mx-auto mt-12">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
           
           <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20 flex flex-col md:flex-row justify-between space-y-6 md:space-y-0">
             {/* Content Section (Left) */}
             <div className="flex-1 m-4">
-              <h1 className="text-2xl font-semibold">Get In Touch</h1>
+              <h2 className="text-2xl font-semibold">Get In Touch</h2>
               <ul>
                 <li className="flex mt-4 text-base leading-6 text-gray-700 sm:text-lg sm:leading-7">
                 <svg viewBox="0 0 24 24" fill="none" width={25} height={25} xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM16.78 9.7L11.11 15.37C10.97 15.51 10.78 15.59 10.58 15.59C10.38 15.59 10.19 15.51 10.05 15.37L7.22 12.54C6.93 12.25 6.93 11.77 7.22 11.48C7.51 11.19 7.99 11.19 8.28 11.48L10.58 13.78L15.72 8.64C16.01 8.35 16.49 8.35 16.78 8.64C17.07 8.93 17.07 9.4 16.78 9.7Z" fill="#2275fb"></path> </g></svg>
@@ -140,31 +147,41 @@ const handleSubmit = async (e) => {
             </div>
           </div>
         </div>
+        
 
-        <section className="bg-gray-50">
-  <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-1/2 lg:items-center">
-    <div className="mx-auto max-w-xl text-center">
-      <h1 className="text-3xl font-extrabold sm:text-5xl">
-      Explore My Expertise in
-        <strong className="font-extrabold text-blue-600 sm:block mt-4">   SEO and Link Building </strong>
-      </h1>
 
-      <p className="mt-4 sm:text-xl/relaxed">
-      Scale up organic traffic and domain rating with ethical link building & SEO solutions. Get Started here and receive a free quote for SEO/link building.
-      </p>
-
-      <div className="mt-8 flex flex-wrap justify-center gap-4">
-        <div
-          className="block w-full rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
-          
+        <div className="relative bg-blue-600 mt-12">
+    
+      <div className="relative bg-opacity-75 bg-deep-purple-accent-700">
+        <svg
+          className="absolute inset-x-0 bottom-0 text-white"
+          viewBox="0 0 1160 163"
         >
-        <CalendlyPopupButton/>
+          <path
+            fill="currentColor"
+            d="M-164 13L-104 39.7C-44 66 76 120 196 141C316 162 436 152 556 119.7C676 88 796 34 916 13C1036 -8 1156 2 1216 7.7L1276 13V162.5H1216C1156 162.5 1036 162.5 916 162.5C796 162.5 676 162.5 556 162.5C436 162.5 316 162.5 196 162.5C76 162.5 -44 162.5 -104 162.5H-164V13Z"
+          />
+        </svg>
+        <div className="relative px-4 py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+          <div className="flex flex-col items-center justify-between xl:flex-row">
+            <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
+              <h2 className="max-w-lg mb-6  text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+              Get Help with SEO Management<br className="hidden md:block" />
+              and Link Building 
+              </h2>
+              <p className="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
+              Need expert assistance with SEO management and link-building? I'm here to help! Book a FREE 30-minute call for your website's visibility.
+              </p>
+             
+            </div>
+            <div className="w-full max-w-xl xl:px-8 xl:w-1/2">
+             <Calander/>
+            </div>
+          </div>
         </div>
-
       </div>
     </div>
-  </div>
-</section>
+
 
       </div>
       <Footer/>
@@ -172,42 +189,69 @@ const handleSubmit = async (e) => {
   );
 }
 
+
+export async function getStaticProps() {
+    const description = "Book a FREE consultation today or send a message for more information. Start your journey towards enhanced online visibility and increased traffic with expert guidance. ";
+    const title = "Get a customized SEO strategy for your brand. Book a FREE consultation."
+    return {
+        props: { description ,title },
+       
+         // Pass the description to the component
+      };
+    }
+
 export default Index;
 
 
 
 
-// Extend the Window interface to include Calendly
-const CalendlyPopupButton = () => {
-    const [isOpen, setIsOpen] = useState(false);
+// // Extend the Window interface to include Calendly
+// const CalendlyPopupButton = () => {
+//     const [isOpen, setIsOpen] = useState(false);
   
-    const togglePopup = () => {
-      setIsOpen(!isOpen);
-    };
+//     const togglePopup = () => {
+//       setIsOpen(!isOpen);
+//     };
   
-    return (
-      <div>
-        <button onClick={togglePopup}>Book A Free Consultation Call</button>
-        {isOpen && (
-          <div className="fixed inset-0 flex items-center justify-center z-50">
-            <div className="absolute inset-0 bg-black opacity-50"></div>
-            <div className="relative bg-white p-8 rounded-lg shadow-lg z-10">
-              <button
-                className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
-                onClick={togglePopup}
-              >
-                &times;
-              </button>
-              <iframe
-                src="https://calendly.com/shahmirishahid/seo-consultation"
-                width="100%"
-                height="600"
+//     return (
+//       <div>
+//         <button onClick={togglePopup}>Book A Free Consultation Call</button>
+//         {isOpen && (
+//           <div className="fixed inset-0 flex items-center justify-center z-50">
+//             <div className="absolute inset-0 bg-black opacity-50"></div>
+//             <div className="relative bg-white p-8 rounded-lg shadow-lg z-10">
+//               <button
+//                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+//                 onClick={togglePopup}
+//               >
+//                 &times;
+//               </button>
+//               <iframe
+//                 src="https://calendly.com/shahmirishahid/seo-consultation"
+//                 width="100%"
+//                 height="600"
               
-              ></iframe>
-            </div>
-          </div>
-        )}
-      </div>
-    );
-  };
+//               ></iframe>
+//             </div>
+//           </div>
+//         )}
+//       </div>
+//     );
+//   };
+
+
+
+
+
+
+const Calander = () => {
+  return (
+    <div className="App">
+      <InlineWidget
+        url="https://calendly.com/shahmirishahid/marketing-lad-calendar"
+      />
+    </div>
+  );
+};
+
 

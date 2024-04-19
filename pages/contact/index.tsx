@@ -5,6 +5,7 @@ import { InlineWidget } from "react-calendly";
 import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
 import img from '../../public/Google-Meet-How-to-See-Everyone-at-the-Same-TIme.webp'
+import img1 from '../../public/Purple Minimalist Linked in Profile Picture.svg'
 
 
 const Index = ({discription ,title}) => {
@@ -165,12 +166,22 @@ const handleSubmit = async (e) => {
         <div className="relative px-4 py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
           <div className="flex flex-col items-center justify-between xl:flex-row">
             <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
-              <h2 className="max-w-lg mb-6  text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+              <h2 className="flex  max-w-lg mb-6   text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
               Get Help with SEO Management<br className="hidden md:block" />
-              and Link Building 
+              and Link Building <span>
+                <Image
+                src={img1}
+                width={200}
+                height={200}
+                alt='Shahid'
+
+                className='rounded-full'
+                />
+              </span>
               </h2>
+
               <p className="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
-              Need expert assistance with SEO management and link-building? I'm here to help! Book a FREE 30-minute call for your website's visibility.
+              Need expert assistance with SEO management and <br/> link-building?  I'm here to help!<br/> Book a FREE 30-minute call for your website's visibility.
               </p>
              
             </div>

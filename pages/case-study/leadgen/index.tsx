@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Navbar from 'components/Navbar'
+import Calan from 'components/PopUp'
 import CustomButton from 'components/CustomButton'
 import img from '../../../public/leadgen.png'
 import Footer from '../../../components/Footer'
@@ -125,6 +126,7 @@ As a result, LeadGen App saw a significant improvement in their search engine ra
     </div>
   </div>
 </section>
+<Calan/>
 <Footer/>
   </div>
    

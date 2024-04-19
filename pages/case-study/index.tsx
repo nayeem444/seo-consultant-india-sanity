@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Navbar from "components/Navbar"
 import Footer from "components/Footer"
+import Calan from "components/PopUp";
 import CustomButton from "../../components/CustomButton"
 import img1 from '../../public/prospeo.png'
 import img2 from '../../public/leadgen1.png'
@@ -157,6 +158,7 @@ const index=  ({description , title}) => {
     </div>
   </div>
 </section>
+<Calan/>
 <Footer/>
         </>
     )

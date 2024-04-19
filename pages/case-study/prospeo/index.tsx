@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Navbar from 'components/Navbar'
 import Footer from '../../../components/Footer'
+import Calan from 'components/PopUp'
 import CustomButton from 'components/CustomButton'
 import img from '../../../public/prospeo.png'
 const index = ({description,title}) => {
@@ -122,7 +123,7 @@ const index = ({description,title}) => {
     </div>
   </div>
 </section>
-  
+<Calan/>
 <Footer/>
  </>
    

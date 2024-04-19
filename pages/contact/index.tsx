@@ -87,6 +87,48 @@ const handleSubmit = async (e) => {
     
     <>
       <Navbar/>
+
+      <div className="relative bg-blue-600 ">
+    
+    <div className="relative bg-opacity-75 bg-deep-purple-accent-700">
+      <svg
+        className="absolute inset-x-0 bottom-0 text-white"
+        viewBox="0 0 1160 163"
+      >
+        <path
+          fill="currentColor"
+          d="M-164 13L-104 39.7C-44 66 76 120 196 141C316 162 436 152 556 119.7C676 88 796 34 916 13C1036 -8 1156 2 1216 7.7L1276 13V162.5H1216C1156 162.5 1036 162.5 916 162.5C796 162.5 676 162.5 556 162.5C436 162.5 316 162.5 196 162.5C76 162.5 -44 162.5 -104 162.5H-164V13Z"
+        />
+      </svg>
+      <div className="relative px-4 py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div className="flex flex-col items-center justify-between xl:flex-row">
+          <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
+            <h2 className="flex  max-w-lg mb-6   text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+            Get Help with SEO Management<br className="hidden md:block" />
+            and Link Building <span>
+              <Image
+              src={img1}
+              width={200}
+              height={200}
+              alt='Shahid'
+
+              className='rounded-full'
+              />
+            </span>
+            </h2>
+
+            <p className="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
+            Need expert assistance with SEO management and <br/> link-building?  I'm here to help!<br/> Book a FREE 30-minute call for your website's visibility.
+            </p>
+           
+          </div>
+          <div className="w-full max-w-xl xl:px-8 xl:w-1/2">
+           <Calander/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
       <div className="min-h-screen bg-gray-10  flex flex-col justify-center ">
         <div className="relative py-3 sm:max-w-xl md:max-w-4xl mx-auto mt-12">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
@@ -151,47 +193,7 @@ const handleSubmit = async (e) => {
         
 
 
-        <div className="relative bg-blue-600 mt-12">
-    
-      <div className="relative bg-opacity-75 bg-deep-purple-accent-700">
-        <svg
-          className="absolute inset-x-0 bottom-0 text-white"
-          viewBox="0 0 1160 163"
-        >
-          <path
-            fill="currentColor"
-            d="M-164 13L-104 39.7C-44 66 76 120 196 141C316 162 436 152 556 119.7C676 88 796 34 916 13C1036 -8 1156 2 1216 7.7L1276 13V162.5H1216C1156 162.5 1036 162.5 916 162.5C796 162.5 676 162.5 556 162.5C436 162.5 316 162.5 196 162.5C76 162.5 -44 162.5 -104 162.5H-164V13Z"
-          />
-        </svg>
-        <div className="relative px-4 py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-          <div className="flex flex-col items-center justify-between xl:flex-row">
-            <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
-              <h2 className="flex  max-w-lg mb-6   text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
-              Get Help with SEO Management<br className="hidden md:block" />
-              and Link Building <span>
-                <Image
-                src={img1}
-                width={200}
-                height={200}
-                alt='Shahid'
-
-                className='rounded-full'
-                />
-              </span>
-              </h2>
-
-              <p className="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
-              Need expert assistance with SEO management and <br/> link-building?  I'm here to help!<br/> Book a FREE 30-minute call for your website's visibility.
-              </p>
-             
-            </div>
-            <div className="w-full max-w-xl xl:px-8 xl:w-1/2">
-             <Calander/>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+ 
 
 
       </div>
@@ -259,7 +261,7 @@ const Calander = () => {
   return (
     <div className="App">
       <InlineWidget
-        url="https://calendly.com/shahmirishahid/marketing-lad-calendar"
+        url="https://calendly.com/shahmirishahid/seo-consultation"
       />
     </div>
   );

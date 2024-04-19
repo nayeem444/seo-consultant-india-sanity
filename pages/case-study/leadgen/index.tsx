@@ -102,16 +102,16 @@ As a result, LeadGen App saw a significant improvement in their search engine ra
   <div className="mx-auto max-w-screen-xl px-4 py-24 lg:flex lg:h-4/3 lg:items-center">
     <div className="mx-auto max-w-3xl text-center ">
       <h1
-        className=" text-white leading-10  text-3xl font-bold text-transparent sm:text-5xl"
+        className=" text-white leading-10  text-3xl font-medium text-transparent sm:text-3xl"
       >
        Don't Let Poor SEO Hold You Back.
 
 
-        <span className="sm:block">Contact Us Today To See How We Can Help</span>
+        <span className="sm:block">Connect With Me Today To See How I Can Help</span>
       </h1>
 
       <p className="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
-      Maximise Your Online Potential With Our Custom SEO Solutions
+      Maximise Your Online Potential With My Custom SEO Solutions
       </p>
 
       <div className="mt-8 flex flex-wrap justify-center gap-4">

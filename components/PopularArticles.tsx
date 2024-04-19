@@ -275,7 +275,7 @@ const PopularArticles = () => {
       </div>
       <Cards2 settings={settings} />
 
-      <div className="w-1/2  lg:w-1/6 ml-4 lg:ml-24">
+      <div className="w-1/2  lg:w-1/6 ml-4 lg:ml-24 mt-12">
         <Image layout="responsive" width={100} height={100} src={img3} alt="image" />
       </div>
       <Cards3 settings={settings} />

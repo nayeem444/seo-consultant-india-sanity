@@ -149,19 +149,18 @@ export default Service;
 
 const ServiceCard = ({ icon, title, details }) => {
   return (
-    <>
-      <div className="w-full h-50 px-4 md:w-1/2 lg:w-1/3">
-        <div className="mb-9 rounded-[20px] bg-white p-4 shadow-2 hover:shadow-lg dark:bg-dark-2 md:px-7 xl:px-10">
-          <div className="mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-black">
-            {icon}
-          </div>
-          <h4 className="mb-[14px] text-2xl  text-black ">
-            {title}
-          </h4>
-          <p className=" ">{details}</p>
+    <div className="w-full h-50 px-4 md:w-1/2 lg:w-1/3">
+      <div className="mb-9 rounded-[20px] bg-white p-4 shadow-2 hover:shadow-lg dark:bg-dark-2 md:px-7 xl:px-10 flex flex-col items-center text-center">
+        <div className="mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-black">
+          {icon}
         </div>
+        <h4 className="mb-[14px] text-2xl text-black">
+          {title}
+        </h4>
+        <p>{details}</p>
       </div>
-    </>
+    </div>
   );
 };
+
 

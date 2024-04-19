@@ -20,12 +20,12 @@ import ExitPopup from "components/Banner";
 import CaseStudy from "../components/caseStudy"
 
 
-export default function Home({discription}) {
+export default function Home({discription ,title}) {
   return ( 
    <>
     <Head>
     <link rel="icon" href="/favicon.ico" sizes="any" />
-            <title>Shahid Shahmiri - Your Expert SEO Consultant in India</title>
+            <title>{title}</title>
         <meta name="description" content=" Looking for the #1 SEO consultant in India? My proven tactics drive traffic and increase revenue. Schedule a Free consultation." />
         <link rel="canonical" href="https://shahidshahmiri.com/" />
         
@@ -58,8 +58,9 @@ export default function Home({discription}) {
 }
 export async function getStaticProps() {
   const description = " Looking for the #1 SEO consultant in India? My proven tactics drive traffic and increase revenue. Schedule a Free consultation.";
+  const title = "Shahid Shahmiri - Your Expert SEO Consultant in India"
   return {
-      props: { description }, // Pass the description to the component
+      props: { description,title }, // Pass the description to the component
     };
   }
 

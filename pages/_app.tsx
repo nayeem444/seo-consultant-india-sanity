@@ -25,12 +25,14 @@ function App({ Component, pageProps }: AppProps<{ draftMode: boolean; token: str
       {pageProps.draftMode ? (
         <PreviewProvider token={pageProps.token}>
           <main className={montserrat.className}>
+            <h1 className="visually-hidden">{pageProps.title || 'Default Page Title'}</h1>
             <Component {...pageProps} />
           </main>
         </PreviewProvider>
       ) : (
         <main className={montserrat.className}>
-          <Component {...pageProps} />
+            <h1 className="visually-hidden">{pageProps.title || 'Default Page Title'}</h1>
+            <Component {...pageProps} />
         </main>
       )}
     </>

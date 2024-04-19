@@ -77,9 +77,9 @@ const index=  ({description , title}) => {
             <section className="py-28">
                 <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">
                     <div className="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
-                        <h1 className="text-sm text-blue-600 font-medium">
+                        <h2 className="text-sm text-blue-600 font-medium">
                             Over 20+ successful projects.
-                        </h1>
+                        </h2>
                         <h2 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
                             I help startups to grow and make money
                         </h2>
@@ -133,14 +133,14 @@ const index=  ({description , title}) => {
 <section className="bg-gradient-to-b  from-blue-600  to-black  text-white h-2/3">
   <div className="mx-auto max-w-screen-xl px-4 py-24 lg:flex lg:h-4/3 lg:items-center">
     <div className="mx-auto max-w-3xl text-center ">
-      <h1
+      <h2
         className=" text-white leading-10  text-3xl font-medium text-transparent sm:text-3xl"
       >
        Don't Let Poor SEO Hold You Back.
 
 
         <span className="sm:block">Connect With Me Today To See How I Can Help</span>
-      </h1>
+      </h2>
 
       <p className="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
       Maximise Your Online Potential With My Custom SEO Solutions

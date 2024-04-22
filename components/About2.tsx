@@ -6,7 +6,9 @@ const About2 = () => {
   return (
     <section className="bg-gray-100">
     <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
-    <h2 className="text-4xl my-12 flex justify-center font-bold  text-gray-900 sm:text-4xl">My Expertise As The SEO Consultant</h2>
+    <h2 className="text-4xl my-12 font-bold text-center text-gray-900 sm:text-4xl">
+  My Expertise As The SEO Consultant
+</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             <div className="max-w-lg">

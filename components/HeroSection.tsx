@@ -7,27 +7,30 @@ import Img2 from '../public/Screenshot 2024-03-22 at 3.14.21 PM.png';
 
 const Hero = () => {
   return (
-<div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 mt-24 mb-24 ">
-  
-<div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
-    <div>
-      <h2 className="block  text-3xl font-bold  sm:text-4xl lg:text-6xl lg:leading-tight ">Hi,
-I Am Shahid <span className="text-blue-600"> Expert SEO Consultant From India</span></h2>
-      <p className=" mt-3 ">The fact that you have landed here is a testament to
-the effectiveness of my optimization strategies.</p>
+<div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 mt-24 mb-24">
+  <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 sm:items-center justify-center">
+
+  <div className="text-center md:text-left">
+  <h2 className="block text-3xl font-bold sm:text-4xl lg:text-6xl lg:leading-tight mx-auto">
+  Hi, I Am Shahid <span className="text-blue-600"> Expert SEO Consultant From India</span>
+</h2>
+<p className="text-center sm:text-left">
+  The fact that you have landed here is a testament to the effectiveness of my optimization strategies.
+</p>
 
 
-      <div className="mt-7 grid gap-3 w-full sm:inline-flex">
-        <div className="font-montserrat py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" >
-          <CustomButton/>
-          {/* <svg className="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg> */}
-        </div>
+
+<div className="mt-7 grid gap-3 w-full inline-flex justify-center  items-center sm:justify-start ">
+<div className="font-montserrat py-3 px-4 inline-flex justify-start items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+  <CustomButton/>
+</div>
+
       </div>
      
-      <div className="mt-6 lg:mt-10 gap-x-5">
+      <div className="mt-6 lg:mt-10 gap-x-5 justify-center  items-center sm:justify-start">
        
         <div className="py-5  md:ml-0 ">
-          <div className="flex space-x-1">
+        <div className="flex justify-center  items-center sm:justify-start">
             {/* <div className='-mt-4'>
             <svg xmlns="http://www.w3.org/2000/svg"  width="80" height="48" viewBox="0 0 190 48">
           <g>
@@ -56,22 +59,24 @@ the effectiveness of my optimization strategies.</p>
             
           </div>
 
-          <p className="mt-3 text-sm text-gray-800 font-bold dark:text-black hover:text-blue-600 sm:flex sm:items-center">
+          <div className="mt-3 text-sm text-gray-800 font-bold dark:text-black hover:text-blue-600 justify-center  items-center sm:justify-start">
   <span className="sm:mr-2">
     <a href='https://www.linkedin.com/in/shahidshahmiri/details/recommendations/'>Based on LinkedIn Reviews</a>
     
   </span>
-  
+  <div className="mt-2 rounded flex justify-center  items-center sm:justify-start ">
   <Image
-    width={200}
-    height={200}
-    className="mt-2 rounded sm:mt-0"
-    src={Img2}
-    alt="Image"
-  />
-</p>
-<div className='mt-8 -mb-12 font-semibold'>Certified SEO by </div>
-<div className='flex'>
+  width={200}
+  height={200}
+  
+  src={Img2}
+  alt="Image"
+/>
+
+</div>
+</div>
+<div className="mt-8 -mb-12 font-semibold flex justify-center  items-center sm:justify-start">Certified SEO by</div>
+<div className="flex justify-center  items-center sm:justify-start">
  
   <div> 
     <svg version="1.1" id="Layer_1" width={150} height={150} xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
@@ -144,3 +149,7 @@ the effectiveness of my optimization strategies.</p>
 }
 
 export default Hero
+
+
+
+

@@ -14,16 +14,18 @@ const Card = ({ title, keyword, imgSrc, link }) => (
       <div className="relative h-40 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
         <img className="object-cover" src={imgSrc} alt="card-image" />
       </div>
-      <div className="p-6">
-        <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+      <div className="p-6 ">
+        
+         <h5 className=" flex justify-center  items-center sm:justify-start mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
           {title}
         </h5>
-        <p className="block font-sans text-base antialiased leading-relaxed text-inherit">
+      
+        <p className="flex justify-center  items-center sm:justify-start font-sans text-base antialiased leading-relaxed text-inherit">
           <span className="font-semibold mr-2">Keyword :</span>
           {keyword}
         </p>
       </div>
-      <div className="p-6 pt-0">
+      <div className="p-6 pt-0 flex justify-center  items-center sm:justify-start">
         <a href={link} target="_blank" rel="noopener noreferrer">
           <button
             className="align-middle select-none font-sans font-bold text-center captilize transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-blue-600 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
@@ -264,18 +266,18 @@ const PopularArticles = () => {
 
   return (
     <div>
-      <div className="w-1/2  lg:w-1/6 ml-4 lg:ml-24  ">
+      <div className="lg:w-1/6 ml-4 lg:ml-24 m-8  ">
         <Image layout="responsive" width={100} height={100} src={img1} alt="image" />
       </div>
 
       <Cards1 settings={settings} />
 
-      <div className="w-1/2 lg:w-1/6 ml-4 lg:ml-24">
+      <div className="lg:w-1/6 ml-4 lg:ml-24 m-8">
         <Image layout="responsive" width={100} height={100} src={img2} alt="image" />
       </div>
       <Cards2 settings={settings} />
 
-      <div className="w-1/2  lg:w-1/6 ml-4 lg:ml-24 mt-12">
+      <div className=" lg:w-1/6 ml-4 lg:ml-24 mt-12 m-8">
         <Image layout="responsive" width={100} height={100} src={img3} alt="image" />
       </div>
       <Cards3 settings={settings} />

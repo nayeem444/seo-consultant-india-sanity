@@ -13,7 +13,7 @@ export default function PostPageHead({ settings, post }: PostPageHeadProps) {
   return (
     <Head>
       <title>{post.title ? `${post.title} | ${title}` : title}</title>
-      <BlogMeta />
+      {/* <BlogMeta /> */}
       {post.coverImage?.asset?._ref && (
         <meta
           property="og:image"

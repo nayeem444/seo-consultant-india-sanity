@@ -7,6 +7,7 @@ import { Post, Settings } from 'lib/sanity.queries';
 import { GetStaticProps } from 'next';
 import type { SharedPageProps } from 'pages/_app';
 import Footer from '../../components/Footer';
+import Navbar from 'components/Navbar';
 
 interface PageProps extends SharedPageProps {
   posts: Post[];
@@ -29,7 +30,15 @@ export default function Page(props: PageProps) {
       <Head>
         <title>Blogs</title>
         <meta name="SEO Blogs" content="" />
+        
       </Head>
+      <Navbar/>
+    <section className="mb-8 md:mb-16 flex justify-center h-64  items-center bg-blue-600">
+      <div >
+      <h1 className='flex justify-center align-middle text-7xl text-white font-bold font-montserrat'  >Blog</h1>
+      </div>
+    
+    </section>
       <IndexPage posts={posts} settings={settings} />
       <Footer/>
     </>

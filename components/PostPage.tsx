@@ -7,6 +7,7 @@ import PostHeader from 'components/PostHeader'
 import PostPageHead from 'components/PostPageHead'
 import PostTitle from 'components/PostTitle'
 import SectionSeparator from 'components/SectionSeparator'
+import Footer from 'components/Footer'
 import * as demo from '../lib/demo.data'
 import type { Post, Settings } from 'lib/sanity.queries'
 import { notFound } from 'next/navigation'
@@ -56,6 +57,7 @@ export default function PostPage(props: PostPageProps) {
               {morePosts?.length > 0 && <MoreStories posts={morePosts} />}
             </>
           )}
+          <Footer/>
         </Container>
       </Layout>
     </>

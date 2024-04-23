@@ -11,7 +11,7 @@ export default function PostHeader(
 
   return (
     <>
-     <div className='bg-blue-600'>
+     <div className='h-60  bg-blue-600 flex justify-center items-center'>
      <PostTitle>{title}</PostTitle>
       </div> 
       <div className="hidden md:mb-12 md:flex justify-center mx-24">

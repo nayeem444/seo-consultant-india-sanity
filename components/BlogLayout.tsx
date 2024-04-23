@@ -11,9 +11,9 @@ export default function BlogLayout({
 }) {
   return (
     <>
-      <div className="min-h-screen font-montserrat ">
+      <div className="font-montserrat ">
         <AlertBanner preview={preview} loading={loading} />
-        <main>{children}</main>
+        <div>{children}</div>
       </div>
     </>
   )

@@ -28,23 +28,26 @@ export default function IndexPage(props: IndexPageProps) {
   const pageCount = Math.ceil(posts.length / POSTS_PER_PAGE);
 
   return (
-    <>
-<HeroPost/>
-      <Layout preview={preview} loading={loading}>
-        <Container>
-          {/* Display all posts using MoreStories component */}
-          {posts.length > 0 && <MoreStories posts={paginatedPosts} />}
+<>
+  <Layout preview={preview} loading={loading}>
+    <Container>
+      {/* Display all posts using MoreStories component */}
+      {posts.length > 0 && <MoreStories posts={paginatedPosts} />}
 
-          {/* Pagination Controls */}
-          <div className="pagination">
-            {Array.from({ length: pageCount }, (_, i) => (
-              <button key={i} onClick={() => setCurrentPage(i)}>
-                {i + 1}
-              </button>
-            ))}
-          </div>
-        </Container>
-      </Layout>
+      {/* Pagination Controls */}
+      {posts.length > 6 && ( // Conditionally render pagination controls if there are more than 6 posts
+        <div className="pagination">
+          {Array.from({ length: pageCount }, (_, i) => (
+            <button key={i} onClick={() => setCurrentPage(i)}>
+              {i + 1}
+            </button>
+          ))}
+        </div>
+      )}
+    </Container>
+  </Layout>
+
+
     </>
   );
 }

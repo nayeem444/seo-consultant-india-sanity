@@ -20,9 +20,10 @@ const Card = ({ title, keyword, imgSrc, link }) => (
           {title}
         </h5>
       
-        <p className="flex justify-center  items-center sm:justify-start font-sans text-base antialiased leading-relaxed text-inherit">
-          <span className="font-semibold mr-2">Keyword :</span>
+        <p className="flex justify-center   items-center sm:justify-start font-sans text-base antialiased leading-relaxed text-inherit">
+          <span className="font-semibold mx-2">Keyword :
           {keyword}
+          </span>
         </p>
       </div>
       <div className="p-6 pt-0 flex justify-center  items-center sm:justify-start">

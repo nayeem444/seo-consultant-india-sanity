@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { InlineWidget } from "react-calendly";
 import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
+import Calan from 'components/PopUp';
 import img from '../../public/Google-Meet-How-to-See-Everyone-at-the-Same-TIme.webp'
 import img1 from '../../public/Purple Minimalist Linked in Profile Picture.svg'
 
@@ -152,7 +153,7 @@ const handleSubmit = async (e) => {
                 </li>
               </ul>
               <p className="mt-4 text-base leading-6 text-gray-700 sm:text-lg sm:leading-7">
-                Fill out the form to get in touch for a free quote. Start your growth journey now, we look forward to hearing from you!
+              Fill out the form to get in touch. Start your growth journey now, I look forward to hearing from you!
               </p>
             </div>
 
@@ -197,6 +198,7 @@ const handleSubmit = async (e) => {
 
 
       </div>
+      <Calan/>
       <Footer/>
     </>
   );

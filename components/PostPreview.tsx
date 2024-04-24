@@ -18,7 +18,7 @@ export default function PostPreview({
   readTime, // Include readTime prop
 }: PostPreviewProps) {
   return (
-    <div className="p-4 md:p-0 md:flex md:flex-col "> {/* Flex container */}
+    <div className="p-4 md:p-0 md:flex md:flex-col font-montserrat  "> {/* Flex container */}
       {coverImage && (
         <div className="mb-5">
           <CoverImage
@@ -29,7 +29,7 @@ export default function PostPreview({
           />
         </div>
       )}
-      <h3 className="mb-3 text-2xl md:text-3xl font-bold text-blue-600 leading-tight text-balance"> {/* Adjust text size for mobile */}
+      <h3 className=" font-montserrat mb-3 text-2xl md:text-3xl font-bold text-blue-600 leading-tight text-balance"> {/* Adjust text size for mobile */}
         <Link href={`/blog/${slug}`} className="hover:underline">
           {title}
         </Link>
@@ -39,7 +39,7 @@ export default function PostPreview({
         {/* <span className="ml-2">Read Time: {readTime} min</span>  */}
       </div>
       {excerpt && (
-        <p className="mb-2 text-sm md:text-lg leading-relaxed text-gray-700">{excerpt}</p> 
+        <p className=" font-montserrat mb-2 text-sm md:text-lg leading-relaxed text-gray-700">{excerpt}</p> 
       )}
       {author && <Avatar name={author.name} picture={author.picture} />}
     </div>

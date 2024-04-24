@@ -11,20 +11,20 @@ const footer = () => {
 <NewsLetter/> 
 </div> 
 <div> 
-  <p className="font-semibold text-gray-800 dark:text-white">Quick Link</p> 
+  <p className="font-semibold text-white">Quick Link</p> 
 <div className="flex flex-col items-start mt-5 space-y-2"> 
-<a href="/#about" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">About</a> 
-<a href="/blog" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Blogs</a> 
-<a href="/contact" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Contact</a> 
+<a href="/#about" className=" transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">About</a> 
+<a href="/blog" className=" transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Blog</a> 
+<a href="/contact" className=" transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Contact</a> 
 </div> </div> <div> <p className="font-semibold text-gray-800 dark:text-white">Address</p> 
 <div className="flex flex-col items-start mt-5 space-y-2"> 
-<p className="text-gray-600 transition-colors duration-300 dark:text-gray-300  ">Srinagar, India Office
+<p className=" transition-colors duration-300 dark:text-gray-300  ">Srinagar, India Office
 H NO 3. Qamarwari 2nd Petrol Pump, Near City Mart 190017.</p> 
 </div> </div> </div> <hr className="my-6 border-gray-200 md:my-8 dark:border-gray-700"/>
 <div className="flex items-center justify-between text-white"> 
 © 2024 Shahid Shahmiri. All rights reserved.
  <a href="#"> <img className="w-auto h-7" src="../public/C.png" alt=""/> 
- </a> <div className="flex -mx-2"> <a href="https://twitter.com/shahid_shahmiri" className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="twitter"> 
+ </a> <div className="flex -mx-2"> <a href="https://twitter.com/shahid_shahmiri" className="transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="twitter"> 
  <svg
   xmlns="http://www.w3.org/2000/svg"
   className="mx-auto h-full w-4"
@@ -33,7 +33,7 @@ H NO 3. Qamarwari 2nd Petrol Pump, Near City Mart 190017.</p>
   <path
     d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
 </svg> </a> 
- <a href="https://www.linkedin.com/in/shahidshahmiri/" className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="LinkedIn"> 
+ <a href="https://www.linkedin.com/in/shahidshahmiri/" className="mx-2  transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="LinkedIn"> 
  <svg
   xmlns="http://www.w3.org/2000/svg"
   className="mx-auto h-full w-4"

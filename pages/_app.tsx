@@ -1,13 +1,10 @@
-// _app.tsx
 import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
 import { AppProps } from 'next/app';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import { Montserrat } from 'next/font/google';
 
-const montserrat = Montserrat({ subsets: ['latin'] });
 const PreviewProvider = dynamic(() => import('components/PreviewProvider'));
 import { VisualEditing } from '@sanity/visual-editing/next-pages-router';
 
@@ -21,16 +18,18 @@ function App({ Component, pageProps }: AppProps<{ draftMode: boolean; token: str
         <title>{pageProps.title || 'Default Site Title'}</title>
         <meta name="description" content={pageProps.description || "Default description for the site."} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* Import Montserrat font from Google Fonts */}
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
       {pageProps.draftMode ? (
         <PreviewProvider token={pageProps.token}>
-          <main className={montserrat.className}>
+          <main className="font-montserrat">
             <h1 className="visually-hidden">{pageProps.title || 'Default Page Title'}</h1>
             <Component {...pageProps} />
           </main>
         </PreviewProvider>
       ) : (
-        <main className={montserrat.className}>
+        <main className="font-montserrat">
             <h1 className="visually-hidden">{pageProps.title || 'Default Page Title'}</h1>
             <Component {...pageProps} />
         </main>

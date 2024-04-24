@@ -35,7 +35,7 @@ export default function PostPreview({
         </Link>
       </h3>
       <div className="mb-2 text-sm text-gray-500"> {/* Date and Read Time */}
-        <Date dateString={date} />
+        {/* <Date dateString={date} /> */}
         {/* <span className="ml-2">Read Time: {readTime} min</span>  */}
       </div>
       {excerpt && (

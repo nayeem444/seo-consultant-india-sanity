@@ -31,7 +31,7 @@ export default function PostHeader(props: PostHeaderProps) {
           {author && <Avatar name={author.name} picture={author.picture} />}
         </div>
         <div className="mb-6 text-lg flex justify-center">
-          <Date dateString={date} />
+          {/* <Date dateString={date} /> */}
           <span className="ml-4">Read Time: {readTime} min</span> {/* Display read time */}
         </div>
       </div>

@@ -12,6 +12,7 @@ export default defineType({
       title: 'Name',
       type: 'string',
       validation: (rule) => rule.required(),
+      description: 'The name of the author.',
     }),
     defineField({
       name: 'picture',
@@ -22,11 +23,12 @@ export default defineType({
           name: 'alt',
           type: 'string',
           title: 'Alternative text',
-          description: 'Important for SEO and accessiblity.',
+          description: 'Important for SEO and accessibility.',
         },
       ],
       options: { hotspot: true },
       validation: (rule) => rule.required(),
+      description: 'The picture of the author.',
     }),
   ],
 })

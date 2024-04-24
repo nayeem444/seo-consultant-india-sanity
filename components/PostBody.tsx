@@ -36,7 +36,7 @@ export default function PostBody({ content }) {
       
       {/* Right column (side content) */}
       <div className="mx-4 md:mx-0 mt-4 md:mt-0 md:w-72"> {/* Apply margin and width */}
-        <div className="rounded h-96 bg-blue-600 p-6 flex flex-col justify-center items-center"> {/* Side content */}
+        <div className="sticky top-4 rounded h-96 bg-blue-600 p-6 flex flex-col justify-center items-center"> {/* Side content */}
           <h1 className="text-white text-3xl font-bold mb-4 text-center">Let Us Handle Your SEO and Marketing</h1>
           <a 
            href="/contact"

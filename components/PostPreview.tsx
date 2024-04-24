@@ -4,6 +4,10 @@ import Date from 'components/PostDate'
 import type { Post } from 'lib/sanity.queries'
 import Link from 'next/link'
 
+interface PostPreviewProps extends Omit<Post, '_id'> {
+  readTime: number; // Add readTime prop
+}
+
 export default function PostPreview({
   title,
   coverImage,
@@ -11,7 +15,8 @@ export default function PostPreview({
   excerpt,
   author,
   slug,
-}: Omit<Post, '_id'>) {
+  readTime, // Include readTime prop
+}: PostPreviewProps) {
   return (
     <div className="p-4 md:p-0 md:flex md:flex-col "> {/* Flex container */}
       {coverImage && (
@@ -29,8 +34,9 @@ export default function PostPreview({
           {title}
         </Link>
       </h3>
-      <div className="mb-2 text-sm text-gray-500"> {/* Date text */}
+      <div className="mb-2 text-sm text-gray-500"> {/* Date and Read Time */}
         <Date dateString={date} />
+        {/* <span className="ml-2">Read Time: {readTime} min</span>  */}
       </div>
       {excerpt && (
         <p className="mb-2 text-sm md:text-lg leading-relaxed text-gray-700">{excerpt}</p> 

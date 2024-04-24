@@ -32,6 +32,24 @@ export default function PostPage(props: PostPageProps) {
     notFound()
   }
 
+  // Calculate read time
+  let readTime = 0; // Default read time
+
+  if (post?.content && Array.isArray(post.content)) {
+    const wordsPerMinute = 200; // Average words per minute
+    
+    // Extract text from each block of content and join them into a single string
+    const contentText = post.content.map(block => block.text).join(' ');
+    
+    // Calculate read time based on the combined text content
+    const contentWords = contentText.split(/\s+/).length;
+    readTime = Math.ceil(contentWords / wordsPerMinute);
+  }
+  
+
+
+  
+
   return (
     <>
       <PostPageHead settings={settings} post={post} />
@@ -49,7 +67,7 @@ export default function PostPage(props: PostPageProps) {
                   coverImage={post.coverImage}
                   date={post.date}
                   author={post.author}
-                  
+                  readTime={readTime} // Pass read time to PostHeader
                 />
                 <PostBody content={post.content} />
               </article>

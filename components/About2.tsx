@@ -10,7 +10,7 @@ const About2 = () => {
   My Expertise As The SEO Consultant
 </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 items-center lg:gap-8">
             <div className="max-w-lg">
                
                 <p className="mt-4">I have worked with several high-profile clients, including BeaconStac, Unacademy, AMEX GBT, fullfeel, Taxmann, CustomShow, Prospeo, GrowThink and Dominion.</p>
@@ -24,7 +24,7 @@ As time passed, I started my side hustle again as a Marketing Lad, and this time
 
                
             </div>
-            <div className="sm:mt-12 md:mt-0">
+            <div className="lg:mt-4 md:mt-0">
             <p className="mt-4">I passed it on to an outstanding team of more than 20 people and took on the role of an advisor.
 </p>
                 <p className="mt-4">I also discovered a deep love for SEO consulting. It’s a joy to share the knowledge I’ve gathered over the years – not just the wins, but the failures too – with my clients.

@@ -15,7 +15,7 @@ function App({ Component, pageProps }: AppProps<{ draftMode: boolean; token: str
     <>
       <Head>
         <link rel="canonical" href={`https://shahidshahmiri.com${router.asPath}`} />
-        <title>{pageProps.title || 'Default Site Title'}</title>
+        <title>{pageProps.title ? pageProps.title : 'Default Site Title'}</title>
         <meta name="description" content={pageProps.description || "Default description for the site."} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* Import Montserrat font from Google Fonts */}
@@ -30,7 +30,8 @@ function App({ Component, pageProps }: AppProps<{ draftMode: boolean; token: str
         </PreviewProvider>
       ) : (
         <main className="font-montserrat">
-            <h1 className="visually-hidden">{pageProps.title || 'Default Page Title'}</h1>
+            {/* Render default title only if no specific title is provided */}
+            {pageProps.title ? null : <h1 className="visually-hidden">Default Page Title</h1>}
             <Component {...pageProps} />
         </main>
       )}

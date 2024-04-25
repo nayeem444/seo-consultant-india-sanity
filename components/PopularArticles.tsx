@@ -21,7 +21,7 @@ const Card = ({ title, keyword, imgSrc, link }) => (
         </h5>
       
         <p className="flex justify-center   items-center sm:justify-start font-sans text-base antialiased leading-relaxed text-inherit">
-          <span className="font-semibold  ">Keyword: 
+          <span className="font-semibold  ">Keyword:<span className='mr-2'></span>
           {keyword}
           </span>
         </p>

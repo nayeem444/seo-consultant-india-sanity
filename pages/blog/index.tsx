@@ -12,14 +12,18 @@ import Navbar from 'components/Navbar';
 interface PageProps extends SharedPageProps {
   posts: Post[];
   settings: Settings;
+  draftMode?: boolean;
+  title: string; // Add title property
+  description: string; // Add description property
 }
+
 
 interface Query {
   [key: string]: string;
 }
 
 export default function Page(props: PageProps) {
-  const { posts, settings, draftMode } = props;
+  const { posts, settings, draftMode, title, description } = props;
 
   if (draftMode) {
     return <PreviewIndexPage posts={posts} settings={settings} />;
@@ -27,15 +31,15 @@ export default function Page(props: PageProps) {
 
   return (
     <>
-      <Head>
-        <title>Blogs</title>
-        <meta name="SEO Blogs" content="" />
-        
-      </Head>
       <Navbar/>
+      <Head>
+        <title>
+          {title}
+        </title>
+      </Head>
     <section className="mb-8 md:mb-16 flex justify-center h-64  items-center bg-blue-600">
       <div >
-      <h1 className='flex justify-center align-middle text-7xl text-white font-bold font-montserrat'  >Blog</h1>
+      <h2 className='flex justify-center align-middle text-7xl text-white font-bold font-montserrat'>Blog</h2>
       </div>
     
     </section>
@@ -45,10 +49,12 @@ export default function Page(props: PageProps) {
   );
 }
 
+
 export const getStaticProps: GetStaticProps<PageProps, Query> = async (ctx) => {
   const { draftMode = false } = ctx;
   const client = getClient(draftMode ? { token: readToken } : undefined);
-  const discription = "Seo and Link Building Posts"
+  const description = "Learn the latest strategies and tips to enhance your online presence and drive more traffic to your site. Start reading now for cutting-edge digital marketing insights!";
+  const title = "Read Blogs on Search Engine Optimization and Digital Marketing"
 
   const [settings, posts = []] = await Promise.all([
     getSettings(client),
@@ -60,7 +66,8 @@ export const getStaticProps: GetStaticProps<PageProps, Query> = async (ctx) => {
       posts,
       settings,
       draftMode,
-      discription,
+      description, // Add description prop
+      title, // Add title prop
       token: draftMode ? readToken : '',
     },
   };

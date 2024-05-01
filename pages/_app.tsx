@@ -24,15 +24,20 @@ function App({ Component, pageProps }: AppProps<{ draftMode: boolean; token: str
       {pageProps.draftMode ? (
         <PreviewProvider token={pageProps.token}>
           <main className="font-montserrat">
-            <h1 className="visually-hidden">{pageProps.title || 'Default Page Title'}</h1>
+            {/* Render blog title only if it exists and not on the blog page */}
+            {pageProps.title && router.pathname !== '/blog' && (
+              <h1 className="visually-hidden">{pageProps.title}</h1>
+            )}
             <Component {...pageProps} />
           </main>
         </PreviewProvider>
       ) : (
         <main className="font-montserrat">
-            {/* Render default title only if no specific title is provided */}
-            {pageProps.title ? null : <h1 className="visually-hidden">Default Page Title</h1>}
-            <Component {...pageProps} />
+          {/* Render blog title only if it exists and not on individual blog pages */}
+          {pageProps.title && !router.pathname.startsWith('/blog/') && (
+            <h1 className="visually-hidden">{pageProps.title}</h1>
+          )}
+          <Component {...pageProps} />
         </main>
       )}
     </>

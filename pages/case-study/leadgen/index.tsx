@@ -10,6 +10,7 @@ const index = ({description,title}) => {
    
     <div>
     <Navbar />
+ 
     <div className="min-w-full bg-gray-100 flex flex-col justify-center p-4 sm:p-10">
       <div className="relative w-full max-w-full lg:max-w-6xl xl:max-w-screen-2xl mx-auto">
         <div className="absolute inset-0 -mr-3.5 bg-gradient-to-r from-blue-600 to-blue-300 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:rotate-3 sm:rounded-3xl"></div>

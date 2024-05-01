@@ -88,7 +88,6 @@ const handleSubmit = async (e) => {
     
     <>
       <Navbar/>
-
       <div className="relative bg-blue-600 ">
     
     <div className="relative bg-opacity-75 bg-deep-purple-accent-700">

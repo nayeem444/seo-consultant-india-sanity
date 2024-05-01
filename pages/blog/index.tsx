@@ -32,11 +32,7 @@ export default function Page(props: PageProps) {
   return (
     <>
       <Navbar/>
-      <Head>
-        <title>
-          {title}
-        </title>
-      </Head>
+     
     <section className="mb-8 md:mb-16 flex justify-center h-64  items-center bg-blue-600">
       <div >
       <h2 className='flex justify-center align-middle text-7xl text-white font-bold font-montserrat'>Blog</h2>

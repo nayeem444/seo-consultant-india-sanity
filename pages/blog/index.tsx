@@ -32,10 +32,11 @@ export default function Page(props: PageProps) {
   return (
     <>
       <Navbar/>
+
       <Head>
-        <title>
+        <h1 className='hidden'>
           {title}
-        </title>
+        </h1>
       </Head>
     <section className="mb-8 md:mb-16 flex justify-center h-64  items-center bg-blue-600">
       <div >

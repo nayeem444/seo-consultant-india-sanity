@@ -25,7 +25,7 @@ export default function Home({discription ,title}) {
    <>
     <Head>
     <link rel="icon" href="/favicon.ico" sizes="any" />
-            <title>{title}</title>
+            <h1 className="hidden">{title}</h1>
         <meta name="description" content=" Looking for the #1 SEO consultant in India? My proven tactics drive traffic and increase revenue. Schedule a Free consultation." />
         <link rel="canonical" href="https://shahidshahmiri.com/" />
         
@@ -46,7 +46,7 @@ export default function Home({discription ,title}) {
 <CaseStudy/>
 <Accordion/>
 <Testimonials/>
-{/* <Contact/> */}
+<Contact/>
 <Footer/>
 
 {/* <Hero2/> */}

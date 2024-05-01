@@ -24,13 +24,15 @@ function App({ Component, pageProps }: AppProps<{ draftMode: boolean; token: str
       {pageProps.draftMode ? (
         <PreviewProvider token={pageProps.token}>
           <main className="font-montserrat">
-            {pageProps.title ? <h1 className="visually-hidden">{pageProps.title}</h1> : null}
+            <h1 className="visually-hidden">{pageProps.title || 'Default Page Title'}</h1>
             <Component {...pageProps} />
           </main>
         </PreviewProvider>
       ) : (
         <main className="font-montserrat">
-          <Component {...pageProps} />
+            {/* Render default title only if no specific title is provided */}
+            {pageProps.title ? null : <h1 className="visually-hidden">Default Page Title</h1>}
+            <Component {...pageProps} />
         </main>
       )}
     </>

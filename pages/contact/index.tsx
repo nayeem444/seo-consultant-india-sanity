@@ -88,7 +88,6 @@ const handleSubmit = async (e) => {
     
     <>
       <Navbar/>
-      <h1 className='hidden'>{title}</h1>
 
       <div className="relative bg-blue-600 ">
     

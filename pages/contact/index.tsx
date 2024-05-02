@@ -219,39 +219,6 @@ export default Index;
 
 
 
-// // Extend the Window interface to include Calendly
-// const CalendlyPopupButton = () => {
-//     const [isOpen, setIsOpen] = useState(false);
-  
-//     const togglePopup = () => {
-//       setIsOpen(!isOpen);
-//     };
-  
-//     return (
-//       <div>
-//         <button onClick={togglePopup}>Book A Free Consultation Call</button>
-//         {isOpen && (
-//           <div className="fixed inset-0 flex items-center justify-center z-50">
-//             <div className="absolute inset-0 bg-black opacity-50"></div>
-//             <div className="relative bg-white p-8 rounded-lg shadow-lg z-10">
-//               <button
-//                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
-//                 onClick={togglePopup}
-//               >
-//                 &times;
-//               </button>
-//               <iframe
-//                 src="https://calendly.com/shahmirishahid/seo-consultation"
-//                 width="100%"
-//                 height="600"
-              
-//               ></iframe>
-//             </div>
-//           </div>
-//         )}
-//       </div>
-//     );
-//   };
 
 
 

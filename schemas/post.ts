@@ -4,18 +4,6 @@ import { defineField, defineType } from 'sanity'
 
 import authorType from './author'
 
-/**
- * This file is the schema definition for a post.
- *
- * Here you'll be able to edit the different fields that appear when you 
- * create or edit a post in the studio.
- * 
- * Here you can see the different schema types that are available:
-
-  https://www.sanity.io/docs/schema-types
-
- */
-
 export default defineType({
   name: 'post',
   title: 'Post',
@@ -61,9 +49,15 @@ export default defineType({
               name: 'alt',
               type: 'string',
               title: 'Alternative text',
-              description: 'Important for SEO and accessiblity.',
+              description: 'Important for SEO and accessibility.',
             },
           ],
+        },
+        // Allow HTML editing for links
+        {
+          type: 'html',
+          title: 'HTML',
+          description: 'Allows HTML editing for links.',
         },
       ],
     }),
@@ -91,6 +85,30 @@ export default defineType({
       title: 'Author',
       type: 'reference',
       to: [{ type: authorType.name }],
+    }),
+    // SEO Fields
+    defineField({
+      name: 'metaTitle',
+      title: 'Meta Title',
+      type: 'string',
+      description: 'Title for SEO purposes (max 60-70 characters)',
+    }),
+    defineField({
+      name: 'metaDescription',
+      title: 'Meta Description',
+      type: 'text',
+      description: 'Description for SEO purposes (max 150-160 characters)',
+    }),
+    // Text Alignment Field
+    defineField({
+      name: 'textAlignment',
+      title: 'Text Alignment',
+      type: 'string',
+      options: {
+        list: ['left', 'center', 'right', 'justify'],
+        layout: 'dropdown',
+      },
+      description: 'Choose the alignment for the text content.',
     }),
   ],
   preview: {

@@ -10,7 +10,7 @@ import img from '../public/Screenshot 2023-02-17 at 5.webp'
 
 const serializers = {
   marks: {
-    link: ({children, mark}) => {
+    link: ({ children, mark }) => {
       const relAttributes = [];
       if (mark.blank) {
         relAttributes.push('noopener noreferrer');
@@ -19,7 +19,7 @@ const serializers = {
         relAttributes.push('nofollow');
       }
       const relAttribute = relAttributes.length > 0 ? relAttributes.join(' ') : null;
-      
+
       return (
         <a href={mark.href} target={mark.blank ? '_blank' : '_self'} rel={relAttribute}>
           {children}

@@ -25,8 +25,8 @@ const serializers = {
           {children}
         </a>
       );
-    }
-  }
+    },
+  },
 };
 
 const myPortableTextComponents: Partial<PortableTextReactComponents> = {

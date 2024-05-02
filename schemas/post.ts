@@ -27,24 +27,13 @@ const linkMark = {
       description: 'Specifies that the link should not be followed by search engines.',
     },
     {
-      name: 'target',
-      type: 'string',
-      title: 'Target',
-      options: {
-        list: ['_self', '_blank', '_parent', '_top'],
-      },
-      description: 'Specifies where to open the linked document.',
-    },
-    // New field for rel attribute
-    {
-      name: 'rel',
-      type: 'string',
-      title: 'Rel',
-      description: 'Specifies the relationship between the current document and the linked document.',
+      name: 'blank',
+      type: 'boolean',
+      title: 'Open in New Window',
+      description: 'Specifies whether to open the link in a new window or tab.',
     },
   ],
 }
-
 
 export default defineType({
   name: 'post',

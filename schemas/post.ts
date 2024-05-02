@@ -4,74 +4,37 @@ import { defineField, defineType } from 'sanity'
 
 import authorType from './author'
 
-const linkType = {
-  title: 'Link',
+const linkMark = {
   name: 'link',
   type: 'object',
+  title: 'Link',
   fields: [
     {
       name: 'href',
-      title: 'URL',
       type: 'url',
+      title: 'URL',
       validation: (rule) => rule.uri({ allowRelative: false, scheme: ['http', 'https', 'mailto', 'tel'] }),
     },
     {
       name: 'text',
-      title: 'Text',
       type: 'string',
+      title: 'Link Text',
+    },
+    {
+      name: 'nofollow',
+      type: 'boolean',
+      title: 'No Follow',
+      description: 'Specifies that the link should not be followed by search engines.',
     },
     {
       name: 'target',
-      title: 'Target',
       type: 'string',
+      title: 'Target',
       options: {
         list: ['_self', '_blank', '_parent', '_top'],
       },
       description: 'Specifies where to open the linked document.',
     },
-    {
-      name: 'nofollow',
-      title: 'No Follow',
-      type: 'boolean',
-      description: 'Specifies that the link should not be followed by search engines.',
-    },
-    {
-      name: 'dofollow',
-      title: 'Do Follow',
-      type: 'boolean',
-      description: 'Specifies that the link should be followed by search engines.',
-    },
-    {
-      name: 'rel',
-      title: 'Rel',
-      type: 'string',
-      description: 'Specifies the relationship between the current document and the linked document.',
-    },
-    {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-      description: 'Specifies extra information about the link.',
-    },
-    {
-      name: 'class',
-      title: 'Class',
-      type: 'string',
-      description: 'Specifies one or more class names for an element (refers to a class in a style sheet).',
-    },
-    {
-      name: 'id',
-      title: 'ID',
-      type: 'string',
-      description: 'Specifies a unique id for an element.',
-    },
-    {
-      name: 'style',
-      title: 'Style',
-      type: 'string',
-      description: 'Specifies an inline CSS style for an element.',
-    },
-    // Add more fields as needed for additional attributes
   ],
 }
 
@@ -103,7 +66,7 @@ export default defineType({
       title: 'Content',
       type: 'array',
       of: [
-        { type: 'block' },
+        { type: 'block', marks: [{ type: 'link' }] }, // Enable link mark for blocks
         {
           type: 'image',
           options: {
@@ -124,8 +87,6 @@ export default defineType({
             },
           ],
         },
-        // Add linkType to allow HTML editing for links
-        linkType,
       ],
     }),
     defineField({

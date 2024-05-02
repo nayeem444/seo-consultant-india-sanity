@@ -66,7 +66,7 @@ export default defineType({
       title: 'Content',
       type: 'array',
       of: [
-        { type: 'block', marks: [{ type: 'link' }] }, // Enable link mark for blocks
+        { type: 'block', marks: { decorators: [{ title: 'Strong', value: 'strong' }, { title: 'Emphasis', value: 'em' }], annotations: [linkMark] } },
         {
           type: 'image',
           options: {

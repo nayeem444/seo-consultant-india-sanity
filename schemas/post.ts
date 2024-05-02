@@ -66,7 +66,18 @@ export default defineType({
       title: 'Content',
       type: 'array',
       of: [
-        { type: 'block', marks: { decorators: [{ title: 'Strong', value: 'strong' }, { title: 'Emphasis', value: 'em' }], annotations: [linkMark] } },
+        {
+          type: 'block',
+          marks: { decorators: [{ title: 'Strong', value: 'strong' }, { title: 'Emphasis', value: 'em' }], annotations: [linkMark] },
+          styles: [
+            { title: 'Normal', value: 'normal' },
+            { title: 'H1', value: 'h1' },
+            { title: 'H2', value: 'h2' },
+            { title: 'H3', value: 'h3' },
+            { title: 'H4', value: 'h4' },
+            { title: 'Quote', value: 'blockquote' },
+          ],
+        },
         {
           type: 'image',
           options: {
@@ -84,6 +95,28 @@ export default defineType({
               type: 'string',
               title: 'Alternative text',
               description: 'Important for SEO and accessibility.',
+            },
+            {
+              name: 'alignment',
+              type: 'string',
+              title: 'Alignment',
+              options: {
+                list: ['left', 'center', 'right'],
+                layout: 'radio',
+              },
+              description: 'Specifies the alignment of the image.',
+            },
+            {
+              name: 'width',
+              type: 'number',
+              title: 'Width',
+              description: 'Specifies the width of the image.',
+            },
+            {
+              name: 'height',
+              type: 'number',
+              title: 'Height',
+              description: 'Specifies the height of the image.',
             },
           ],
         },

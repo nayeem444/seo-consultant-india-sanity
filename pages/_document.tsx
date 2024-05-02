@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         </Head>
-      <body className="bg-white text-black">
+      <body className="bg-white text-black ">
         <Main />
         <NextScript />
       </body>

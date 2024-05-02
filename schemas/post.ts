@@ -35,8 +35,16 @@ const linkMark = {
       },
       description: 'Specifies where to open the linked document.',
     },
+    // New field for rel attribute
+    {
+      name: 'rel',
+      type: 'string',
+      title: 'Rel',
+      description: 'Specifies the relationship between the current document and the linked document.',
+    },
   ],
 }
+
 
 export default defineType({
   name: 'post',
@@ -77,6 +85,11 @@ export default defineType({
             { title: 'H4', value: 'h4' },
             { title: 'Quote', value: 'blockquote' },
           ],
+          lists: [{ title: 'Bullet', value: 'bullet' }, { title: 'Number', value: 'number' }],
+          marks: {
+            decorators: [{ title: 'Strong', value: 'strong' }, { title: 'Emphasis', value: 'em' }],
+            annotations: [linkMark],
+          },
         },
         {
           type: 'image',
@@ -102,7 +115,6 @@ export default defineType({
               title: 'Alignment',
               options: {
                 list: ['left', 'center', 'right'],
-                layout: 'radio',
               },
               description: 'Specifies the alignment of the image.',
             },

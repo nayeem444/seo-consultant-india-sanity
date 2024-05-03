@@ -1,4 +1,5 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react"
 import Head from 'next/head';
 import Hero from '../components/HeroSection'
 import Header from '../components/Navbar'
@@ -24,6 +25,7 @@ export default function Home({discription ,title}) {
   return ( 
    <>
     <Head>
+    <Analytics/>
     <link rel="icon" href="/favicon.ico" sizes="any" />
            
         <meta name="description" content=" Looking for the #1 SEO consultant in India? My proven tactics drive traffic and increase revenue. Schedule a Free consultation." />
@@ -31,6 +33,7 @@ export default function Home({discription ,title}) {
         
       </Head>
    <SpeedInsights/>
+   
 <Header/>
 <Hero/>
 <ExitPopup/>

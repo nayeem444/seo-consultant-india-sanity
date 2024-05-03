@@ -39,7 +39,7 @@ const Accordion = () => {
               header="How much SEO charges in India?
 
               "
-              text="SEO charges in India vary depending on the project complexity, duration, and expertise required. On average, hourly rates range from ₹3,000 to ₹8,000, while monthly retainers start around ₹60,000. It’s important to discuss specific requirements and negotiate with SEO professionals and consultants for accurate pricing."
+              text="SEO charges in India vary depending on the project complexity, duration, and expertise required. On average, hourly rates range from $3,000 to $8,000, while monthly retainers start around $60,000. It’s important to discuss specific requirements and negotiate with SEO professionals and consultants for accurate pricing."
             />
              <AccordionItem
               header="Benefits of Hiring an SEO Expert ?"
@@ -55,7 +55,7 @@ const Accordion = () => {
           <div className="w-full px-4 lg:w-1/2">
            
             <AccordionItem
-              header="What are benefits of choosing my SEO services?"
+              header="What are benefits of choosing Your SEO services?"
               text="Here are some benefits of choosing my SEO expert services:
 
               Up-to-Date with Latest Google Algorithms: I always stay updated with the latest Google algorithms while implementing SEO strategies, keeping your website ahead of the competition.

@@ -6,12 +6,13 @@ import Image from 'next/image';
 
 import img1 from '../public/Apexure (1).png';
 import img2 from '../public/Beaconstac.png';
-import img3 from '../public/DOOR3.png';
 import img4 from '../public/Infuse-Media (2).png';
 import img5 from '../public/LeadGen-App.png';
 import img6 from '../public/Taxmann.png';
 import img7 from '../public/Untitled-1-1.png';
 import img8 from '../public/Untitled design (65).png';
+import img9 from '../public/Untitled (5).png';
+import img10 from '../public/Untitled (6).png';
 
 const CustomNextArrow = (props) => (
   <div {...props} className="slick-arrow next-arrow">
@@ -26,7 +27,7 @@ const CustomPrevArrow = (props) => (
 );
 
 const CaurosalLogo = () => {
-  const logos = [img1, img2, img3, img4, img5, img6, img7,img8]
+  const logos = [img1, img2, img4, img5, img6, img7,img8,img9,img10]
 
   const settings = {
     dots: true,

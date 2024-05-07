@@ -17,6 +17,11 @@ export const SanityImage = (props: Props) => {
 
   if (!imageProps) return null;
 
+  const imageStyle = {
+    height: height || 'auto', // Use provided height or 'auto' if not provided
+    objectFit: 'contain', // Apply object-fit: contain
+  };
+
   return (
     <figure>
       <Image
@@ -24,6 +29,7 @@ export const SanityImage = (props: Props) => {
         alt={alt}
         width={width || imageProps.width}
         height={height || imageProps.height}
+        style={imageStyle}
         sizes="(max-width: 800px) 100vw, 800px"
       />
       {caption && (

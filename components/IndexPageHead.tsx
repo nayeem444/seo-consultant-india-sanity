@@ -9,6 +9,6 @@ export default function IndexPageHead({ settings }: IndexPageHeadProps) {
   
 
   return (
-      // <BlogMeta />
+      <BlogMeta />
   )
 }

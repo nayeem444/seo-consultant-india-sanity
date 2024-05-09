@@ -9,7 +9,7 @@ import PostPageHead from 'components/PostPageHead';
 import PostTitle from 'components/PostTitle';
 import SectionSeparator from 'components/SectionSeparator';
 import Footer from 'components/Footer';
-import * as demo from '../lib/demo.data';
+
 import type { Post, Settings } from 'lib/sanity.queries';
 import { notFound } from 'next/navigation';
 import { toPlainText } from '@portabletext/react';
@@ -44,11 +44,11 @@ const useReadTime = (content: any[]) => {
 
 export default function PostPage(props: PostPageProps) {
   const { preview, loading, morePosts = NO_POSTS, post, settings } = props;
-  const { title = demo.title } = settings || {};
+
   const slug = post?.slug;
   if (!slug && !preview) {
     notFound();
-  }
+  };
 
   const readTime = useReadTime(post?.content);
 
@@ -57,7 +57,7 @@ export default function PostPage(props: PostPageProps) {
       <PostPageHead settings={settings} post={post} />
       <Layout preview={preview} loading={loading}>
         <Container>
-          <BlogHeader title={title} level={2} />
+          <BlogHeader  />
           {preview && !post ? (
             <PostTitle>Loading…</PostTitle>
           ) : (

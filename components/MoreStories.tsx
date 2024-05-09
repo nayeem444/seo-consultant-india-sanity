@@ -9,7 +9,7 @@ export default function MoreStories({ posts }: { posts: Post[] }) {
           // Calculate read time for each post
           let readTime = 0; // Default read time
           if (post?.content && Array.isArray(post.content)) {
-            const wordsPerMinute = 200; // Average words per minute
+            const wordsPerMinute = 10; // Average words per minute
             
             // Extract text from each block of content and join them into a single string
             const contentText = post.content.map(block => block.text).join(' ');

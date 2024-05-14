@@ -24,13 +24,15 @@ interface Query {
 export default function ProjectSlugRoute(props: PageProps) {
   const { settings, post, morePosts, draftMode } = props
 
+
+
   if (draftMode) {
     return (
       <PreviewPostPage post={post} morePosts={morePosts} settings={settings} />
     )
   }
 
-  return <PostPage post={post} morePosts={morePosts} settings={settings} />
+  return <PostPage post={post} morePosts={morePosts} settings={settings} title = {post.title} description = {post.excerpt} />
 }
 
 export const getStaticProps: GetStaticProps<PageProps, Query> = async (ctx) => {
@@ -55,6 +57,8 @@ export const getStaticProps: GetStaticProps<PageProps, Query> = async (ctx) => {
       settings,
       draftMode,
       token: draftMode ? readToken : '',
+      description: post.excerpt || null,
+      title:post.title || null
     },
   }
 }
@@ -67,3 +71,4 @@ export const getStaticPaths = async () => {
     fallback: 'blocking',
   }
 }
+

@@ -2,6 +2,7 @@ import BlogMeta from 'components/BlogMeta'
 import { urlForImage } from 'lib/sanity.image'
 import { Post, Settings } from 'lib/sanity.queries'
 import Head from 'next/head'
+import post from 'schemas/post'
 
 export interface PostPageHeadProps {
   settings: Settings
@@ -10,9 +11,13 @@ export interface PostPageHeadProps {
 
 export default function PostPageHead({ settings, post }: PostPageHeadProps) {
   const title = settings?.title
+
+  console.log(post.excerpt); // Log the excerpt field
+
   return (
     <Head>
-      <title>{post.title ? `${post.title} | ${title}` : title}</title>
+      <title>{post.title}</title>
+      <meta name='description' content={post.excerpt} />
       {/* <BlogMeta /> */}
       {post.coverImage?.asset?._ref && (
         <meta

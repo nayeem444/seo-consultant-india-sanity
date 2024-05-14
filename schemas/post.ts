@@ -48,6 +48,13 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'text',
+      rows: 3,
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -73,6 +80,9 @@ export default defineType({
             { title: 'H3', value: 'h3' },
             { title: 'H4', value: 'h4' },
             { title: 'Quote', value: 'blockquote' },
+            { title: 'Align Left', value: 'alignLeft' },
+            { title: 'Align Center', value: 'alignCenter' },
+            { title: 'Align Right', value: 'alignRight' }
           ],
           lists: [{ title: 'Bullet', value: 'bullet' }, { title: 'Number', value: 'number' }],
           marks: {
@@ -122,11 +132,6 @@ export default defineType({
           ],
         },
       ],
-    }),
-    defineField({
-      name: 'excerpt',
-      title: 'Excerpt',
-      type: 'text',
     }),
     defineField({
       name: 'coverImage',

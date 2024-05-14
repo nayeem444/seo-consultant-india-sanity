@@ -4,17 +4,18 @@ import Date from 'components/PostDate'
 import PostTitle from 'components/PostTitle'
 import type { Post } from 'lib/sanity.queries'
 
-interface PostHeaderProps extends Pick<Post, 'title' | 'coverImage' | 'date' | 'author' | 'slug'> {
+interface PostHeaderProps extends Pick<Post, 'title' | 'excerpt' | 'coverImage' | 'date' | 'author' | 'slug'> {
   readTime: number; // Add readTime prop
 }
 
 export default function PostHeader(props: PostHeaderProps) {
-  const { title, coverImage, date, author, slug, readTime } = props;
+  const { title, coverImage, date, author, slug, readTime, excerpt } = props;
 
   return (
     <>
       <div className='h-60 bg-blue-600 flex justify-center items-center'>
         <PostTitle>{title}</PostTitle>
+        <meta name='description'  content={excerpt} />
       </div>
       <div className="hidden md:mb-12 md:flex justify-center mx-24">
         {author && <Avatar name={author.name} picture={author.picture} />}

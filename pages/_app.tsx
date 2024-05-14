@@ -8,7 +8,7 @@ import Head from 'next/head';
 const PreviewProvider = dynamic(() => import('components/PreviewProvider'));
 import { VisualEditing } from '@sanity/visual-editing/next-pages-router';
 
-function App({ Component, pageProps }: AppProps<{ draftMode: boolean; token: string; title?: string; description?: string }>) {
+function App({ Component, pageProps }: AppProps<{ draftMode: boolean; token: string; title?: string;  excerpt?: string }>) {
   const router = useRouter();
 
   return (
@@ -16,7 +16,7 @@ function App({ Component, pageProps }: AppProps<{ draftMode: boolean; token: str
       <Head>
         <link rel="canonical" href={`https://shahidshahmiri.com${router.asPath}`} />
         <title>{pageProps.title ? pageProps.title : 'Default Site Title'}</title>
-        <meta name="description" content={pageProps.description || "Default description for the site."} />
+        <meta name="description" content={pageProps.excerpt ? pageProps.excerpt : 'Default Site Description'} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* Import Montserrat font from Google Fonts */}
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -33,12 +33,17 @@ function App({ Component, pageProps }: AppProps<{ draftMode: boolean; token: str
         </PreviewProvider>
       ) : (
         <main className="font-montserrat">
-          {/* Render blog title only if it exists and not on individual blog pages */}
-          {pageProps.title && !router.pathname.startsWith('/blog/') && (
-            <h1 className="visually-hidden">{pageProps.title}</h1>
-          )}
-          <Component {...pageProps} />
-        </main>
+        {/* Render blog title only if it exists and not on individual blog pages */}
+        {pageProps.title && !router.pathname.startsWith('/blog/') && (
+          <h1 className="visually-hidden">{pageProps.title}</h1>
+        )}
+        {/* Render blog description */}
+        {pageProps.excerpt && !router.pathname.startsWith('/blog/') && (
+          <p>{pageProps.excerpt}</p>
+        )}
+        <Component {...pageProps} />
+      </main>
+      
       )}
     </>
   );

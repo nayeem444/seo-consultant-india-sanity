@@ -53,6 +53,12 @@ const defaultUrls: SitemapLocation[] = [
     priority: 0.5,
     lastmod: new Date(),
   },
+  {
+    url: '/blog/affordable-seo-services',
+    changefreq: 'weekly',
+    priority: 0.5,
+    lastmod: new Date(),
+  },
 ];
 
 const createSitemap = (locations: SitemapLocation[]) => {

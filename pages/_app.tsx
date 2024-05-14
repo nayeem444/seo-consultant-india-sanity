@@ -1,4 +1,5 @@
 import 'tailwindcss/tailwind.css';
+import Script from 'next/script'
 import '../styles/globals.css';
 import { AppProps } from 'next/app';
 import dynamic from 'next/dynamic';
@@ -41,7 +42,14 @@ function App({ Component, pageProps }: AppProps<{ draftMode: boolean; token: str
         {pageProps.excerpt && !router.pathname.startsWith('/blog/') && (
           <p>{pageProps.excerpt}</p>
         )}
-        <Component {...pageProps} />
+      <Component {...pageProps} />
+<Script
+  id="__NEXT_DATA__"
+  type="application/json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(pageProps),
+  }}
+/>
       </main>
       
       )}

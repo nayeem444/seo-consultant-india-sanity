@@ -3,7 +3,7 @@ import { apiVersion, dataset, projectId } from 'lib/sanity.api'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { createClient } from 'next-sanity'
 
-const token = process.env.SANITY_API_READ_TOKEN
+const token = "sk2m7uW7JdXSd8x9vOJOXkJxNeulKNGcLUBSYlqfPBhQBhLHEZI8oLjG2HnPaunp7kBKLaAFJFlgXjcaZDUJtT4Qcw2LlLxNSKHHM0l7qFxP42szJkjlTOYvDxyw2rCYGGm08lOP020crsMghinTLnCmsUWS03zLvgvRbV90k6knL9XNLBMl"
 if (!token) {
   throw new Error(
     'A secret is provided but there is no `SANITY_API_READ_TOKEN` environment variable setup.',

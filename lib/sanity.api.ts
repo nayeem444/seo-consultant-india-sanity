@@ -22,7 +22,8 @@ export const dataset: string = assertValue(
 );
 
 export const projectId: string = assertValue(
-  "rmr3399o",
+  // "rmr3399o",
+  "gp7jbxbl",
   'Missing environment variable: NEXT_PUBLIC_SANITY_PROJECT_ID'
 );
 

@@ -15,6 +15,7 @@
     "singleQuote": true
   },
   "dependencies": {
+    "@apollo/client": "^3.10.4",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@heroicons/react": "^2.1.1",
@@ -36,12 +37,14 @@
     "@vercel/analytics": "^1.2.2",
     "@vercel/og": "0.6.2",
     "@vercel/speed-insights": "^1.0.10",
+    "@wordpress/block-library": "^8.35.0",
     "classnames": "2.5.1",
     "date-fns": "2.30.0",
     "dotenv": "^16.3.1",
     "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
     "exit-intent": "^1.1.0",
+    "graphql": "^16.8.1",
     "gray-matter": "^4.0.3",
     "intl-segmenter-polyfill": "0.4.4",
     "mdast-util-to-string": "^4.0.0",

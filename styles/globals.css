@@ -18,4 +18,10 @@ body {
     clip: rect(0, 0, 0, 0);
     border: 0;
   }
+
+  /* Add this CSS to your global styles file (e.g., globals.css) */
+.blue-links a {
+    color: rgb(37 99 235);
+  }
+  
   

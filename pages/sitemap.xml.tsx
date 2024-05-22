@@ -1,4 +1,4 @@
-import { getClient } from 'lib/sanity.client';
+
 
 type SitemapLocation = {
   url: string;
@@ -53,12 +53,8 @@ const defaultUrls: SitemapLocation[] = [
     priority: 0.5,
     lastmod: new Date(),
   },
-  {
-    url: '/blog/affordable-seo-services',
-    changefreq: 'weekly',
-    priority: 0.5,
-    lastmod: new Date(),
-  },
+  
+
 ];
 
 const createSitemap = (locations: SitemapLocation[]) => {
@@ -86,21 +82,20 @@ export default function SiteMap() {
   return null;
 }
 
-export async function getServerSideProps({ res }) {
-  // Fetch posts data from Sanity CMS
-  const client = getClient();
 
-  // Fetch posts
-  const posts = await client.fetch(`*[_type == "post"]{slug}`);
 
- // Generate sitemap locations for blog posts
-const postUrls: SitemapLocation[] = posts.map((post) => ({
-  url: `/blog/${post.slug.current}`, // Remove extra slash before 'blog'
-  changefreq: 'weekly',
-  priority: 0.5,
-  lastmod: new Date(), // Assuming you want to use the current date as the last modified date
-}));
+  export async function getServerSideProps({ res }) {
+    // Fetch posts data from WordPress
+    const response = await fetch('http://marketinglad.co.in/wp-json/wp/v2/posts');
+    const posts = await response.json();
 
+  // Generate sitemap locations for blog posts
+  const postUrls: SitemapLocation[] = posts.map((post) => ({
+    url: `/blog/${post.slug}`,
+    changefreq: 'weekly',
+    priority: 0.5,
+    lastmod: new Date(post.modified), // Use the post modified date
+  }));
 
   // Combine all URLs
   const allLocations = [...defaultUrls, ...postUrls];

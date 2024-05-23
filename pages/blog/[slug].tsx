@@ -73,7 +73,6 @@
 // }
 
 
-
 import { useQuery } from '@apollo/client';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -84,6 +83,11 @@ import img from '../../public/Screenshot 2023-02-17 at 5.webp';
 import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
 
+const stripHtmlTags = (html) => {
+  if (!html) return '';
+  return html.replace(/<\/?[^>]+(>|$)/g, "");
+};
+
 export default function PostPage({ slug }) {
   const { data, loading, error } = useQuery(GET_FULL_POST, {
     client,
@@ -93,17 +97,16 @@ export default function PostPage({ slug }) {
   if (error) return <div className="text-center mt-10 text-red-500">Error: {error.message}</div>;
 
   const post = data?.post;
-
-  const { title, content, date, featuredImage, author, description } = post || {};
-
+  const { title, content, date, featuredImage, author, descriptio ,excerpt } = post || {};
   const formattedContent = content ? content.replace(/\n{4,}/g, '<br>') : '';
+  const cleanExcerpt = stripHtmlTags(excerpt);
 
   return (
     <div>
       <Navbar />
       <Head>
         <title>{title || 'Loading...'}</title>
-        <meta name="description" content={description || 'Loading...'} />
+        <meta name="description" content={cleanExcerpt || 'Loading...'} />
       </Head>
 
       <div className='h-60 bg-blue-600 flex justify-center items-center'>
@@ -195,10 +198,6 @@ export const getStaticPaths = async () => {
     fallback: 'blocking',
   };
 };
-
-
-
-
 
 const SkeletonTitle = () => (
   <div className="h-10 w-3/4 bg-gray-300 rounded-lg animate-pulse mb-4"></div>

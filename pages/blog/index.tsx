@@ -69,7 +69,6 @@ import { GetStaticProps } from 'next';
 //   };
 // };
 
-
 import { useQuery } from '@apollo/client';
 import client from '../../lib/apollo';
 import { GET_LATEST_POSTS } from '../../lib/queries';
@@ -78,6 +77,7 @@ import { useState } from 'react';
 import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar';
 import Image from 'next/image';
+import Head from 'next/head';
 
 const SkeletonPost = () => (
   <div className="block p-4 border rounded-lg animate-pulse">
@@ -89,7 +89,7 @@ const SkeletonPost = () => (
   </div>
 );
 
-export default function IndexPage(props) {
+export default function IndexPage({ description, title }) {
   const [page, setPage] = useState(1);
   const { data, loading, error, fetchMore } = useQuery(GET_LATEST_POSTS, {
     client,
@@ -137,15 +137,18 @@ export default function IndexPage(props) {
     setPage(newPage);
   };
 
+console.log(title);
+console.log(description);
+  
   return (
     <div>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </Head>
       <Navbar />
       <div className="mb-8 md:mb-16 flex justify-center h-64 items-center bg-blue-600">
         <p className="flex justify-center align-middle text-7xl text-white font-bold font-montserrat">Blog</p>
-      </div>
-      <div>
-        <h1 className='hidden'>{props?.title}</h1>
-        <meta name="description" content={props.description} />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 m-12">
         {loading
@@ -163,12 +166,8 @@ export default function IndexPage(props) {
                     className="mb-4"
                   />
                 )}
-                <p>
-                  {post.excerpt}
-                </p>
-                <p className="text-gray-700 text-sm font-semibold">
-                  By {post.author.node.name}
-                </p>
+                <p>{post.excerpt}</p>
+                <p className="text-gray-700 text-sm font-semibold">By {post.author.node.name}</p>
               </div>
             </Link>
           ))}
@@ -200,6 +199,5 @@ export const getStaticProps = async () => {
     },
   };
 };
-
 
 

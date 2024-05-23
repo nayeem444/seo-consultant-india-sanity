@@ -92,7 +92,6 @@
 
 // export default App;
 
-
 import 'tailwindcss/tailwind.css';
 import '@wordpress/block-library/build-style/style.css'; // Gutenberg styles
 import Script from 'next/script';
@@ -104,9 +103,7 @@ import { useEffect } from 'react';
 import ReactGA from 'react-ga';
 import { initGA, logPageView } from '../utils/analytics';
 
-import { VisualEditing } from '@sanity/visual-editing/next-pages-router';
-
-function App({ Component, pageProps }: AppProps<{ token: string; title?: string; excerpt?: string }>) {
+function App({ Component, pageProps }: AppProps<{ token: string; title?: string; description?: string }>) {
   const router = useRouter();
 
   useEffect(() => {
@@ -133,20 +130,18 @@ function App({ Component, pageProps }: AppProps<{ token: string; title?: string;
       <Head>
         <link rel="canonical" href={`https://shahidshahmiri.com${router.asPath}`} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Import Montserrat font from Google Fonts */}
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        {pageProps.title && <title>{pageProps.title}</title>}
+        {pageProps.description && <meta name="description" content={pageProps.description} />}
       </Head>
       <main className="font-montserrat">
-        {/* Render blog title only if it exists and not on individual blog pages */}
         {pageProps.title && !router.pathname.startsWith('/blog/') && (
           <h1 className="visually-hidden">{pageProps.title}</h1>
         )}
-        {/* Render blog description */}
-        {pageProps.excerpt && !router.pathname.startsWith('/blog/') && (
-          <p>{pageProps.excerpt}</p>
+        {pageProps.description && !router.pathname.startsWith('/blog/') && (
+          <p className="visually-hidden">{pageProps.description}</p>
         )}
         <Component {...pageProps} />
-        {/* Render Google Analytics script */}
         <Script
           id="google-analytics"
           strategy="lazyOnload"
@@ -159,7 +154,7 @@ function App({ Component, pageProps }: AppProps<{ token: string; title?: string;
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-6B4YEN9B05'); 
+              gtag('config', 'G-6B4YEN9B05');
             `,
           }}
         />
@@ -169,3 +164,4 @@ function App({ Component, pageProps }: AppProps<{ token: string; title?: string;
 }
 
 export default App;
+

@@ -72,7 +72,6 @@
 //   }
 // }
 
-
 import { useQuery } from '@apollo/client';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -108,7 +107,7 @@ export default function PostPage({ slug }) {
       <Navbar />
       <Head>
         <title>{title}</title>
-        <meta name="description" content={post.description} />
+        <meta name="description" content={description} />
       </Head>
 
       <div className='h-60 bg-blue-600 flex justify-center items-center'>
@@ -121,13 +120,13 @@ export default function PostPage({ slug }) {
         <div className="flex items-center m-8">
           {author && author.node && (
             <>
-             <Image
-  src={author.node.avatar?.url}
-  alt={author.node.name}
-  width={40}
-  height={40}
-  className="rounded-full mr-4"
-/>
+              <Image
+                src={author.node.avatar?.url}
+                alt={author.node.name}
+                width={40}
+                height={40}
+                className="rounded-full mr-4"
+              />
               <div>
                 <p className="text-gray-500">
                   By <span className="font-semibold">{author.node.name}</span>
@@ -138,7 +137,7 @@ export default function PostPage({ slug }) {
           )}
         </div>
       </div>
-{/* left */}
+      {/* left */}
       <div className='flex flex-col lg:flex-row justify-center mx-4 sm:mx-24'>
         <div className='lg:w-3/4 lg:mx-4'>
           <div className='flex justify-center'>
@@ -154,11 +153,10 @@ export default function PostPage({ slug }) {
           </div>
           <article className="prose prose-lg m-4 sm:m-12 blue-links" dangerouslySetInnerHTML={{ __html: formattedContent }} />
         </div>
-{/* Right section */}
-
+        {/* Right section */}
         <div className='lg:w-1/4 lg:m-4 m-4'>
-          <div className="mx-4 md:mx-0 mt-4 md:mt-0 md:w-72">
-            <div className=" rounded h-96 bg-blue-600 p-6 flex flex-col justify-center items-center">
+          <div className="sticky top-4 mx-4 md:mx-0 mt-4 md:mt-0 md:w-72">
+            <div className="rounded h-96 bg-blue-600 p-6 flex flex-col justify-center items-center">
               <h2 className="text-white text-3xl font-bold mb-4 text-center">Want to see a similar trend in your GSC?</h2>
               <div className="py-4">
                 <Image width={400} height={200} src={img} className="rounded" />

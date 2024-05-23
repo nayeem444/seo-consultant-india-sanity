@@ -4,7 +4,7 @@ const config = {
     remotePatterns: [
       { hostname: 'localhost' },
       { hostname: 'https://shahidshahmiri.com/' },
-      { hostname: '0.gravatar.com' },
+      { hostname: 'secure.gravatar.com' },
       { hostname: 'http://marketinglad.co.in/' }, // Replace with your actual WordPress domain
     ],
   },

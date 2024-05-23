@@ -117,7 +117,7 @@ export default function PostPage({ slug }) {
         </h1>
       </div>
 
-      <div className="hidden  md:flex justify-center mx-4 sm:mx-24">
+      <div className="hidden md:mb-12 md:flex justify-center mx-4 sm:mx-24">
         <div className="flex items-center m-8">
           {author && author.node && (
             <>

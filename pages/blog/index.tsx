@@ -79,6 +79,16 @@ import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar';
 import Image from 'next/image';
 
+const SkeletonPost = () => (
+  <div className="block p-4 border rounded-lg animate-pulse">
+    <div className="h-6 bg-gray-300 rounded mb-2 w-3/4"></div>
+    <div className="h-40 bg-gray-300 rounded mb-4"></div>
+    <div className="h-4 bg-gray-300 rounded mb-2 w-full"></div>
+    <div className="h-4 bg-gray-300 rounded mb-2 w-5/6"></div>
+    <div className="h-4 bg-gray-300 rounded w-1/2"></div>
+  </div>
+);
+
 export default function IndexPage(props) {
   const [page, setPage] = useState(1);
   const { data, loading, error, fetchMore } = useQuery(GET_LATEST_POSTS, {
@@ -89,14 +99,13 @@ export default function IndexPage(props) {
     },
   });
 
-  if (loading) return <div className="text-center mt-10">Loading...</div>;
   if (error) return <div className="text-center mt-10 text-red-500">Error: {error.message}</div>;
 
-  const posts = data.posts.edges.map((edge) => {
+  const posts = data?.posts.edges.map((edge) => {
     const post = edge.node;
     const cleanedExcerpt = post.excerpt.replace(/<\/?p>/g, ''); // Remove <p> tags from excerpt
     return { ...post, excerpt: cleanedExcerpt };
-  });
+  }) || [];
 
   const loadMorePosts = async () => {
     const newPage = page + 1;
@@ -139,30 +148,32 @@ export default function IndexPage(props) {
         <meta name="description" content={props.description} />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 m-12">
-        {posts.map((post) => (
-          <Link href={`/blog/${post.slug}`} legacyBehavior key={post.id}>
-            <div className="block p-4 border rounded-lg hover:shadow-lg transition-shadow duration-300 cursor-pointer">
-              <h2 className="text-xl font-bold mb-2 text-blue-600">{post.title}</h2>
-              {post.featuredImage && post.featuredImage.node && (
-                <Image
-                  src={post.featuredImage.node.sourceUrl}
-                  alt={post?.title}
-                  width={200}
-                  height={200}
-                  className="mb-4"
-                />
-              )}
-              <p>
-                {post.excerpt}
-              </p>
-              <p className="text-gray-700 text-sm font-semibold">
-                By {post.author.node.name}
-              </p>
-            </div>
-          </Link>
-        ))}
+        {loading
+          ? Array.from({ length: 6 }).map((_, index) => <SkeletonPost key={index} />)
+          : posts.map((post) => (
+            <Link href={`/blog/${post.slug}`} legacyBehavior key={post.id}>
+              <div className="block p-4 border rounded-lg hover:shadow-lg transition-shadow duration-300 cursor-pointer">
+                <h2 className="text-xl font-bold mb-2 text-blue-600">{post.title}</h2>
+                {post.featuredImage && post.featuredImage.node && (
+                  <Image
+                    src={post.featuredImage.node.sourceUrl}
+                    alt={post?.title}
+                    width={200}
+                    height={200}
+                    className="mb-4"
+                  />
+                )}
+                <p>
+                  {post.excerpt}
+                </p>
+                <p className="text-gray-700 text-sm font-semibold">
+                  By {post.author.node.name}
+                </p>
+              </div>
+            </Link>
+          ))}
       </div>
-      {data.posts.pageInfo.hasNextPage && (
+      {data?.posts.pageInfo.hasNextPage && (
         <div className="text-center mt-8">
           <button
             onClick={loadMorePosts}
@@ -189,3 +200,6 @@ export const getStaticProps = async () => {
     },
   };
 };
+
+
+

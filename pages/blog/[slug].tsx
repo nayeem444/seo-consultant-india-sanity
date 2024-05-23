@@ -72,6 +72,8 @@
 //   }
 // }
 
+
+
 import { useQuery } from '@apollo/client';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -88,32 +90,28 @@ export default function PostPage({ slug }) {
     variables: { slug },
   });
 
-  if (loading) return <div className="text-center mt-10">Loading...</div>;
-  if (error)
-    return <div className="text-center mt-10 text-red-500">Error: {error.message}</div>;
+  if (error) return <div className="text-center mt-10 text-red-500">Error: {error.message}</div>;
 
   const post = data?.post;
 
-  if (!post) {
-    return <div className="text-center mt-10">Post not found</div>;
-  }
+  const { title, content, date, featuredImage, author, description } = post || {};
 
-  const { title, content, date, featuredImage, author, description } = post;
-
-  const formattedContent = content.replace(/\n{4,}/g, '<br>');
+  const formattedContent = content ? content.replace(/\n{4,}/g, '<br>') : '';
 
   return (
     <div>
       <Navbar />
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        <title>{title || 'Loading...'}</title>
+        <meta name="description" content={description || 'Loading...'} />
       </Head>
 
       <div className='h-60 bg-blue-600 flex justify-center items-center'>
-        <h1 className="text-center text-4xl font-bold leading-tight tracking-tighter md:text-center md:text-4xl md:leading-none lg:text-6xl text-balance mx-4 sm:mx-24 text-white">
-          {title}
-        </h1>
+        {loading ? <SkeletonTitle /> : (
+          <h1 className="text-center text-4xl font-bold leading-tight tracking-tighter md:text-center md:text-4xl md:leading-none lg:text-6xl text-balance mx-4 sm:mx-24 text-white">
+            {title}
+          </h1>
+        )}
       </div>
 
       <div className="hidden md:mb-12 md:flex justify-center mx-4 sm:mx-24">
@@ -131,7 +129,6 @@ export default function PostPage({ slug }) {
                 <p className="text-gray-500">
                   By <span className="font-semibold">{author.node.name}</span>
                 </p>
-                {/* <p className="text-gray-500">{new Date(date).toLocaleDateString()}</p> */}
               </div>
             </>
           )}
@@ -141,17 +138,20 @@ export default function PostPage({ slug }) {
       <div className='flex flex-col lg:flex-row justify-center mx-4 sm:mx-24'>
         <div className='lg:w-3/4 lg:mx-4'>
           <div className='flex justify-center'>
-            {featuredImage && featuredImage.node && (
-              <Image
-                src={featuredImage.node.sourceUrl}
-                alt={title}
-                width={400}
-                height={200}
-                className="mb-8 rounded-lg"
-              />
+            {loading ? <SkeletonImage /> : (
+              featuredImage && featuredImage.node && (
+                <Image
+                  src={featuredImage.node.sourceUrl}
+                  alt={title}
+                  width={400}
+                  height={200}
+                  className="mb-8 rounded-lg"
+                />
+              )
             )}
           </div>
           <article className="prose prose-lg m-4 sm:m-12 blue-links" dangerouslySetInnerHTML={{ __html: formattedContent }} />
+          {loading && <SkeletonContent />}
         </div>
         {/* Right section */}
         <div className='lg:w-1/4 lg:m-4 m-4'>
@@ -200,3 +200,19 @@ export const getStaticPaths = async () => {
 
 
 
+const SkeletonTitle = () => (
+  <div className="h-10 w-3/4 bg-gray-300 rounded-lg animate-pulse mb-4"></div>
+);
+
+const SkeletonImage = () => (
+  <div className="w-full h-56 bg-gray-300 rounded-lg animate-pulse mb-8"></div>
+);
+
+const SkeletonContent = () => (
+  <div>
+    <div className="h-6 w-full bg-gray-300 rounded-lg animate-pulse mb-4"></div>
+    <div className="h-6 w-5/6 bg-gray-300 rounded-lg animate-pulse mb-4"></div>
+    <div className="h-6 w-4/6 bg-gray-300 rounded-lg animate-pulse mb-4"></div>
+    <div className="h-6 w-3/6 bg-gray-300 rounded-lg animate-pulse mb-4"></div>
+  </div>
+);

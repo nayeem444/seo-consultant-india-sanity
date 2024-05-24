@@ -73,6 +73,9 @@
 // }
 
 
+
+
+
 import { useQuery } from '@apollo/client';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -82,6 +85,7 @@ import { getAllPostsSlugs } from '../../lib/api';
 import img from '../../public/Screenshot 2023-02-17 at 5.webp';
 import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
+import CommentForm from 'components/CommentForm';
 
 const stripHtmlTags = (html) => {
   if (!html) return '';
@@ -97,10 +101,12 @@ export default function PostPage({ slug }) {
   if (error) return <div className="text-center mt-10 text-red-500">Error: {error.message}</div>;
 
   const post = data?.post;
-  const { title, content, date, featuredImage, author, descriptio ,excerpt } = post || {};
+  const { id: postId, title, content, date, featuredImage, author, excerpt, comments, databaseId } = post || {};
   const formattedContent = content ? content.replace(/\n{4,}/g, '<br>') : '';
   const cleanExcerpt = stripHtmlTags(excerpt);
 
+
+  console.log(databaseId)
   return (
     <div>
       <Navbar />
@@ -137,7 +143,7 @@ export default function PostPage({ slug }) {
           )}
         </div>
       </div>
-      {/* left */}
+
       <div className='flex flex-col lg:flex-row justify-center mx-4 sm:mx-24'>
         <div className='lg:w-3/4 lg:mx-4'>
           <div className='flex justify-center'>
@@ -155,8 +161,42 @@ export default function PostPage({ slug }) {
           </div>
           <article className="prose prose-lg m-4 sm:m-12 blue-links" dangerouslySetInnerHTML={{ __html: formattedContent }} />
           {loading && <SkeletonContent />}
+
+          {/* Comments Section */}
+          <div className="comments-section mt-8">
+            <h2 className="text-2xl font-bold mb-4">Comments</h2>
+            {comments && comments.edges.length > 0 ? (
+              comments.edges.map(({ node: comment }, index) => (
+                <div key={index} className="mb-4">
+                  <div className="flex items-center mb-2">
+                    {comment.author.node.avatar && (
+                      <Image
+                        src={comment.author.node.avatar.url}
+                        alt={comment.author.node.name}
+                        width={40}
+                        height={40}
+                        className="rounded-full mr-2"
+                      />
+                    )}
+                    <div>
+                      <p className="font-semibold">{comment.author.node.name}</p>
+                      <p className="text-gray-500 text-sm">{new Date(comment.date).toLocaleDateString()}</p>
+                    </div>
+                  </div>
+                  <div className="bg-gray-100 p-4 rounded-lg">
+                    {stripHtmlTags(comment.content)}
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p>No comments yet. Be the first to comment!</p>
+            )}
+          </div>
+
+          {/* Comment Form */}
+          {databaseId && <CommentForm databaseId={databaseId} />}
         </div>
-        {/* Right section */}
+
         <div className='lg:w-1/4 lg:m-4 m-4'>
           <div className="sticky top-4 mx-4 md:mx-0 mt-4 md:mt-0 md:w-72">
             <div className="rounded h-96 bg-blue-600 p-6 flex flex-col justify-center items-center">
@@ -177,7 +217,7 @@ export default function PostPage({ slug }) {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

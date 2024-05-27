@@ -7,7 +7,7 @@ import img2 from '../public/apexure.png';
 
 const caseStudy = () => {
   return (
-<div>
+<div className='mt-24'>
 <h2 className="mb-8 lg:mb-16 text-4xl font-bold tracking-tight leading-tight text-center dark:text-dark md:text-4xl">
          Case Study
         </h2>

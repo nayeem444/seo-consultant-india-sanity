@@ -19,6 +19,7 @@ import Hero2 from "components/Hero2";
 import About2 from "components/About2";
 import ExitPopup from "components/Banner";
 import CaseStudy from "../components/caseStudy"
+import MyBrands from "components/MyBrads";
 
 
 export default function Home({discription ,title}) {
@@ -46,6 +47,7 @@ export default function Home({discription ,title}) {
 <About2/>
 <Content/>
 <Service/>
+<MyBrands/>
 <CaseStudy/>
 <Accordion/>
 <Testimonials/>

@@ -101,13 +101,13 @@ export default function PostPage({ slug }) {
   if (error) return <div className="text-center mt-10 text-red-500">Error: {error.message}</div>;
 
   const post = data?.post;
-  const { id:  title, content, date, featuredImage, author, excerpt, comments, databaseId ,seo } = post || {};
+  const {  title, content, date, featuredImage, author, excerpt, comments, databaseId ,seo } = post || {};
   const formattedContent = content ? content.replace(/\n{4,}/g, '<br>') : '';
   const cleanExcerpt = stripHtmlTags(excerpt);
 
-  console.log(seo)
-
-  console.log(post)
+console.log(title)
+console.log(post)
+  
   return (
     <div>
       <Navbar />

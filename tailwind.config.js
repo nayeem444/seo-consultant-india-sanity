@@ -8,6 +8,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      
+      // width: {
+      //   '100': '100px',
+      //   '250': '250px',
+      // },
+      // height: {
+      //   '100': '100px',
+      //   '250': '250px',
+      // },
       colors: {
         'accent-1': '#FAFAFA',
         'accent-2': '#EAEAEA',

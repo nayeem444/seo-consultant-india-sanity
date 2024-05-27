@@ -81,9 +81,23 @@ export const GET_FULL_POST = gql`
       slug
       uri
       content
+      seo {
+        title
+        metaDesc
+        metaKeywords
+        opengraphTitle
+        opengraphDescription
+        opengraphImage {
+          sourceUrl
+        }
+        twitterTitle
+        twitterDescription
+        twitterImage {
+          sourceUrl
+        }
+      }
       title
     }
   }
 `;
-
 

@@ -58,7 +58,7 @@ const CaurosalLogo = () => {
     <section>
       <div>
         <h2 className="mb-8 lg:mb-16 text-4xl font-extrabold tracking-tight leading-tight text-center text-blue-900 dark:text-dark md:text-4xl">
-          Associated And Featured In:
+        Clients I've Worked With
         </h2>
         <Slider {...settings} className="slick-slider md:h-48">
           {logos.map((logo, index) => (

@@ -37,6 +37,7 @@ H NO 3. Qamarwari 2nd Petrol Pump, Near City Mart 190017.</p>
     <div className="flex justify-center items-center text-white mt-4 sm:mt-0">
         © 2024 Shahid Shahmiri. All rights reserved.
     </div>
+    <div></div>
 </div>
 
 

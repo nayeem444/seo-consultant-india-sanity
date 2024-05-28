@@ -105,15 +105,41 @@ export default function PostPage({ slug }) {
   const formattedContent = content ? content.replace(/\n{4,}/g, '<br>') : '';
   const cleanExcerpt = stripHtmlTags(excerpt);
 
-console.log(title)
-console.log(post)
+
   
   return (
     <div>
       <Navbar />
       <Head>
         <title>{title || 'Loading...'}</title>
+        
         <meta name="description" content={cleanExcerpt || 'Loading...'} />
+        {seo && (
+    <>
+      <meta name="robots" content={seo.metaRobotsNoindex ? 'noindex' : 'index'} />
+      <meta name="robots" content={seo.metaRobotsNofollow ? 'nofollow' : 'follow'} />
+      <meta property="og:locale" content={seo.opengraphLocale} />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content={seo.opengraphTitle} />
+      <meta property="og:description" content={seo.opengraphDescription} />
+      <meta property="og:url" content={seo.opengraphUrl} />
+      <meta property="og:site_name" content={seo.opengraphSiteName} />
+      <meta property="article:published_time" content={seo.article?.publishedTime} />
+      <meta property="article:modified_time" content={seo.article?.modifiedTime} />
+      <meta property="og:updated_time" content={seo.article?.updatedTime} />
+      <meta property="og:image" content={seo.opengraphImage?.sourceUrl} />
+      <meta property="og:image:secure_url" content={seo.opengraphImage?.sourceUrl} />
+      <meta property="og:image:width" content={seo.opengraphImage?.mediaDetails?.width} />
+      <meta property="og:image:height" content={seo.opengraphImage?.mediaDetails?.height} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:description" content={seo.twitterDescription} />
+      <meta name="twitter:title" content={seo.twitterTitle} />
+      <meta name="twitter:site" content={seo.twitterSite} />
+      <meta name="twitter:image" content={seo.twitterImage?.sourceUrl} />
+      <meta name="twitter:creator" content={seo.twitterCreator} />
+      <link rel="canonical" href={`https://shahidshahmiri.com/blog/${slug}`} />
+    </>
+  )}
       </Head>
 
       <div className='h-60 bg-blue-600 flex justify-center items-center'>

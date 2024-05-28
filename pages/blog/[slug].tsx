@@ -137,7 +137,7 @@ export default function PostPage({ slug }) {
       <meta name="twitter:site" content={seo.twitterSite} />
       <meta name="twitter:image" content={seo.twitterImage?.sourceUrl} />
       <meta name="twitter:creator" content={seo.twitterCreator} />
-      <link rel="canonical" href={`https://shahidshahmiri.com/blog/${slug}`} />
+      {/* <link rel="canonical" href={`https://shahidshahmiri.com/blog/${slug}`} /> */}
     </>
   )}
       </Head>

@@ -3,9 +3,9 @@ const config = {
   images: {
     remotePatterns: [
       { hostname: 'localhost' },
-      { hostname: 'https://shahidshahmiri.com/' },
+      { hostname: 'shahidshahmiri.com' },
       { hostname: 'secure.gravatar.com' },
-      { hostname: 'http://marketinglad.co.in/' }, // Replace with your actual WordPress domain
+      { hostname: 'marketinglad.co.in' }, // Replace with your actual WordPress domain
     ],
   },
   typescript: {
@@ -15,6 +15,15 @@ const config = {
   eslint: {
     // Set this to false if you want production builds to abort if there's lint errors
     ignoreDuringBuilds: process.env.VERCEL_ENV === 'production',
+  },
+  async redirects() {
+    return [
+      {
+        source: '/blog',
+        destination: 'http://blog.shahidshahmiri.com/', // Replace with your new URL
+        permanent: true, // Set to true for a 308 permanent redirect, false for a 307 temporary redirect
+      },
+    ];
   },
 };
 

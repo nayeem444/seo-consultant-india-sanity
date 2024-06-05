@@ -2,14 +2,14 @@ import React from 'react';
 import Image from 'next/image';
 
 const images = {
-  logo: "/grc.png",
-  logo2: "/marketinglad.png"
+  logo: "/a Marketing Lad Company (1).svg",
+  logo2: "/a Marketing Lad Company.svg"
 };
 
 const MyBrands = () => {
   return (
-    <div>
-      <div className="bg-black p-6 md:p-12">
+    <div className='bg-black'>
+      <div className=" p-6 ">
         <div className="flex justify-center">
           <h3 className="text-white font-bold text-2xl md:text-4xl mt-4 md:mt-8">My Brands</h3>
         </div>
@@ -30,18 +30,18 @@ export default MyBrands;
 
 const Brand = () => {
   return (
-    <div className="flex flex-wrap justify-center p-4">
+    <div className="flex flex-wrap justify-center p-4 ">
       {Object.values(images).map((image, index) => (
-        <div key={index} className="m-2 lg:-mt-12 ">
+        <div key={index} className="m-2 ">
           <Image
            
             src={image}
             alt={`logo${index}`}
-            width={300}
-            height={300}
+            width={180}
+            height={180}
             layout="fixed"
-            sizes="(max-width: 640px) 100px, (min-width: 641px) 250px"
-            className=" rounded sm:w-100 sm:h-100 md:w-250 md:h-250 object-contain"
+            
+            className=" rounded -mt-12 mb-8"
           />
         </div>
       ))}

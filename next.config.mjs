@@ -20,9 +20,14 @@ const config = {
     return [
       {
         source: '/blog',
-        destination: 'http://blog.shahidshahmiri.com/', // Replace with your new URL
+        destination: 'http://blog.shahidshahmiri.com/',// Replace with your new URL
         permanent: true, // Set to true for a 308 permanent redirect, false for a 307 temporary redirect
       },
+      {
+        source: '/blog/affordable-seo-services',
+        destination: 'https://blog.shahidshahmiri.com/affordable-seo-services/ ', // Replace with your new URL
+        permanent: true, // Set to true for a 308 permanent redirect, false for a 307 temporary redirect
+      }
     ];
   },
 };

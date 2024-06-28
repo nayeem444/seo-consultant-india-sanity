@@ -20,6 +20,9 @@ const footer = () => {
 <div className="flex flex-col items-start mt-5 space-y-2"> 
 <p className=" transition-colors duration-300 dark:text-gray-300  ">Srinagar, India Office
 H NO 3. Qamarwari 2nd Petrol Pump, Near City Mart 190017.</p> 
+<p className='dark:text-gray-300'>
+  Contact : hi@shahidshahmiri.com 
+</p>
 </div> </div> </div> <hr className="my-6 border-gray-200 md:my-8 dark:border-gray-700"/>
 <div className="flex flex-col sm:flex-row justify-between px-2">
     <div className="flex justify-center sm:justify-start lg:flex-row">

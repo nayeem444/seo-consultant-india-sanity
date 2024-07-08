@@ -64,7 +64,7 @@ const NewsLetter = () => {
         <section className="">
             <div className="py-8 px-4 mx-auto max-w-screen-xl  lg:px-6">
                 <div className="mx-auto max-w-screen-md ">
-                    <p className="mb-4  capitalize tracking-tight font-bold text-gray-600 sm:text-xl dark:text-white">Subscribe to my newsletter to get awesome SEO tips.</p>
+                    <p className="mb-4  capitalize tracking-tight font-bold text-white sm:text-xl dark:text-white">Subscribe to my newsletter to get awesome SEO tips.</p>
                     <form method='POST'>
                         <div className="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
                             <div className="relative w-full">

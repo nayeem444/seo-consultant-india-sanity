@@ -5,7 +5,13 @@ const config = {
       { hostname: 'localhost' },
       { hostname: 'shahidshahmiri.com' },
       { hostname: 'secure.gravatar.com' },
-      { hostname: 'marketinglad.co.in' }, // Replace with your actual WordPress domain
+      { hostname: 'marketinglad.co.in' },
+      { hostname: 'www.customshow.com' },
+      { hostname: 'marketinglad.io' },
+      { hostname: 'www.fullfeel.io' },
+      { hostname: 'blog.shahidshahmiri.com' },
+     
+       // Replace with your actual WordPress domain
     ],
   },
   typescript: {

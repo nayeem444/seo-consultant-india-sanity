@@ -1,40 +1,85 @@
 import React from 'react'
+import Image from 'next/image'
+import CustomButton from '../components/CustomButton'
+import Search from '../public/assets/Group 14.svg'
+import stars from '../public/assets/Group 17.svg'
+import LinkedIn from '../public/assets/Group 16.svg'
+import Hubspot from '../public/assets/hubspotlogo-web-white 1.svg'
+import Google from '../public/assets/google-white-logo-1 1.svg'
 
-const Hero2 = () => {
+const Hero2: React.FC = () => {
   return (
-    <section className="pt-10 overflow-hidden bg-gray-50 md:pt-0 sm:pt-16 2xl:pt-16">
-    <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid items-center grid-cols-1 md:grid-cols-2">
+    <div className="bg-[#25282C] text-white min-h-fit flex justify-center py-8">
+      {/* Background Text */}
+      {/* <div className="fixed inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
+        <span className="text-[20vw] font-bold opacity-5 text-gray-700">
+          SHAHIDSHAHMIR
+        </span>
+      </div> */}
 
-            <div>
-                <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Hey 👋 I am
-                    <br className="block sm:hidden" />Jenny Carter
-                </h2>
-                <p className="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 md:mt-8">
-                    Amet minim mollit non deserunt
-                    ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
-                    Exercitation veniam consequat sunt nostrud amet.
-                </p>
-
-                <p className="mt-4 text-xl text-gray-600 md:mt-8">
-                    <span className="relative inline-block">
-                        <span className="absolute inline-block w-full bottom-0.5 h-2 bg-yellow-300"></span>
-                    <span className="relative"> Have a question? </span>
-                    </span>
-                    <br className="block sm:hidden" />Ask me on <a href="#" title=""
-                        className="transition-all duration-200 text-sky-500 hover:text-sky-600 hover:underline">Twitter</a>
-                </p>
-            </div>
-
-            <div className="relative">
-                <img className="absolute inset-x-0 bottom-0 -mb-48 -translate-x-1/2 left-1/2" src="https://cdn.rareblocks.xyz/collection/celebration/images/team/1/blob-shape.svg" alt="" />
-
-                <img className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110" src="https://cdn.rareblocks.xyz/collection/celebration/images/team/1/business-woman.png" alt="" />
-            </div>
-
+      {/* Content */}
+      <div className="relative z-10 mx-auto items-center w-full px-4 md:px-8">
+        {/* Title */}
+        <div className="flex justify-center text-4xl md:text-9xl font-bold text-[#55575A] pt-8 mb-8 opacity-[.2]">
+          <h1>SHAHID SHAHMIRI</h1>
         </div>
+
+        <div className="flex flex-col md:flex-row items-center md:mx-16">
+          <div className="flex flex-col items-center md:items-start">
+            <div className="w-64 md:w-auto">
+              <Image src={Search} width={600} height={600} alt="Search" />
+            </div>
+
+            <div className='text-[#C0C0C0] mt-8 md:mt-24 mb-4 flex flex-col md:flex-row items-center'>
+              <p className='mr-0 md:mr-12 mt-2'>Certified SEO by</p>
+              <div className='flex'>
+                <Image src={Hubspot} width={100} height={100} alt="Hubspot" />
+                <Image src={Google} width={100} height={100} alt="Google" />
+              </div>
+            </div>
+          </div>
+
+          <div className="max-w-xl text-left mt-12 ml-0 md:ml-4 text-center md:text-left">
+            <h1 className="text-xl font-light mb-4">Hi,</h1>
+            <h2 className="text-xl mb-4">
+              I Am Shahid{' '}
+              <span className="font-bold text-white">
+                Expert SEO Consultant From India
+              </span>
+            </h2>
+            <p className="mb-8">
+              The fact that you have landed here is a testament to the
+              effectiveness of my optimization strategies.
+            </p>
+            <div
+              className="inline-block bg-transparent border-2 border-blue-500 text-white rounded-full px-6 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 mb-8"
+            >
+             <CustomButton/>
+            </div>
+  
+            <div className="flex flex-col md:flex-row items-center justify-center md:justify-start mb-4">
+              <p className="mr-0 md:mr-2 mb-2 md:mb-0">Based on LinkedIn Reviews</p>
+              <div className="flex">
+                <Image
+                  src={stars}
+                  width={100}
+                  height={100}
+                  alt='stars'
+                />
+              </div>
+            </div>
+            <div className="flex items-center justify-center md:justify-start py-2">
+              <Image
+                src={LinkedIn}
+                width={200}
+                height={200}
+                alt='Linkedin'
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
   )
 }
 

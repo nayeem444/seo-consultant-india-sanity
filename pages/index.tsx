@@ -19,8 +19,18 @@ import Hero2 from "components/Hero2";
 import About2 from "components/About2";
 import ExitPopup from "components/Banner";
 import CaseStudy from "../components/caseStudy"
-import MyBrands from "components/MyBrads";
-
+import Navbar2 from "../components/Navbar2";
+import Clients from "components/Clients";
+import AboutMe from "components/AboutMe";
+import Explore from 'components/Explore';
+import WorkHistory from "components/WorkHistory";
+import SEOExpertise from "components/SEOExpertise";
+import Services from "components/services";
+import MyBrands from "components/MyBrands";
+import CaseStudies from "components/CaseStudies";
+import FaqComponent from "components/FaqComponent";
+import TestimonialsCarousel from "components/TestimonialsCarousel";
+import Footer2 from "components/Footer2";
 
 export default function Home({discription ,title}) {
   return ( 
@@ -34,7 +44,7 @@ export default function Home({discription ,title}) {
         
       </Head>
    <SpeedInsights/>
-   
+{/*    
 <Header/>
 <Hero/>
 <ExitPopup/>
@@ -50,12 +60,23 @@ export default function Home({discription ,title}) {
 <MyBrands/>
 <CaseStudy/>
 <Accordion/>
-<Testimonials/>
+<Testimonials/> */}
 {/* <Contact/> */}
-<Footer/>
+{/* <Footer/> */}
 
-{/* <Hero2/> */}
-
+<Navbar2/>
+<Hero2/>
+<Clients/>
+<AboutMe/>
+<Explore/>
+<WorkHistory/>
+<SEOExpertise/>
+<Services/>
+<MyBrands/>
+<CaseStudies/>
+<FaqComponent/>
+<TestimonialsCarousel/>
+<Footer2/>
    </>
   )
 

@@ -8,9 +8,11 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import ReactGA from 'react-ga';
 import { initGA, logPageView } from '../utils/analytics';
+import { ThemeProvider, useTheme } from '../contexts/ThemeContext';
 
-function App({ Component, pageProps }: AppProps<{ token: string; title?: string; description?: string }>) {
+function AppContent({ Component, pageProps }: AppProps<{ token: string; title?: string; description?: string }>) {
   const router = useRouter();
+  const { isDarkMode } = useTheme();
 
   useEffect(() => {
     // Initialize Google Analytics
@@ -40,7 +42,7 @@ function App({ Component, pageProps }: AppProps<{ token: string; title?: string;
         {pageProps.title && <title>{pageProps.title}</title>}
         {pageProps.description && <meta name="description" content={pageProps.description} />}
       </Head>
-      <main className="font-montserrat">
+      <main className={`font-montserrat ${isDarkMode ? 'bg-[#25282C] text-white' : 'bg-[#25282C] text-white'}`}>
         {pageProps.title && !router.pathname.startsWith('/blog/') && (
           <h1 className="visually-hidden">{pageProps.title}</h1>
         )}
@@ -69,5 +71,12 @@ function App({ Component, pageProps }: AppProps<{ token: string; title?: string;
   );
 }
 
-export default App;
+function App(props: AppProps<{ token: string; title?: string; description?: string }>) {
+  return (
+    <ThemeProvider>
+      <AppContent {...props} />
+    </ThemeProvider>
+  );
+}
 
+export default App;

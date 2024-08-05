@@ -57,9 +57,9 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-      <h1 className="absolute top-20 left-1/2 md:left-[70%] transform -translate-x-1/2 -translate-y-1/2 text-[60px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
+      <h2 className="absolute top-20 left-1/2 md:left-[70%] transform -translate-x-1/2 -translate-y-1/2 text-[60px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
         ABOUT
-      </h1>
+      </h2>
     </section>
   );
 };

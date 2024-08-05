@@ -165,9 +165,9 @@ const ExploreSection = () => {
     <div className="bg-[#25282C] text-white py-4">
       <div className="container mx-auto text-center">
         <div className="flex justify-center">
-          <h1 className="absolute text-[60px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
+          <h2 className="absolute text-[60px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
             EXPLORE
-          </h1>
+          </h2>
         </div>
         <div className="pt-48">
           <p className="-mt-20 text-3xl font-semibold">

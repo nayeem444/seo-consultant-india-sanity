@@ -45,9 +45,9 @@ const services = () => {
     <section className="bg-[#25282C] py-16 text-white">
       <div className="container mx-auto px-4">
         <div className="relative text-center">
-          <h1 className="text-[40px] md:text-[150px] font-bold text-[#55575A] 78 opacity-10 absolute inset-0 flex justify-center items-center">
+          <h2 className="text-[40px] md:text-[150px] font-bold text-[#55575A] 78 opacity-10 absolute inset-0 flex justify-center items-center">
             SERVICES
-          </h1>
+          </h2>
           <h2 className="pt-12 text-4xl font-normal mb-8 text-center">
             What I Offer
           </h2>

@@ -1,9 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import emailjs from 'emailjs-com';
+import { PopupButton } from "react-calendly";
 import CustomButton from '../../components/CustomButton';
 import Navbar from 'components/Navbar2';
 import Footer2 from 'components/Footer2';
 import Image from 'next/image';
+
+
+
+
+
+const CalendlyPopupButton: React.FC = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  return (
+    <PopupButton
+      url="https://calendly.com/shahmirishahid/seo-consultation"
+      rootElement={document.getElementById("__next")}
+      text="Book A Free Consultation Call"
+      className="  bg-transparent border-2 border-blue-500 text-white rounded-full px-6 py-2 my-4 hover:bg-blue-500 hover:text-white transition-colors duration-300 z-50"
+    />
+  );
+};
+
 
 const Index = () => {
   // State to store form data
@@ -90,11 +115,11 @@ const Index = () => {
            Need expert assistance with SEO management and link-building? I'm here to help!
            Book a FREE 30-minute call for your website's visibility.
          </p>
-         <div className="font-montserrat flex   py-2 my-4 px-4 inline-flex justify-center items-center  text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-   <CustomButton/>
-   </div>
+
        </div>
-     
+       <div className='flex justify-center'>
+  <CalendlyPopupButton/>
+   </div>
        <div className="flex-1">
          <div className="divide-y divide-gray-200 p-48">
            <form onSubmit={handleSubmit} className="text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">

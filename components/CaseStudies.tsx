@@ -26,9 +26,9 @@ const CaseStudies = () => {
   return (
     <div className="bg-[#25282C]">
       <div className="flex justify-center relative">
-        <h1 className="absolute top-0 md:top-auto -mt-[50px] text-[40px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
+        <h2 className="absolute top-0 md:top-auto -mt-[50px] text-[40px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
           CASE STUDY
-        </h1>
+        </h2>
       </div>
       <h2 className="text-white text-3xl text-center mb-8 pt-24">Case Study</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-24">

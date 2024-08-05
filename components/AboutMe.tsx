@@ -1,8 +1,28 @@
 import React from 'react';
 import Image from 'next/image';
+import { PopupButton } from "react-calendly";
 import CustomButton from '../components/CustomButton'
 import Img1 from '../public/Images/shahid.webp'
 import Img2 from '../public/assets/Rectangle 19.svg'
+
+const CalendlyPopupButton: React.FC = () => {
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  return (
+    <PopupButton
+      url="https://calendly.com/shahmirishahid/seo-consultation"
+      rootElement={document.getElementById("__next")}
+      text="Book A Free Consultation Call"
+      className="bg-transparent border-2 border-blue-500 text-white rounded-full px-6 py-2 my-4 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+    />
+  );
+};
 
 const AboutMe = () => {
   return (

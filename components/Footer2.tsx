@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer2 = () => {
   return (
@@ -26,12 +27,15 @@ const Footer2 = () => {
               <h3 className="text-xl font-semibold mb-4">Address</h3>
               <p>Srinagar, India Office H NO 3. Qamarwari</p>
               <p>2nd Petrol Pump, Near City Mart 190017.</p>
+              <a
+              href='mailto:hi@shahidshahmiri.com'
+              >Email : hi@shahidshahmiri.com</a>
               <div className="flex justify-center md:justify-start space-x-4 mt-4">
-                <Link href="https://linkedin.com" className="text-[#2465F5] hover:text-blue-400">
+                <Link href="https://www.linkedin.com/in/shahidshahmiri/" className="text-[#2465F5] hover:text-blue-400">
                   <FaLinkedin size={24} />
                 </Link>
-                <Link href="https://twitter.com" className="text-[#2465F5] hover:text-blue-400">
-                  <FaTwitter size={24} />
+                <Link href="https://twitter.com/shahid_shahmiri" className="text-[#2465F5] hover:text-blue-400">
+                  <FaXTwitter size={24} />
                 </Link>
               </div>
             </div>

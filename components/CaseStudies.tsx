@@ -53,18 +53,15 @@ const CaseStudy = ({ title, description, imageSrc, link }) => {
     <div className="p-4">
       <div className="bg-[#3b3b3b] p-6 rounded-3xl shadow-lg">
         <div className="relative h-48 w-full mb-4 rounded-md overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl p-4">
-            <h3 className="text-lg font-semibold text-white">{title}</h3>
-          </div>
           <Image 
             src={imageSrc} 
             alt={title} 
             layout="fill" 
             objectFit="contain" 
-            className="rounded-3xl" 
+            className="rounded-xl" 
           />
         </div>
-        <h3 className="text-lg font-semibold text-left">{title}</h3>
+        <h3 className="text-lg font-semibold text-left text-white">{title}</h3>
         <p className="text-sm text-gray-300 mt-2 mb-2">{description}</p>
         <div className="text-left">
           <a

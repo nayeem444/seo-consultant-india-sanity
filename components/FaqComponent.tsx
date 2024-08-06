@@ -27,11 +27,11 @@ const FaqComponent = () => {
   };
 
   return (
-    <div className="mx-auto my-10 p-6 md:p-24">
-      <h2 className="absolute top-0 md:top-auto -mt-[80px] md:-mt-[130px] text-[40px] md:text-[100px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
+    <div className="max-w-4xl mx-auto my-10 p-6 md:p-24">
+      <h2 className=" -mt-[80px] md:-mt-[130px] text-[40px] md:text-[100px] font-bold text-[#55575A] opacity-[.2] pointer-events-none text-center w-full">
         FAQ's
       </h2>
-      <h2 className="text-2xl font-normal text-center md:text-left mb-6 -mt-12 md:-mt-0">Any Questions? Look Here</h2>
+      <h2 className="text-2xl font-normal text-center mb-6 -mt-12 md:-mt-0">Any Questions? Look Here</h2>
       <div className="space-y-4">
         {faqData.map((faq, index) => (
           <div key={index} className="border-b border-gray-700">

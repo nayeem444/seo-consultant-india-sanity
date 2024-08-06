@@ -57,9 +57,9 @@ const services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-[#323334] p-6 rounded-lg border border-blue-500"
+              className="bg-[#323334] p-6 rounded-lg border border-blue-500 text-center"
             >
-              <div className=" flex justify-start text-left mb-4">
+              <div className="flex justify-center mb-4">
                 <Image
                   src={service.imgSrc}
                   width={50}
@@ -67,10 +67,10 @@ const services = () => {
                   alt="image"
                 />
               </div>
-              <h3 className="text-2xl font-semibold mb-4 text-left">
+              <h3 className="text-2xl font-semibold mb-4">
                 {service.title}
               </h3>
-              <p className="text-left">{service.description}</p>
+              <p>{service.description}</p>
             </div>
           ))}
         </div>

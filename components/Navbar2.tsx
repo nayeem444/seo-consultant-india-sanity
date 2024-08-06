@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <nav className="bg-[#25282C] text-[#fff] font-montserrat relative  flex justify-between items-center px-4 md:px-16 border-b border-[#717171]">
       <a className="text-3xl font-bold leading-none ml-2 md:ml-4" href="/">
-        <Image src={img1} width={50} height={120} alt="logo" />
+        <Image src={img1} width={100} height={120} alt="logo" />
       </a>
       <div className="flex items-center">
         <div className="hidden lg:flex lg:items-center lg:space-x-12 mr-6">

@@ -77,7 +77,9 @@ const Hero2: React.FC = () => {
             </div>
   
             <div className="flex flex-col md:flex-row items-center justify-center md:justify-start mb-4">
-              <p className="mr-0 md:mr-2 mb-2 md:mb-0">Based on LinkedIn Reviews</p>
+              <a
+              href='https://www.linkedin.com/in/shahidshahmiri/details/recommendations/?detailScreenTabIndex=0'
+              className="mr-0 md:mr-2 mb-2 md:mb-0">Based on LinkedIn Reviews</a>
               <div className="flex">
                 <Image
                   src={stars}

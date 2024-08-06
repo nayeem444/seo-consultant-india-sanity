@@ -9,9 +9,8 @@ const clients = [
   { id: 1, src: '/assets/apexure-logo 1.svg', alt: 'Client 1' },
   { id: 2, src: '/assets/Beaconstac_Logo-removebg-preview 1.svg', alt: 'Client 2' },
   { id: 3, src: '/assets/fullfeel_logo_gradient_v1-2048x250 1.svg', alt: 'Client 3' },
-  { id: 4, src: '/assets/google-white-logo-1 1.svg', alt: 'Client 4' },
-  { id: 5, src: '/assets/Growthink-Logo-2020 1.svg', alt: 'Client 5' },
-  { id: 6, src: '/assets/logo-prospeo-removebg-preview 1.svg', alt: 'Client 6' },
+  { id: 4, src: '/assets/Growthink-Logo-2020 1.svg', alt: 'Client 5' },
+  { id: 5, src: '/assets/logo-prospeo-removebg-preview 1.svg', alt: 'Client 6' },
   // Add more clients as needed
 ];
 

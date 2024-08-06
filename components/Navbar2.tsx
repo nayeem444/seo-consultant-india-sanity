@@ -1,4 +1,3 @@
-// components/Navbar.js
 import { useEffect } from 'react';
 import Image from 'next/image';
 import img1 from '../public/ss (1).png';
@@ -43,9 +42,9 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-[#25282C] text-[#fff] font-montserrat relative h-20 py-8 flex justify-between items-center px-16 border-b border-[#717171]">
-      <a className="text-3xl font-bold leading-none ml-4" href="/">
-        <Image src={img1} width={120} height={120} alt="logo" />
+    <nav className="bg-[#25282C] text-[#fff] font-montserrat relative py-4 md:py-4 flex justify-between items-center px-4 md:px-16 border-b border-[#717171]">
+      <a className="text-3xl font-bold leading-none ml-2 md:ml-4" href="/">
+        <Image src={img1} width={50} height={120} alt="logo" />
       </a>
       <div className="flex items-center">
         <div className="hidden lg:flex lg:items-center lg:space-x-12 mr-6">
@@ -59,21 +58,14 @@ const Navbar = () => {
             Case Study
           </a>
         </div>
-        {/* <a
+        <a
           className="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
           href="/contact"
         >
           Get In Touch
-        </a> */}
-        <a
-              href="#"
-              className="inline-block bg-[#3B3B3B] border-2 border-blue-500 text-white rounded-full px-6 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 "
-              href="/contact"
-            >
-              Get In Touch
-            </a>
+        </a>
         <div className="lg:hidden">
-          <button className="navbar-burger flex items-center text-blue-600 p-3">
+          <button className="navbar-burger flex items-center text-blue-600 p-4">
             <svg
               className="h-6 w-6"
               xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +88,7 @@ const Navbar = () => {
         <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
         <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
           <div className="flex items-center mb-8">
-            <a className="mr-auto text-3xl font-bold leading-none" href="#">
+            <a className="mr-auto text-3xl font-bold leading-none" href="/">
               <Image src={img1} width={120} height={120} alt="logo" />
             </a>
             <button className="navbar-close">
@@ -137,14 +129,20 @@ const Navbar = () => {
               <li className="mb-1">
                 <a
                   className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                  href="/blog"
+                  href="/case-study"
                 >
-                  Blog
+                  Case Study
                 </a>
               </li>
             </ul>
           </div>
           <div className="mt-auto">
+            <a
+              href="/contact"
+              className="inline-block bg-[#3B3B3B] border-2 border-blue-500 text-white rounded-full px-6 py-2 hover:bg-blue-500 hover:text-white transition-colors duration-300 w-full text-center"
+            >
+              Get In Touch
+            </a>
             <p className="my-4 text-xs text-center text-gray-400">
               <span>Copyright © 2024</span>
             </p>

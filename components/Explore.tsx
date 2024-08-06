@@ -258,11 +258,11 @@ const SliderComponent = ({ items }) => {
                 className="rounded-3xl"
               />
             </div>
-            <h3 className="text-lg font-semibold text-left">{item.title}</h3>
-            <p className="text-sm text-gray-400 text-left py-2">
+            <h3 className="text-lg font-semibold text-center md:text-left">{item.title}</h3>
+            <p className="text-sm text-gray-400 text-center md:text-left py-2">
               Keyword: {item.keyword}
             </p>
-            <div className="text-left">
+            <div className="text-center md:text-left">
               <a
                 href={item.link}
                 className="inline-block bg-transparent border-[1px] border-blue-500 text-white rounded-full px-6 py-[4px] hover:bg-blue-500 hover:text-white transition-colors duration-300 mb-8"

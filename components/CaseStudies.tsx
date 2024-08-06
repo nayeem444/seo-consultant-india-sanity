@@ -61,9 +61,9 @@ const CaseStudy = ({ title, description, imageSrc, link }) => {
             className="rounded-xl" 
           />
         </div>
-        <h3 className="text-lg font-semibold text-left text-white">{title}</h3>
-        <p className="text-sm text-gray-300 mt-2 mb-2">{description}</p>
-        <div className="text-left">
+        <h3 className="text-lg font-semibold text-center md:text-left text-white">{title}</h3>
+        <p className="text-sm text-gray-300 mt-2 mb-2 text-center md:text-left">{description}</p>
+        <div className="text-center md:text-left">
           <a
             href={link}
             className="inline-block bg-transparent border-[1px] border-blue-500 text-white rounded-full px-6 py-[4px] hover:bg-blue-500 hover:text-white transition-colors duration-300 mb-8"

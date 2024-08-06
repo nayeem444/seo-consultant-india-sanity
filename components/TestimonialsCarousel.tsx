@@ -7,14 +7,14 @@ const testimonials = [
       'Shahid provided exceptional link building services and helped increase our domain ranking significantly. His expertise professionalism and clear communication made the process seamless and his efforts have established our brand as a reputable authority in our industry. We highly recommend Shahid for his outstanding service.',
     name: 'Jeremiah O Brian Emerge',
     title: 'Founder Emerge Global',
-    image: 'https://marketinglad.io/wp-content/uploads/2023/02/Ben-Goodey.png',
+    image: 'https://marketinglad.io/wp-content/uploads/2024/08/testi1.jpeg',
   },
   {
     quote:
       'Shahid have a deep knowledge of SEO and content marketing. Its been a complete pleasure working with him. He is proactive contributors who would make a great addition to any business. Communications are clear & frequent.',
     name: 'Arusik Ghambaryan',
     title: 'Marketer at Crowdfunding',
-    image: 'https://marketinglad.io/wp-content/uploads/2022/11/pic-1.jpg',
+    image: 'https://marketinglad.io/wp-content/uploads/2022/10/Arusik-Ghambaryan-SEO-TCF-min.jpeg',
   },
   {
     quote:

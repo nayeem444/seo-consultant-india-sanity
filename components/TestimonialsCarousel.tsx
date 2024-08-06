@@ -68,8 +68,8 @@ const TestimonialsCarousel = () => {
         </h2>
       </div>
       <div className="mt-24 py-12">
-        <p className="text-center mb-8 text-xl">
-          As An SEO Consultant My Competence Speaks For Itself - But My Clients
+        <p className="text-center font-semibold mb-8 text-4xl">
+          As An SEO Consultant My Competence Speaks For Itself<br/> - But My Clients
           Can Vouch For Me Too!
         </p>
         <div className="w-[80%] mx-auto">

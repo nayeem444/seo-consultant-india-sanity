@@ -53,7 +53,7 @@ const Hero2: React.FC = () => {
 
             <div className='text-[#C0C0C0] mt-8 md:mt-24 mb-4 flex flex-col md:flex-row items-center'>
               <p className='mr-0 md:mr-12 mt-2'>Certified SEO by</p>
-              <div className='flex'>
+              <div className='flex align-middle content-center'>
                 <Image src={Hubspot} width={100} height={100} alt="Hubspot" className='mr-4' />
                 <Image src={Google} width={100} height={100} alt="Google" />
               </div>

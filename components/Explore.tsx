@@ -170,8 +170,8 @@ const ExploreSection = () => {
           </h2>
         </div>
         <div className="pt-48">
-          <p className="-mt-20 text-3xl font-semibold">
-            Explore my content which achieves highrankings on Google
+          <p className="-mt-20 text-3xl font-semibold ">
+            Explore My Content Which Achieves High Rankings On Google
           </p>
           <div className="flex justify-center py-12">
             <Image

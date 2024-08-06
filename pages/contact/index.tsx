@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
-import { PopupButton } from 'react-calendly';
+import { InlineWidget } from "react-calendly";
 import CustomButton from '../../components/CustomButton';
 import Navbar from 'components/Navbar2';
 import Footer2 from 'components/Footer2';
@@ -16,12 +16,9 @@ const CalendlyPopupButton: React.FC = () => {
   if (!mounted) return null;
 
   return (
-    <PopupButton
-      url="https://calendly.com/shahmirishahid/seo-consultation"
-      rootElement={document.getElementById('__next')}
-      text="Book A Free Consultation Call"
-      className="bg-transparent border-2 border-blue-500 text-white rounded-full px-6 py-2 my-4 hover:bg-blue-500 hover:text-white transition-colors duration-300 z-50"
-    />
+    <div className="w-full -mt-16">
+      <InlineWidget url="https://calendly.com/shahmirishahid/seo-consultation" />
+    </div>
   );
 };
 
@@ -94,7 +91,7 @@ const Index = () => {
       <Navbar />
       <div className="min-h-screen px-4 py-8 sm:px-6 lg:px-8">
         <div className="relative text-center mx-4 my-8 md:mx-24">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-700 opacity-10 absolute inset-0 flex justify-center items-center">
+          <h1 className="text-8xl  font-bold text-gray-700 opacity-10 text-white absolute inset-0 flex justify-center items-center">
             Contact Me
           </h1>
           <h2 className="relative text-2xl md:text-3xl font-semibold pt-16 pb-2">
@@ -105,11 +102,11 @@ const Index = () => {
             Book a FREE 30-minute call for your website's visibility.
           </p>
         </div>
-        <div className="flex justify-center">
-          <CalendlyPopupButton />
-        </div>
-        <div className="flex justify-center">
-          <div className="w-full max-w-lg">
+        <div className="flex flex-wrap justify-center">
+          <div className="w-full md:w-1/2 p-4">
+            <CalendlyPopupButton />
+          </div>
+          <div className="w-full md:w-1/2 p-4">
             <form onSubmit={handleSubmit} className="bg-white p-8 shadow-md rounded-lg space-y-4">
               <div className="relative">
                 <input

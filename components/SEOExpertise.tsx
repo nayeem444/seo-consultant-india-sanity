@@ -33,7 +33,7 @@ const ExpertiseSection = () => {
       </div>
 
       <div className="container mx-auto px-4 lg:px-20 mt-12">
-        <h2 className="text-3xl md:text-4xl font-normal mb-8 text-center pt-4 pb-12">
+        <h2 className="text-3xl md:text-4xl font-semibold mb-8 text-center pt-4 pb-12">
           My Expertise As The SEO Consultant
         </h2>
 
@@ -81,24 +81,25 @@ const ExpertiseSection = () => {
           
           
         </div>
+        <div className="mt-12 md:mt-24 text-center">
+  <h3 className="text-4xl font-semibold mb-8">
+    Trusted SEO Consultant in India
+  </h3>
+</div>
 
-        <div className="mt-12 md:mt-24">
-          <h3 className="text-2xl font-normal mb-8 text-left">
-            Trusted SEO Consultant in India
-          </h3>
-        </div>
-        
-        <div>
-          <p className="mb-4">
-            As an SEO specialist, I understand that it can be difficult to trust someone on the internet claiming to be an expert. However, I have a proven track record of helping businesses develop successful digital strategies that increase rankings, drive quality traffic, and generate revenue.
-          </p>
-          <p className="mb-4">
-            My understanding of evolving search intent and data-driven approach helps me avoid penalties from core updates. I actively participate in industry events, webinars, and podcasts to share my knowledge and stay up-to-date on the latest SEO techniques and insights.
-          </p>
-          <div>
-            <CalendlyPopupButton />
-          </div>
-        </div>
+<div className="text-center mx-auto ">
+  <p className="mb-4">
+    As an SEO specialist, I understand that it can be difficult to trust someone on the internet claiming to be an expert. However, I have a proven track record of helping businesses develop successful digital strategies that increase rankings, drive quality traffic, and generate revenue.
+  </p>
+  <p className="mb-4">
+    My understanding of evolving search intent and data-driven approach helps me avoid penalties from core updates. I actively participate in industry events, webinars, and podcasts to share my knowledge and stay up-to-date on the latest SEO techniques and insights.
+  </p>
+  <div className="mt-8">
+    <CalendlyPopupButton />
+  </div>
+</div>
+
+       
       </div>
     </div>
   );

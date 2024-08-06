@@ -48,7 +48,7 @@ const services = () => {
           <h2 className="text-[40px] md:text-[150px] font-bold text-[#55575A] 78 opacity-10 absolute inset-0 flex justify-center items-center">
             SERVICES
           </h2>
-          <h2 className="pt-12 text-4xl font-normal mb-8 text-center">
+          <h2 className="pt-12 text-4xl font-semibold mb-8 text-center">
             What I Offer
           </h2>
         </div>

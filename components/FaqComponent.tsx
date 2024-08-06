@@ -31,7 +31,7 @@ const FaqComponent = () => {
       <h2 className=" -mt-[80px] md:-mt-[130px] text-[40px] md:text-[100px] font-bold text-[#55575A] opacity-[.2] pointer-events-none text-center w-full">
         FAQ's
       </h2>
-      <h2 className="text-2xl font-normal text-center mb-6 -mt-12 md:-mt-0">Any Questions? Look Here</h2>
+      <h2 className="text-4xl font-bold text-center mb-6 -mt-12 md:-mt-0">Any Questions? Look Here</h2>
       <div className="space-y-4">
         {faqData.map((faq, index) => (
           <div key={index} className="border-b border-gray-700">

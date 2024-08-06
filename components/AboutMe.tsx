@@ -41,7 +41,7 @@ const AboutMe = () => {
           </div>
         </div>
         <div className="md:w-1/2 pt-12 md:mt-0 md:pl-12 ">
-          <h2 className="text-3xl font-normal mb-4 text-center md:text-left">Best SEO Consultant In India</h2>
+          <h2 className="text-3xl  mb-4 text-center md:text-left font-semibold">Best SEO Consultant In India</h2>
           <p className="leading-relaxed mb-4 text-center md:text-left">
             As an experienced SEO consultant from India, I am specialized in driving organic growth and visibility for businesses of all sizes. With a focus on ethical SEO practices, I help businesses thrive online through sustainable and long-term strategies. I am readily available to address any questions or concerns you may have. Let me help your business succeed online.
           </p>

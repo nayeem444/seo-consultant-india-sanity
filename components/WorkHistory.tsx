@@ -7,9 +7,9 @@ const WorkHistory = () => {
     <section className="bg-[#25282C] text-white py-12">
       <div className="container mx-auto px-4">
         <div className="relative text-center">
-          <h1 className="text-[40px] md:text-[100px] font-bold text-gray-700 opacity-10 absolute inset-0 flex justify-center items-center">
+          <h2 className="text-[40px] md:text-[100px] font-bold text-gray-700 opacity-10 absolute inset-0 flex justify-center items-center">
             EXPERIENCE
-          </h1>
+          </h2>
           <h2 className="relative text-3xl font-semibold mb-12">
             Work History
           </h2>

@@ -47,13 +47,13 @@ export default function Home({discription ,title}) {
 {/*    
 <Header/>
 <Hero/>
-<ExitPopup/>
+
 <Caursal/>
 <About/>
 <Heading/>
 <Popular/>
 <Timeline/>
-<Calan/>
+
 <About2/>
 <Content/>
 <Service/>
@@ -73,6 +73,8 @@ export default function Home({discription ,title}) {
 <SEOExpertise/>
 <Services/>
 <MyBrands/>
+<Calan/>
+<ExitPopup/>
 <CaseStudies/>
 <FaqComponent/>
 <TestimonialsCarousel/>

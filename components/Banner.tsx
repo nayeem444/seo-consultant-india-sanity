@@ -30,9 +30,9 @@ const ExitPopup = () => {
   };
 
   return (
-    <section className="white-bg">
-      <div className="container">
-        <div className="">
+    <section className="bg-[#25282C]">
+     
+        <div className="bg-[#25282C]">
           <div>
             <Modal open={isOpen} onClose={closeModal} center>
               <section className="sm:mt-6 lg:mt-8 mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,7 +71,7 @@ const ExitPopup = () => {
             </Modal>
           </div>
         </div>
-      </div>
+     
     </section>
   );
 };

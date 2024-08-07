@@ -5,7 +5,7 @@ import googleRankCheckLogo from '../public/assets/a Marketing Lad Company 1.svg'
 const MyBrands = () => {
   return (
     <section className="bg-[#25282C] text-white p-6 md:p-24">
-      <h2 className="p-6 md:p-12 absolute top-0 md:top-auto -mt-[100px] md:-mt-[130px] text-[30px] md:text-[100px] font-bold text-[#55575A] opacity-[.2] pointer-events-none text-center w-full">
+      <h2 className="p-6 md:p-12 -ml-36 absolute top-0 md:top-auto -mt-[100px] md:-mt-[130px] text-[30px] md:text-[100px] font-bold text-[#55575A] opacity-[.2] pointer-events-none text-center w-full">
         MY BRANDS
       </h2>
       <div className="container mx-auto px-4 md:px-24 flex flex-col items-center text-center">

@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
+import NewsLetter from './NewsLetter';
 
 const Footer2 = () => {
   return (
     <div>
       <div className="bg-[#25282C] text-white px-6 md:px-48 py-2">
         <div className="max-w-7xl mx-auto py-8">
-          <div className="mb-8 text-center md:text-left">
+          {/* <div className="mb-8 text-center md:text-left">
             <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
               Subscribe To My Newsletter To Get Awesome SEO Tips.
             </h2>
@@ -21,7 +22,8 @@ const Footer2 = () => {
                 Subscribe
               </button>
             </div>
-          </div>
+          </div> */}
+          <NewsLetter/>
           <div className="flex flex-col md:flex-row justify-between text-center md:text-left">
             <div className="mb-8 md:mb-0">
               <h3 className="text-xl font-semibold mb-4">Address</h3>

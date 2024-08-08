@@ -54,10 +54,10 @@ const NewsLetter = () => {
   }
 
   return (
-    <section className="">
-      <div className="py-8 px-4 mx-auto max-w-screen-xl  lg:px-6">
+    <section className="flex justify-start">
+      <div className="py-8 px-4 mx-auto lg:px-6">
         <div className="mx-auto max-w-screen-md ">
-          <p className="mb-4  capitalize tracking-tight font-bold text-white sm:text-xl dark:text-white">
+          <p className="mb-4  capitalize tracking-tight font-bold text-white sm:text-xl dark:text-white justify-center flex">
             Subscribe to my newsletter to get awesome SEO tips.
           </p>
           <form method="POST">
@@ -81,9 +81,9 @@ const NewsLetter = () => {
                   </svg>
                 </div>
                 <input
-                  className={`w-full rounded-md border ${
+                  className={`w-full  rounded-tl-full	rounded-bl-full border ${
                     emailValid ? 'border-[#e0e0e0]' : 'border-red-500'
-                  } block p-3 pl-10 w-full text-sm text-gray-600 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500`}
+                  } block p-3 pl-10 w-full text-sm text-gray-600 bg-gray-50  border border-gray-300  focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500`}
                   placeholder="Enter your email"
                   type="email"
                   id="email"
@@ -96,7 +96,7 @@ const NewsLetter = () => {
               <div>
                 <button
                   type="submit"
-                  className="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                  className="py-3 px-5 w-full text-sm font-medium text-center text-white  rounded-tr-full rounded-br-full border border-slate-600 cursor-pointer bg-primary-700   hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                   onClick={(e) => handleSubmit(e)}
                   disabled={loading}
                 >

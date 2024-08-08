@@ -4,7 +4,7 @@ import Image from 'next/image'
 const testimonials = [
   {
     quote:
-      'Shahid provided exceptional link building services and helped increase our domain ranking significantly. His expertise professionalism and clear communication made the process seamless and his efforts have established our brand as a reputable authority in our industry. We highly recommend Shahid for his outstanding service.',
+      'Shahid delivered exceptional link-building services, significantly boosting our domain ranking. His expertise, professionalism, and clear communication made the process seamless, establishing our brand as a reputable authority. We highly recommend his service.',
     name: 'Jeremiah O Brian Emerge',
     title: 'Founder Emerge Global',
     image: 'https://marketinglad.io/wp-content/uploads/2024/08/testi1.jpeg',

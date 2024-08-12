@@ -7,6 +7,13 @@ module.exports = {
     './plugins/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    listStyleType: {
+      none: 'none',
+      disc: 'disc',
+      decimal: 'decimal',
+      square: 'square',
+      roman: 'upper-roman',
+    },
     extend: {
       
       // width: {

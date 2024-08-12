@@ -40,9 +40,7 @@ const index = () => {
                 It involves identifying and analyzing the search terms that your target audience<br />
                 uses when looking for products, services, or information related to your.
               </p>
-              <p className="p-2">
-                <span className="font-semibold">Category :</span> Keyword Research & Analysis
-              </p>
+           
               {/* <p className="p-2">
                 <span className="font-semibold">Date :</span> 12 May, 2024
               </p> */}

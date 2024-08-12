@@ -17,10 +17,10 @@ const index = () => {
         <div className="container mx-auto text-center px-4">
           <div className="relative flex justify-center">
             <h1 className="absolute text-[60px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none pt-12">
-              LeadGen
+              LeadGen App
             </h1>
             <p className="mt-36 md:mt-48 text-3xl font-semibold">
-            Increasing LeadGenApp's Search Impressions by 834% overall
+            Increasing LeadGen App's Search Impressions by 834% overall
             </p>
           </div>
           <div className="md:flex justify-between py-12 md:py-28">

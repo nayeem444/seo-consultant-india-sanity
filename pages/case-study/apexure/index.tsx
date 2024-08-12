@@ -178,7 +178,7 @@ const index = () => {
           </div>
         </div>
         <Banner />
-        {/* <Footer2 /> */}
+        <Footer2 />
       </div>
     </>
   )

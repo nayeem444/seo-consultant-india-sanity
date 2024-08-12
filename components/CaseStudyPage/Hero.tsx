@@ -56,7 +56,7 @@ const caseStudies = [
     link: '/case-study/prospeo'
   },
   {
-    title: 'LeadGen',
+    title: 'LeadGen App',
     description: 'Since October 2020, we have boosted LeadGenApp search traffic from 677K to 1.2M per month ',
     imageSrc: 'https://blog.shahidshahmiri.com/wp-content/uploads/2024/07/Screenshot-2024-07-19-at-4.05.23 PM.png',
     link: '/case-study/leadgen'

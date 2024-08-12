@@ -20,7 +20,7 @@ const index = () => {
               Apexure
             </h1>
             <p className="mt-36 md:mt-48 text-3xl font-semibold">
-              Explore my content which achieves high rankings on Google?
+            Increasing APEXURE's Search Clicks by 310%
             </p>
           </div>
           <div className="md:flex justify-between py-12 md:py-28">
@@ -41,11 +41,11 @@ const index = () => {
               <p className="p-2">
                 <span className="font-semibold">Category :</span> Keyword Research & Analysis
               </p>
-              <p className="p-2">
+              {/* <p className="p-2">
                 <span className="font-semibold">Date :</span> 12 May, 2024
-              </p>
+              </p> */}
               <p className="p-2">
-                <span className="font-semibold">Client :</span> John Smith
+                <span className="font-semibold">Client :</span> APEXURE
               </p>
             </div>
           </div>

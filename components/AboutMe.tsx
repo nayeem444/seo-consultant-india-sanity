@@ -46,7 +46,7 @@ const AboutMe = () => {
             As an experienced SEO consultant from India, I am specialized in driving organic growth and visibility for businesses of all sizes. With a focus on ethical SEO practices, I help businesses thrive online through sustainable and long-term strategies. I am readily available to address any questions or concerns you may have. Let me help your business succeed online.
           </p>
           <p className="leading-relaxed mb-6 text-center md:text-left">
-            I regularly provide recommendations and advice to some of the biggest <span className="text-blue-400">SEO communities</span>, groups, and social media platforms to keep up with the highly competitive search ecosystem and the latest SEO strategies. I also share many of these insights on my blog in great detail to ensure that my readers don’t miss out on anything important.
+            I regularly provide recommendations and advice to some of the biggest <span className="text-blue-400"> <a href="https://marketinglad.io/link-building-slack-community/"> SEO communities</a> </span>, groups, and social media platforms to keep up with the highly competitive search ecosystem and the latest SEO strategies. I also share many of these insights on my blog in great detail to ensure that my readers don’t miss out on anything important.
           </p>
           <div className="text-center md:text-left">
             <div

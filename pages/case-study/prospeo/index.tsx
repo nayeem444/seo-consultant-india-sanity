@@ -56,9 +56,17 @@ const index = () => {
           <div className="grid md:grid-cols-2 gap-8 p-12">
             <div>
               <h2 className="pl-8 py-4 font-medium text-2xl">Project Brief:</h2>
-              <p className="pl-8">
-                Prospeo, a cutting-edge email-finding tool designed for sales and marketing professionals, faced challenges in gaining online visibility and attracting its target audience. With an initial traffic of just 15 visitors and a Domain Rating (DR) of 2, Prospeo needed a robust strategy to improve its online presence and attract more users.
-              </p>
+              <div className="pl-8">
+                <ul className='list-disc'>
+                  <li>
+                  Prospeo, a cutting-edge email-finding tool designed for sales and marketing professionals, faced challenges in gaining online visibility and attracting its target audience.
+                  </li>
+                  <li>
+                  With an initial traffic of just 15 visitors and a Domain Rating (DR) of 2, Prospeo needed a robust strategy to improve its online presence and attract more users.
+                  </li>
+                </ul>
+                 
+              </div>
             </div>
             <div className="pt-8 md:pt-16">
               <div className="space-y-4">
@@ -89,21 +97,34 @@ const index = () => {
             </div>
             <div className="flex flex-col text-left">
               <h2 className="text-2xl font-medium p-2">Our approach:</h2>
-              <p className="p-2">
-                Our approach centred around enhancing Prospeo’s organic reach<br />
-                and authority through strategic SEO and link-building efforts.<br />
-                Key components of our strategy included:
-              </p>
+              <div className="p-2">
+                <ul className='list-disc'>
+                  <li>
+                  Our approach centred around enhancing Prospeo’s organic reach
+                and authority through strategic SEO and link-building efforts.
+                  </li>
+                  <li>
+                  Key components of our strategy included:
+                  </li>
+                </ul>
+      
+               
+              </div>
             </div>
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center py-12 space-y-8 md:space-y-0 md:space-x-12">
             <div className="flex flex-col text-left">
               <h2 className="text-2xl font-medium p-2">High-Quality Backlink Acquisition:</h2>
-              <p className="p-2">
-                Focused on securing 56+ high-authority links from websites <br />
+              <div className="p-2">
+                <ul className='list-disc'>
+                  <li>
+                  Focused on securing 56+ high-authority links from websites <br />
                 with an average DR of 64 to boost Prospeo’s <br />
                 domain authority and search rankings.
-              </p>
+                  </li>
+                </ul>
+              
+              </div>
             </div>
             <div className="flex justify-center md:justify-start">
               <Image
@@ -127,12 +148,20 @@ const index = () => {
             </div>
             <div className="flex flex-col text-left">
               <h2 className="text-2xl font-medium p-2">Execution:</h2>
-              <p className="p-2">
-                Over 8 months, we implemented a targeted link-building campaign,<br />
+              <div  className="p-2">
+                <ul className='list-disc'>
+                  <li>
+                  Over 8 months, we implemented a targeted link-building campaign,<br />
                 leveraging relationships with high-DR websites across relevant industries.<br />
-                This approach enhanced Prospeo’s backlink profile and overall SEO performance,<br />
+                  </li>
+                  <li>
+
+                  This approach enhanced Prospeo’s backlink profile and overall SEO performance,<br />
                 leading to significant gains in organic traffic and domain rating.
-              </p>
+                  </li>
+                </ul>
+               
+              </div>
             </div>
           </div>
         </div>

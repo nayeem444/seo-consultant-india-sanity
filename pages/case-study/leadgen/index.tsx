@@ -146,7 +146,7 @@ const index = () => {
               <h2 className="text-2xl font-medium p-2">Conclusion</h2>
               <div  className="p-2">
                 <ul className='list-disc'>
-                  <li>In conclusion, LeadGen App's struggles with domain rating, search impressions, and clicks were holding back their lead generation efforts.</li>
+                  <li>LeadGen App's struggles with domain rating, search impressions, and clicks were holding back their lead generation efforts.</li>
                   <li>Our team was able to help them overcome these challenges by implementing a comprehensive link building strategy that included building high-quality backlinks to their website.</li>
                   <li>As a result, LeadGen App saw a significant improvement in their search engine rankings, traffic, and conversions, which helped them grow their business and increase their revenue.</li>
                 </ul>

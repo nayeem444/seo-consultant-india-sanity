@@ -57,6 +57,11 @@ const Footer2 = () => {
                     Contact
                   </Link>
                 </li>
+                <li>
+                  <Link href="/seo-glossary" className="hover:text-gray-300">
+                  SEO Glossary
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

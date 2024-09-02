@@ -1,24 +1,9 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react"
 import Head from 'next/head';
-import Hero from '../components/HeroSection'
-import Header from '../components/Navbar'
-import About from '../components/About'
-import Contact from '../components/Contact'
-import Service from '../components/ServicesSection';
-import Testimonials from '../components/Testimonials';
-import Footer from '../components/Footer'
-import Caursal from '../components/CaursalLogos'
-import Timeline from "../components/Timeline";
-import Accordion from "../components/FaqSection";
-import Content from "../components/ContentSection";
 import Calan from "../components/PopUp";
-import Popular from "../components/PopularArticles";
-import Heading  from "../components/Headline";
 import Hero2 from "components/Hero2";
-import About2 from "components/About2";
 import ExitPopup from "components/Banner";
-import CaseStudy from "../components/caseStudy"
 import Navbar2 from "../components/Navbar2";
 import Clients from "components/Clients";
 import AboutMe from "components/AboutMe";

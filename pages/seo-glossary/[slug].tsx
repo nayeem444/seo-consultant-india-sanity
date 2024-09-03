@@ -58,3 +58,5 @@ const Page: React.FC<PageProps> = ({ content }) => {
 };
 
 export default Page;
+
+export { getAllSlugs };

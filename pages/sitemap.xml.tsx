@@ -1,5 +1,5 @@
 import { GetServerSideProps } from 'next';
-import { getAllSlugs } from '../pages/seo-glossary/[slug]'; // Adjust the import path as necessary
+import { getAllSlugs } from '../lib/pages'; // Adjust the import path as necessary
 
 const baseUrl = 'https://shahidshahmiri.com';
 

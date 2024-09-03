@@ -29,7 +29,7 @@ async function generateSiteMap() {
   ${dynamicSlugs
     .map((slug) => `
   <url>
-    <loc>${baseUrl}/${slug}</loc>
+    <loc>${baseUrl}/seo-glossary/${slug}</loc>
   </url>`
     )
     .join('')}

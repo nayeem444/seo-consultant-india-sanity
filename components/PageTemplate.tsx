@@ -16,7 +16,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({ content }) => (
 
       {content.questions.map((qa, index) => (
         <div key={index} className="mb-8">
-          <h2 className="text-xl font-semibold mb-4 md:text-2xl">{decodeHtml(qa.question)}</h2>
+          <h1 className="text-xl font-semibold mb-4 md:text-2xl">{decodeHtml(qa.question)}</h1>
           {Array.isArray(qa.answer) ? (
             qa.answer.map((paragraph, pIndex) => (
               <p key={pIndex} className="mb-4 text-sm sm:text-base">{decodeHtml(paragraph)}</p>

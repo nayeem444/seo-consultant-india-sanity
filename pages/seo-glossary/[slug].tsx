@@ -12,7 +12,7 @@ interface PageProps {
 export const getStaticPaths: GetStaticPaths = async () => {
   const slugs = await getAllSlugs();
   console.log('Available slugs:', slugs);
-  const paths = slugs.map(slug => ({
+  const paths = slugs.map((slug) => ({
     params: { slug },
   }));
 
@@ -43,20 +43,25 @@ const Page: React.FC<PageProps> = ({ content }) => {
     return <div>Loading...</div>;
   }
 
-  // Assuming `metaTitle` and `metaDescription` are available in your `content`
-  const { title, metaDescription } = content;
+  // Extracting necessary values from content
+  const { title, metaDescription, questions } = content;
+
+  // Getting the first question or falling back to the title
+  const firstQuestion = questions[0]?.question || title || 'Default Title';
 
   return (
     <>
       <Head>
-        <title>{title || 'Default Title'}</title>
+        <title>{firstQuestion}</title>
         <meta name="description" content={metaDescription || 'Default Description'} />
       </Head>
-      <PageTemplate content={content} />
+      <main className="px-4 py-6">
+        {/* Display the first question as the H1 heading */}
+       
+        <PageTemplate content={content} />
+      </main>
     </>
   );
 };
 
 export default Page;
-
-

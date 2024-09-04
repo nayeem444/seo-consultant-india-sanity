@@ -37,7 +37,7 @@ const MyBrands = () => {
               <Image
                 src={'/GRC_LOGO_ORANGE_GREY_WITHOUTBG.png'}
                 alt="Google Rank Check Logo"
-                width={200}
+                width={150}
                 height={100}
               />
             </a>

@@ -35,9 +35,9 @@ const MyBrands = () => {
           <div>
             <a href='https://googlerankcheck.com'>
               <Image
-                src={googleRankCheckLogo}
+                src={'/GRC_LOGO_ORANGE_GREY_WITHOUTBG.png'}
                 alt="Google Rank Check Logo"
-                width={300}
+                width={200}
                 height={100}
               />
             </a>

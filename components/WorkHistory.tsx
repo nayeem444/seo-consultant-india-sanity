@@ -29,7 +29,7 @@ const WorkHistory = () => {
                     clients with innovative strategies that propel their online
                     presence to new heights.
                   </li>
-                  <li>Key Achievements:</li>
+            
                   <li>
                     Pioneered result-oriented SEO campaigns, increasing organic
                     traffic by 200% for a diverse clientele.

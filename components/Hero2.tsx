@@ -60,8 +60,8 @@ const Hero2: React.FC = () => {
             </div>
           </div>
 
-          <div className="max-w-xl text-left mt-12 ml-0 md:ml-4 text-center md:text-left">
-            <h2 className="text-xl font-light mb-4">Hi,</h2>
+          <div className="max-w-xl text-left mt-4 ml-0 md:ml-4 text-center md:text-left">
+           
             <h2 className="text-xl mb-4">
               I Am Shahid{' '}
               <span className="font-bold text-white">

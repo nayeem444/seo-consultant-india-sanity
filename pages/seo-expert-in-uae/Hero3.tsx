@@ -65,11 +65,12 @@ const Hero2: React.FC = () => {
             <h2 className="text-xl mb-4">
             I’m Shahid,{' '}
               <span className="font-bold text-white">
-              an Expert SEO Consultant Based in the UAE.
+              an Expert SEO Consultant.
               </span>
             </h2>
             <p className="mb-8">
-            Your search for top-notch SEO expertise ends here. My proven strategies are designed to drive results, and the fact that you're reading this is the first step towards transforming your digital presence.
+            Your search for top-notch SEO expertise ends here. My proven strategies are designed to drive results, and the fact that you're reading this is a testament to the
+              effectiveness of my optimization strategies.
             </p>
             <div>
              <CalendlyPopupButton/>

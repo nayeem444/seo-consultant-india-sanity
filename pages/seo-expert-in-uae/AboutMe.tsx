@@ -43,7 +43,7 @@ const AboutMe = () => {
         <div className="md:w-1/2 pt-12 md:mt-0 md:pl-12 ">
           <h2 className="text-3xl  mb-4 text-center md:text-left font-semibold">Top SEO Consultant in the UAE</h2>
           <p className="leading-relaxed mb-4 text-center md:text-left">
-          As a seasoned SEO consultant based in the UAE, I specialize in driving organic growth and increasing online visibility for businesses of all sizes. My approach focuses on ethical, sustainable SEO practices that deliver long-term results. I'm always available to address your questions and help your business thrive in the competitive digital landscape.
+           I specialize in driving organic growth and increasing online visibility for businesses of all sizes. My approach focuses on ethical, sustainable SEO practices that deliver long-term results. I'm always available to address your questions and help your business thrive in the competitive digital landscape.
           </p>
           <p className="leading-relaxed mb-6 text-center md:text-left">
           I regularly provide expert advice to leading SEO communities, groups, and social media platforms to stay ahead of the ever-evolving search ecosystem. I also share valuable insights on my blog to ensure my readers are equipped with the latest SEO strategies.

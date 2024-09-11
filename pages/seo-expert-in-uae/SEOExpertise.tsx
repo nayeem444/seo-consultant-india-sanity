@@ -89,7 +89,7 @@ const ExpertiseSection = () => {
 
 <div className="text-center mx-auto ">
   <p className="mb-4">
-  As an SEO specialist, I understand that placing your trust in someone online can be challenging. However, my proven track record of helping businesses craft successful digital strategies speaks for itself—boosting rankings, driving quality traffic, and increasing revenue.  </p>
+   I understand that placing your trust in someone online can be challenging. However, my proven track record of helping businesses craft successful digital strategies speaks for itself—boosting rankings, driving quality traffic, and increasing revenue.  </p>
   <p className="mb-4">
   With a deep understanding of evolving search intent and a data-driven approach, I ensure your site stays protected from penalties due to core updates. I regularly participate in industry events, webinars, and podcasts to share insights and stay at the forefront of the latest SEO techniques.
   </p>

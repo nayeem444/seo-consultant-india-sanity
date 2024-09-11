@@ -39,6 +39,18 @@ const Footer2 = () => {
                 </Link>
               </div>
             </div>
+          
+            <div className="px-12">
+              <h3 className="text-xl font-semibold mb-4">Locations</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/seo-expert-in-uae" className="hover:text-gray-300">
+                  UAE
+                  </Link>
+                </li>
+               
+              </ul>
+            </div>
             <div className="px-12">
               <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">

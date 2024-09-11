@@ -13,7 +13,7 @@ import SEOExpertise from "./SEOExpertise";
 import Services from "components/services";
 import MyBrands from "components/MyBrands";
 import CaseStudies from "components/CaseStudies";
-import FaqComponent from "components/FaqComponent";
+import FaqComponent from "./FaqComponent";
 import TestimonialsCarousel from "components/TestimonialsCarousel";
 import Footer2 from "components/Footer2";
 
@@ -52,8 +52,8 @@ export default function Home({discription ,title}) {
   
 }
 export async function getStaticProps() {
-  const description = " Looking for the #1 SEO consultant in India? My proven tactics drive traffic and increase revenue. Schedule a Free consultation.";
-  const title = "Shahid Shahmiri - Your Expert SEO Consultant in India"
+  const description = " Looking for the #1 SEO consultant in UAE? My proven tactics drive traffic and increase revenue. Schedule a Free consultation.";
+  const title = "Shahid Shahmiri - Your Expert SEO Consultant in UAE"
   return {
       props: { description,title }, // Pass the description to the component
     };

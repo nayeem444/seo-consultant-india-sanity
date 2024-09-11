@@ -2,21 +2,43 @@ import { useState } from 'react';
 
 const faqData = [
   {
-    question: "Why Hire an SEO Expert for Your Business?",
-    answer: "In the competitive UAE market, a strong online presence is essential for reaching and engaging with customers. Hiring an SEO expert offers these key benefits:Boost Brand Awareness: Enhance your website’s visibility and build trust with potential customers.Generate More Leads: SEO attracts organic leads, leading to increased sales and revenue.Increase Sales: Higher search engine rankings draw in active customers, boosting your sales potential.Stay Ahead of Competitors: Effective SEO keeps you ahead in a competitive market, giving you an edge over competitors."
+    question: "How much does SEO cost in Dubai?",
+    answer: [
+      "The cost of SEO services in Dubai varies depending on several factors, such as the scope of the project, the SEO agency's experience, and the business's specific goals.", 
+      "On average, monthly SEO packages can range from AED 3,000 to AED 15,000 or more.",
+      "For small businesses, basic SEO services may cost around AED 3,000 to AED 6,000 per month, while more comprehensive or enterprise-level SEO campaigns can exceed AED 15,000 per month. Some agencies may also offer one-time SEO audits or specific services at a lower rate."
+    ]
   },
-  { question: "Who is the Best SEO Expert in the UAE?", 
-  answer: "Shahid Shahmiri, a leading SEO expert in the UAE, has made a significant impact by partnering with renowned brands such as Unacademy, BeconStac, LeadGen App, and more. Shahid’s expertise in scaling marketing and SEO efforts ensures remarkable growth and helps businesses stand out from the competition." },
-  { question: "How Much Do SEO Services Cost in the UAE?", 
-  answer: "SEO service costs in the UAE vary based on project complexity, duration, and expertise. On average, hourly rates range from AED 1,000 to AED 3,000, while monthly retainers start around AED 12,000. For precise pricing, discuss your specific needs with SEO professionals and consultants." },
-  { question: "Benefits of Hiring an SEO Expert", 
-  answer: "Hiring an SEO expert offers:Cost-Effective Online Promotion: Maximize your online marketing budget.Precise Audience Tracking: Understand and target your audience effectively.Organic Lead Generation: Attract leads without relying on paid ads.High Conversion Rates: Improve your website’s ability to convert visitors into customers.Increased Brand Visibility: Enhance your online presence and brand recognition." },
-  { question: "What Are the Benefits of Choosing My SEO Services?", 
-  answer: "Here are some benefits of choosing my SEO services:Generate a Large Number of Leads: My strategies drive high-quality traffic to your site, resulting in more leads.ncreased Sales: Achieving top Google rankings attracts more consumers, boosting your sales potential.Online Reputation Management: I focus on not just SEO, but also maintaining and enhancing your business’s online reputation." },
-  { question: "Can the Assistance of SEO Experts Be Beneficial?",
-  answer: "Yes, SEO experts are crucial for achieving brand recognition and trust in the UAE market. Their expertise helps elevate your company’s online identity, significantly enhancing your brand's presence and credibility." },
-  { question: "How Much Does It Cost to Hire an SEO Consultant?", 
-  answer: "The cost to hire an SEO consultant in the UAE depends on factors like project scope, industry, and expertise. Hourly rates can range from AED 400 to AED 1,100+, while project-based fees start around AED 3,500. For a precise quote, discuss your specific needs with an SEO consultant. Investing in SEO brings long-term benefits for your online visibility and business growth." },
+  { 
+    question: "How much do SEO experts charge?", 
+    answer: [
+      "SEO experts typically charge based on their experience, the complexity of the project, and the client's goals. ",
+      "Hourly rates can range from $75 to $200 or more. ",
+      "For project-based pricing, small to medium-sized projects may cost between $1,000 to $5,000, while larger or more complex SEO campaigns can exceed $10,000. ",
+      "Monthly retainer fees, which are common, range from $1,500 to $10,000+ depending on the scope of work and the expertise required."
+    ]
+  },
+  { 
+    question: "How Much Do SEO Services Cost in the UAE?", 
+    answer: [
+        "An SEO expert in the UAE typically offers various services, including keyword research, on-page and off-page optimization, technical SEO audits, content strategy, local SEO, link-building campaigns, and performance tracking. ",
+        "They also help businesses enhance their website's visibility on search engines like Google and optimize for UAE-specific market trends."
+         ]
+  },
+  { 
+    question: "What services does an SEO expert in the UAE offer?", 
+    answer: [
+      "An SEO expert in the UAE typically offers various services, including keyword research, on-page and off-page optimization, technical SEO audits, content strategy, local SEO, link-building campaigns, and performance tracking.",
+      "They also help businesses enhance their website's visibility on search engines like Google and optimize for UAE-specific market trends."
+    ]
+  },
+  { 
+    question: "How do I choose the right SEO expert in the UAE?", 
+    answer: [
+        "When selecting an SEO expert in the UAE, consider their experience, knowledge of local market trends, client reviews, and proven track record. ",
+        "It's important to ask for case studies or past results to ensure they have successfully worked with businesses similar to yours. Choose an expert who communicates clearly and offers a transparent SEO strategy. Book a call to learn more about how I can help your SEO campaign."
+  ]
+  },
 ];
 
 const FaqComponent = () => {
@@ -28,7 +50,7 @@ const FaqComponent = () => {
 
   return (
     <div className="max-w-4xl mx-auto my-10 p-6 md:p-24">
-      <h2 className=" -mt-[80px] md:-mt-[130px] text-[40px] md:text-[100px] font-bold text-[#55575A] opacity-[.2] pointer-events-none text-center w-full">
+      <h2 className="-mt-[80px] md:-mt-[130px] text-[40px] md:text-[100px] font-bold text-[#55575A] opacity-[.2] pointer-events-none text-center w-full">
         FAQ's
       </h2>
       <h2 className="text-4xl font-bold text-center mb-6 -mt-12 md:-mt-0">Any Questions? Look Here</h2>
@@ -44,7 +66,9 @@ const FaqComponent = () => {
             </button>
             {activeIndex === index && (
               <div className="py-2 text-gray-300">
-                <p>{faq.answer}</p>
+                {faq.answer.map((paragraph, pIndex) => (
+                  <p key={pIndex} className="mb-2">{paragraph}</p>
+                ))}
               </div>
             )}
           </div>

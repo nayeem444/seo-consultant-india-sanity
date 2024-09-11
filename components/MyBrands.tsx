@@ -12,9 +12,9 @@ const MyBrands = () => {
         <h2 className="text-4xl md:text-3xl font-semibold mb-4 md:mb-6">
           My Brands
         </h2>
-        <h3 className="text-lg md:text-xl font-normal mb-2 md:mb-4">
+        {/* <h3 className="text-lg md:text-xl font-normal mb-2 md:mb-4">
           Trusted SEO Consultant in India
-        </h3>
+        </h3> */}
         <p className="text-base md:text-lg mb-6 md:mb-8">
           I'm the founder of Marketing Lad and Google Rank Check. Our intuitive
           SaaS

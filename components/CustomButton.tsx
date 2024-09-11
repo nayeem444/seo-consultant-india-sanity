@@ -20,7 +20,7 @@ const CalendlyPopupButton = () => {
     }, []);
 
     const openCalendlyPopup = () => {
-        const calendlyUrl = 'https://calendly.com/shahmirishahid/seo-consultation';
+        const calendlyUrl = 'https://calendly.com/d/cpjz-pkk-k6k';
         
         // Check if Calendly is loaded
         if (window.Calendly) {

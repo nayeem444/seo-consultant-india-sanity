@@ -17,7 +17,7 @@ const CalendlyPopupButton: React.FC = () => {
 
   return (
     <div className="w-full -mt-16">
-      <InlineWidget url="https://calendly.com/shahmirishahid/seo-consultation" />
+      <InlineWidget url="https://calendly.com/d/cpjz-pkk-k6k" />
     </div>
   );
 };

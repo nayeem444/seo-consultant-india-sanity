@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import { InlineWidget } from "react-calendly";
 import CustomButton from '../../components/CustomButton';
+import Clients from 'components/Clients';
+import TestimonialsCarousel from 'components/TestimonialsCarousel';
 import Navbar from 'components/Navbar2';
 import Footer2 from 'components/Footer2';
 import Image from 'next/image';
@@ -190,6 +192,9 @@ const Index = () => {
           </div>
         </div>
       </div>
+      <TestimonialsCarousel/>
+      <Clients/>
+    
       <Footer2 />
     </>
   );

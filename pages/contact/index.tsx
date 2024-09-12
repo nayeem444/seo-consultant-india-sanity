@@ -64,7 +64,7 @@ const Index = () => {
 
     try {
       await emailjs.send(
-        'service_4vvzs8s', // Your EmailJS service ID
+        'service_9msgoem', // Your EmailJS service IDservice_9msgoem
         'template_sj37i4q', // Your EmailJS template ID
         templateParams,
         '2KVJi6pnykS-hRjpk' // Your EmailJS user ID

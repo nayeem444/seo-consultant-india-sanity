@@ -12,7 +12,7 @@ const CalendlyPopupButton: React.FC = () => {
 
   return (
     <PopupButton
-      url="https://calendly.com/shahmirishahid/seo-consultation"
+    url="https://calendly.com/d/cpjz-pkk-k6k"
       rootElement={document.getElementById("__next")}
       text="Book A Free Consultation Call"
       className="bg-transparent border-2 border-white-500 text-white rounded-full px-6 py-2 my-4 hover:bg-blue-500 hover:text-white transition-colors duration-300"

@@ -64,10 +64,10 @@ const Index = () => {
 
     try {
       await emailjs.send(
-        'service_9msgoem', // Your EmailJS service IDservice_9msgoem
-        'template_sj37i4q', // Your EmailJS template ID
+        'service_svfqs4q', // Your EmailJS service IDservice_9msgoem
+        'template_4gf7hec', // Your EmailJS template ID
         templateParams,
-        '2KVJi6pnykS-hRjpk' // Your EmailJS user ID
+        'DdtunyfAGpJ-a2X2L' // Your EmailJS user ID
       );
 
       console.log('Email sent successfully');

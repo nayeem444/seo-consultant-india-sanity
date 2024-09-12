@@ -10,7 +10,8 @@ const staticPages = [
   '/case-study',
   '/case-study/prospeo',
   '/case-study/leadgen',
-  '/case-study/apexure'
+  '/case-study/apexure',
+  '/seo-expert-in-uae'
 ];
 
 async function generateSiteMap() {

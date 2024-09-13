@@ -6,11 +6,13 @@ import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { useEffect } from 'react';
-import ReactGA from 'react-ga';
 import { initGA, logPageView } from '../utils/analytics';
 import { ThemeProvider, useTheme } from '../contexts/ThemeContext';
 
-function AppContent({ Component, pageProps }: AppProps<{ token: string; title?: string; description?: string }>) {
+function AppContent({
+  Component,
+  pageProps,
+}: AppProps<{ token: string; title?: string; description?: string }>) {
   const router = useRouter();
   const { isDarkMode } = useTheme();
 
@@ -38,11 +40,18 @@ function AppContent({ Component, pageProps }: AppProps<{ token: string; title?: 
       <Head>
         <link rel="canonical" href={`https://shahidshahmiri.com${router.asPath}`} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
         {pageProps.title && <title>{pageProps.title}</title>}
-        {pageProps.description && <meta name="description" content={pageProps.description} />}
+        {pageProps.description && (
+          <meta name="description" content={pageProps.description} />
+        )}
       </Head>
-      <main className={`font-montserrat ${isDarkMode ? 'bg-[#25282C] text-white' : 'bg-[#25282C] text-white'}`}>
+      <main
+        className={`font-montserrat ${isDarkMode ? 'bg-[#25282C] text-white' : 'bg-[#25282C] text-white'}`}
+      >
         {pageProps.title && !router.pathname.startsWith('/blog/') && (
           <h1 className="visually-hidden">{pageProps.title}</h1>
         )}
@@ -50,10 +59,12 @@ function AppContent({ Component, pageProps }: AppProps<{ token: string; title?: 
           <p className="visually-hidden">{pageProps.description}</p>
         )}
         <Component {...pageProps} />
+
+        {/* Google Analytics Script */}
         <Script
           id="google-analytics"
           strategy="lazyOnload"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-6B4YEN9B05`}
+          src="https://www.googletagmanager.com/gtag/js?id=G-6B4YEN9B05"
         />
         <Script
           strategy="lazyOnload"
@@ -63,6 +74,21 @@ function AppContent({ Component, pageProps }: AppProps<{ token: string; title?: 
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-6B4YEN9B05');
+            `,
+          }}
+        />
+
+        {/* Clarity Script */}
+        <Script
+          id="clarity-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "o2f572dzct");
             `,
           }}
         />

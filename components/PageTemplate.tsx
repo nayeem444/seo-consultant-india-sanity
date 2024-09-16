@@ -4,6 +4,7 @@ import { decodeHtml } from '../utils/htmlDecoder';
 import Navbar from './Navbar2';
 import Footer2 from './Footer2';
 
+
 interface PageTemplateProps {
   content: PageContent;
 }

@@ -8,6 +8,7 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import { initGA, logPageView } from '../utils/analytics';
 import { ThemeProvider, useTheme } from '../contexts/ThemeContext';
+import Calan from 'components/PopUp';
 
 function AppContent({
   Component,
@@ -59,6 +60,7 @@ function AppContent({
           <p className="visually-hidden">{pageProps.description}</p>
         )}
         <Component {...pageProps} />
+        <Calan />
 
         {/* Google Analytics Script */}
         <Script

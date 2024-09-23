@@ -22,11 +22,11 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="mx-auto bg-[#25282C] text-white font-montserrat relative w-full border-b border-[#717171] max-w-6xl">
+    <nav className="mx-auto bg-[#25282C] text-white font-montserrat relative w-full border-b border-[#717171] max-w-7xl">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex-shrink-0">
-            <Image src={img1} width={180} height={90} alt="logo" className="h-8 w-auto" />
+            <Image src={img1} width={200} height={90} alt="logo" className="h-8 w-auto" />
           </Link>
           <div className="flex items-center">
             <div className="hidden lg:flex lg:items-center lg:space-x-8">

@@ -133,9 +133,7 @@ const SeoCheckList: React.FC = () => {
     </li>
   </ul>
   
-    <div className="mt-8 flex justify-center">
-     <PaymentButton/> 
-  </div>
+   
     </div>
   </div>
 <Banner/>

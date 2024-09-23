@@ -10,7 +10,7 @@ interface PageTemplateProps {
 }
 
 const PageTemplate: React.FC<PageTemplateProps> = ({ content }) => (
-  <div className="flex flex-col min-h-screen max-w-6xl mx-auto">
+  <div className="flex flex-col min-h-screen max-w-8xl mx-auto">
     <Navbar />
     <main className="flex-grow px-4 pt-20 pb-4 sm:px-8 md:px-16 lg:px-32 xl:px-56">
       {/* <h1 className="text-3xl font-bold mb-6">{content.title}</h1> */}

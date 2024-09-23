@@ -30,7 +30,7 @@ const ExitPopup = () => {
   };
 
   return (
-    <section className="bg-[#25282C]">
+    <section className="bg-[#25282C] max-w-8xl">
      
         <div className="bg-[#25282C]">
           <div>

@@ -6,7 +6,7 @@ import img3 from '../public/Images/pic-1.jpg'
 
 const testimonials = () => {
   return (
-    <section className=" mx-auto bg-white py-12  sm:py-16 lg:py-20 max-w-6xl">
+    <section className=" mx-auto bg-white py-12  sm:py-16 lg:py-20 max-w-8xl">
       <div className="mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center">
           <div className="text-center">

@@ -162,7 +162,7 @@ const ExploreSection = () => {
   ]
 
   return (
-    <div className="mx-auto bg-[#25282C] text-white py-4 max-w-6xl">
+    <div className="mx-auto bg-[#25282C] text-white py-4 max-w-8xl">
       <div className="container mx-auto text-center">
         <div className="flex justify-center">
           <h2 className="absolute text-[60px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">

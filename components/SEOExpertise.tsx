@@ -25,7 +25,7 @@ const CalendlyPopupButton: React.FC = () => {
 
 const ExpertiseSection = () => {
   return (
-    <div className="mx-auto bg-[#25282C] text-white max-w-6xl">
+    <div className="mx-auto bg-[#25282C] text-white max-w-8xl">
       <div className="flex justify-center relative">
         <h2 className="absolute top-0 md:top-auto -mt-[50px] text-[40px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
           EXPERTISE
@@ -62,7 +62,7 @@ const ExpertiseSection = () => {
             </p>
           </div>
           
-          <div className="lg:w-1/2 flex  mt-8 lg:mt-0 flex-col  ">
+          <div className="lg:w-1/2 flex  mt-8 lg:mt-0 flex-col  ml-8 ">
             <Image
               src={Img1}
               alt="SEO Consultant"

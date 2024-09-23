@@ -28,10 +28,10 @@ const CalendlyPopupButton: React.FC = () => {
 
 const Hero2: React.FC = () => {
   return (
-    <div className=" mx-auto bg-[#25282C] text-white min-h-fit flex justify-center py-4 sm:py-8 max-w-6xl items-center max-w-7xl">
+    <div className=" mx-auto bg-[#25282C] text-white min-h-fit flex justify-center py-4 sm:py-8  items-center max-w-8xl">
       <div className="relative z-10 mx-auto items-center w-full px-2 sm:px-4 md:px-8 ">
-        <div className="flex justify-center text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-[#55575A] pt-4 sm:pt-8 mb-4 sm:mb-8 opacity-[.2]">
-          <h2 className="text-center">SHAHID SHAHMIRI</h2>
+        <div className="flex justify-center  sm:text-4xl md:text-5xl lg:text-7xl font-bold text-[#55575A] pt-4 sm:pt-8 mb-4 sm:mb-8 opacity-[.2]">
+          <h2 className="text-center lg:text-8xl">SHAHID SHAHMIRI</h2>
         </div>
 
         <div className=" flex flex-col lg:flex-row items-center lg:mx-4 xl:mx-16">

@@ -42,7 +42,7 @@ const services = () => {
   ]
 
   return (
-    <section className="mx-auto bg-[#25282C] py-16 text-white max-w-6xl" id='services'>
+    <section className="mx-auto bg-[#25282C] py-16 text-white max-w-8xl" id='services'>
       <div className="container mx-auto px-4">
         <div className="relative text-center">
           <h2 className="text-[40px] md:text-[150px] font-bold text-[#55575A] 78 opacity-10 absolute inset-0 flex justify-center items-center">

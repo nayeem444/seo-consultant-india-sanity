@@ -27,7 +27,7 @@ const FaqComponent = () => {
   };
 
   return (
-    <div className=" mx-auto my-10 p-6 md:p-24 max-w-6xl">
+    <div className=" mx-auto my-10 p-6 md:p-24 max-w-8xl">
       <h2 className=" -mt-[80px] md:-mt-[130px] text-[40px] md:text-[100px] font-bold text-[#55575A] opacity-[.2] pointer-events-none text-center w-full max-w-6xl">
         FAQ's
       </h2>

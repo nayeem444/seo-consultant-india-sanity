@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Head from 'next/head';
 import { Search, Link,ImagePlus , FileText, Database, BarChart, Smartphone, Zap, Download } from 'lucide-react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -7,18 +8,26 @@ import 'slick-carousel/slick/slick-theme.css';
 import Navbar from 'components/Navbar2';
 import PaymentButton from 'components/PaymentButton';
 import Footer2 from 'components/Footer2';
+import { title } from 'process';
 
 
 
 const SeoCheckList: React.FC = () => {
+  
+  const metaKeywords = "Your On-Page SEO Success with My Proven Checklist";
   return (
     <>
+     <Head>
+        <title>Your On-Page SEO Success with My Proven Checklist</title>
+        <meta name="description" content="Simplify your on-page SEO process with my proven checklist. Learn the exact steps to optimize your website for better Google ranking." />
+        <meta name="keywords" content={metaKeywords} />
+      </Head>
     <Navbar/>
     <div className="text-white py-24 px-4 sm:px-6 lg:px-8 mx-auto max-w-6xl">
   <div className="max-w-7xl mx-auto flex flex-col items-center lg:flex-row lg:items-center lg:justify-between">
     <div className="w-full lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left">
       <h1 className="text-4xl sm:text-5xl font-bold mb-4 leading-[49px]">
-        Your On-Page SEO Success with My Proven Checklist.
+      Your On-Page SEO Success with My Proven Checklist
       </h1>
       <p className="text-xl mb-6">
         Are you tired of optimizing every tiny detail on your website just to rank on Google?
@@ -27,7 +36,7 @@ const SeoCheckList: React.FC = () => {
         My On-Page SEO Checklist simplifies the process, allowing you to focus on the factors that truly matter—based on real-world results.
       </p>
       <div className="flex justify-center lg:justify-start">
-        <PaymentButton />
+        <PaymentButton customerName={''} customerEmail={''} customerContact={''} />
       </div>
     </div>
     <div className="w-full lg:w-1/2">
@@ -56,7 +65,7 @@ const SeoCheckList: React.FC = () => {
         Whether you’re an SEO professional or a business owner, this checklist gives you the actionable steps to boost your website's visibility and outrank your competition.
       </p>
       <div className="mt-8 flex justify-center">
-        <PaymentButton />
+        <PaymentButton customerName={''} customerEmail={''} customerContact={''} />
       </div>
     </div>
   </div>
@@ -66,7 +75,7 @@ const SeoCheckList: React.FC = () => {
 
   <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between py-12 gap-12">
         <div className="lg:w-1/2 mb-8 lg:mb-0 mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-semibold mb-4 leading-[49px]">Why Should you Trust me?</h1>
+          <h2 className="text-4xl sm:text-5xl font-semibold mb-4 leading-[49px]">Why Should you Trust me?</h2>
           <p className="text-xl mb-6">
           I’m a seasoned SEO expert with a proven track record of helping websites climb to the top of search rankings. My methods aren’t theoretical—they’re practical, tested, and have delivered tangible results for various businesses. 
           </p>
@@ -74,7 +83,7 @@ const SeoCheckList: React.FC = () => {
           
           Websites I’ve optimized are consistently ranking for competitive keywords, driving significant traffic, and converting visitors into customers. When you use my checklist, you’re leveraging the exact strategies I’ve used to achieve these successes.
           </p>
-        <PaymentButton/>
+        <PaymentButton customerName={''} customerEmail={''} customerContact={''}/>
         </div>
         <div className="lg:w-1/2">
           <div className="relative w-full h-64 sm:h-80 lg:h-96">
@@ -102,9 +111,9 @@ const SeoCheckList: React.FC = () => {
 
 <div className="text-center">
   <p className="mb-4 lg:mx-48 text-xl">
-  For just $20, you’re not only getting a checklist—you’re gaining access to the exact tactics I’ve used to get multiple websites to rank on the first page of Google.Apply these proven methods to your site and see the results for yourself.  </p>
+  For just $20, you’re not only getting a checklist—you’re gaining access to the exact tactics I’ve used to get multiple websites to rank on the first page of Google. Apply these proven methods to your site and see the results for yourself.  </p>
     <div className="mt-8 flex justify-center">
-         <PaymentButton/>    
+         <PaymentButton customerName={''} customerEmail={''} customerContact={''}/>    
   </div>
     </div>
   </div>
@@ -313,10 +322,10 @@ interface CardProps {
 const Banner = () => {
   return (
     <div className='bg-gray-900 flex justify-center h-3/5 align-middle items-center flex-col py-8'>
-        <h1 className='text-center text-5xl font-semibold pt-8'>
+        <h2 className='text-center text-5xl font-semibold pt-8'>
         Ready To Take Your SEO To <br/>
         The Next Level
-        </h1>
+        </h2>
         <p className='text-center text-xl'>
         Effective SEO strategies not only elevate a website's visibility but also drive<br/>
         targeted traffic, enhance user experience,

@@ -24,7 +24,7 @@ const caseStudies = [
 
 const CaseStudies = () => {
   return (
-    <div className="mx-auto bg-[#25282C] max-w-6xl">
+    <div className="mx-auto bg-[#25282C] max-w-8xl">
       <div className="flex justify-center relative">
         <h2 className="absolute top-0 md:top-auto -mt-[50px] text-[40px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
           CASE STUDY
@@ -51,7 +51,7 @@ export default CaseStudies;
 const CaseStudy = ({ title, description, imageSrc, link }) => {
   return (
     <div className="p-4">
-      <div className="bg-[#3b3b3b] p-6 rounded-3xl shadow-lg max-w-6xl">
+      <div className="bg-[#3b3b3b] p-6 rounded-3xl shadow-lg max-w-8xl">
         <div className="relative h-48 w-full mb-4 rounded-md overflow-hidden">
           <Image 
             src={imageSrc} 

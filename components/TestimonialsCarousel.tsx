@@ -204,10 +204,10 @@ const TestimonialsSection: React.FC = () => {
 
         {/* Main Content - Active Testimonial */}
         <div className="md:w-2/3 pl-0 md:pl-4">
-          <blockquote className="text-lg md:text-2xl font-semibold mb-4">
+          <blockquote className="text-lg md:text-xl font-small mb-4">
             "{activeTestimonial.content}"
           </blockquote>
-          <div className="flex items-center">
+          {/* <div className="flex items-center">
             <Image
               width={200}
               height={200}
@@ -221,7 +221,7 @@ const TestimonialsSection: React.FC = () => {
                 {activeTestimonial.role} at {activeTestimonial.company}
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react"
 import Head from 'next/head';
+import Link from "next/link";
 import Calan from "../../components/PopUp";
 import Hero2 from "./Hero3";
 import ExitPopup from "components/Banner";
@@ -26,7 +27,26 @@ export default function Home({discription ,title}) {
            
         <meta name="description" content=" Looking for the #1 SEO consultant in UAE? My proven tactics drive traffic and increase revenue. Schedule a Free consultation." />
         <link rel="canonical" href="https://shahidshahmiri.com/" />
-        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              "name": "Shahid Shahmiri SEO Expert in UAE",
+              "url": "https://shahidshahmiri.com/seo-expert-in-uae",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "AE",
+                "addressLocality": "Dubai",
+                "addressRegion": "Dubai"
+              },
+              "areaServed": "AE"
+            })
+          }}
+        />
+        <Link rel="alternate" hrefLang="en-ae" href="https://shahidshahmiri.com/seo-expert-in-uae" />
+      
       </Head>
    <SpeedInsights/>
 

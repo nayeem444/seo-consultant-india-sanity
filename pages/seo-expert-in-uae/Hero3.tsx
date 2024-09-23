@@ -41,7 +41,7 @@ const Hero2: React.FC = () => {
       {/* Content */}
       <div className="relative z-10  items-center w-full px-4 md:px-8 max-w-6xl mx-auto">
         {/* Title */}
-        <div className="flex justify-center text-4xl md:text-8xl font-bold text-[#55575A] pt-8 mb-8 opacity-[.2]">
+        <div className="flex justify-center text-xl md:text-8xl font-bold text-[#55575A] pt-8 mb-8 opacity-[.2]">
           <h2>SHAHID SHAHMIRI</h2>
         </div>
 

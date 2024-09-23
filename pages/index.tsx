@@ -26,6 +26,25 @@ export default function Home({discription ,title}) {
            
         <meta name="description" content=" Looking for the #1 SEO consultant in India? My proven tactics drive traffic and increase revenue. Schedule a Free consultation." />
         <link rel="canonical" href="https://shahidshahmiri.com/" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              "name": "Shahid Shahmiri SEO Expert Consultant in India",
+              "url": "https://shahidshahmiri.com/",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "AE",
+                "addressLocality": "Dubai",
+                "addressRegion": "Dubai"
+              },
+              "areaServed": "AE"
+            })
+          }}
+        />
         
       </Head>
    <SpeedInsights/>

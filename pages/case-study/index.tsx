@@ -4,7 +4,7 @@ import Banner from 'components/CaseStudyPage/Banner'
 
 const index = () => {
   return (
-    <div>
+    <div className='max-w-6xl mx-auto'>
         <Hero/>
     </div>
   )

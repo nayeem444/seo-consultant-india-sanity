@@ -13,7 +13,7 @@ const index = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-[#25282C] min-h-screen text-white pt-4 flex flex-col">
+      <div className="bg-[#25282C] min-h-screen text-white pt-4 flex flex-col max-w-6xl mx-auto">
         <div className="container mx-auto text-center px-4">
           <div className="relative flex justify-center">
             <h1 className="absolute text-[60px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none pt-12">

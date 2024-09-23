@@ -18,7 +18,7 @@ const CalendlyPopupButton: React.FC = () => {
   if (!mounted) return null;
 
   return (
-    <div className="w-full -mt-16">
+    <div className="w-full -mt-16 max-w-6xl mx-auto">
       <InlineWidget url="https://calendly.com/d/cpjz-pkk-k6k" />
     </div>
   );
@@ -91,7 +91,7 @@ const Index = () => {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen px-4 py-8 sm:px-6 lg:px-8">
+      <div className="min-h-screen px-4 py-8 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div className="relative text-center mx-4 my-8 md:mx-24">
           <h1 className="text-8xl  font-bold text-gray-700 opacity-10 text-white absolute inset-0 flex justify-center items-center">
             Contact Me

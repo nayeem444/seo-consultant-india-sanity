@@ -25,7 +25,7 @@ const CalendlyPopupButton: React.FC = () => {
 
 const ExpertiseSection = () => {
   return (
-    <div className="bg-[#25282C] text-white">
+    <div className="bg-[#25282C] text-white max-w-6xl mx-auto">
       <div className="flex justify-center relative">
         <h2 className="absolute top-0 md:top-auto -mt-[50px] text-[40px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
           EXPERTISE

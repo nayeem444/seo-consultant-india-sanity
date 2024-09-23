@@ -32,7 +32,7 @@ const CalendlyPopupButton = () => {
     };
 
     return (
-        <div>
+        <div className='max-w-6xl mx-auto'>
             <button onClick={openCalendlyPopup}>Book A Free Consultation Call</button>
         </div>
     );

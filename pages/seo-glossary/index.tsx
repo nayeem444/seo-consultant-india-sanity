@@ -63,7 +63,7 @@ const GlossaryPage: React.FC = () => {
   return (
     <>
     
-    <div className="min-h-screen bg-[#25282C] text-white font-sans">
+    <div className="min-h-screen bg-[#25282C] text-white font-sans max-w-6xl mx-auto">
       <Head>
       <title>{'SEO Glossary, SEO Terms'}</title>
         <meta name="description" content={' Comprehensive SEO glossary with detailed definitions from A to Z, covering essential terms and concepts.'} />

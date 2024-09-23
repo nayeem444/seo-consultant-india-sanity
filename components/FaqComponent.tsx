@@ -27,8 +27,8 @@ const FaqComponent = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto my-10 p-6 md:p-24">
-      <h2 className=" -mt-[80px] md:-mt-[130px] text-[40px] md:text-[100px] font-bold text-[#55575A] opacity-[.2] pointer-events-none text-center w-full">
+    <div className=" mx-auto my-10 p-6 md:p-24 max-w-6xl">
+      <h2 className=" -mt-[80px] md:-mt-[130px] text-[40px] md:text-[100px] font-bold text-[#55575A] opacity-[.2] pointer-events-none text-center w-full max-w-6xl">
         FAQ's
       </h2>
       <h2 className="text-4xl font-bold text-center mb-6 -mt-12 md:-mt-0">Any Questions? Look Here</h2>

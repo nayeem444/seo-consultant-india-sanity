@@ -26,7 +26,7 @@ const CalendlyPopupButton: React.FC = () => {
 
 const AboutMe = () => {
   return (
-    <section className="relative bg-[#25282C] text-white pt-12 overflow-hidden flex justify-start" id='about'>
+    <section className="max-w-6xl mx-auto relative bg-[#25282C] text-white pt-12 overflow-hidden flex justify-start" id='about'>
       <div className="max-w-6xl mx-auto px-6 md:flex md:items-center relative z-10">
         <div className="flex justify-center md:w-1/2">
           <div className="relative">

@@ -4,7 +4,7 @@ const WorkHistory = () => {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <section className="bg-[#25282C] text-white py-12">
+    <section className="mx-auto bg-[#25282C] text-white py-12 max-w-6xl">
       <div className="container mx-auto px-4">
         <div className="relative text-center">
           <h2 className="text-[40px] md:text-[100px] font-bold text-gray-700 opacity-10 absolute inset-0 flex justify-center items-center">

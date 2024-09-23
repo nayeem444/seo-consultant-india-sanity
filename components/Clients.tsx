@@ -51,7 +51,7 @@ const Clients = () => {
   };
 
   return (
-    <div className="h-1/4 bg-[#191B1D] py-8">
+    <div className="mx-auto h-1/4 bg-[#191B1D] py-8 max-w-6xl">
       <div className="max-w-6xl mx-auto text-center">
         <p className="text-[#C0C0C0] mb-8">Clients I've Worked With</p>
         <Slider {...settings}>

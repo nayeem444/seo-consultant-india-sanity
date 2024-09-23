@@ -61,9 +61,9 @@ const TestimonialsCarousel = () => {
   }
 
   return (
-    <div className="bg-[#25282C] text-white">
+    <div className=" mx-auto bg-[#25282C] text-white max-w-6xl">
       <div className="flex justify-center">
-        <h2 className="absolute top-0 md:top-auto -mt-[50px] text-[40px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
+        <h2 className="absolute top-0 md:top-auto -mt-[50px] text-[40px] md:text-[130px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
           TESTIMONIAL
         </h2>
       </div>

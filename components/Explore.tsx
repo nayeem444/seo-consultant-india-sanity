@@ -162,7 +162,7 @@ const ExploreSection = () => {
   ]
 
   return (
-    <div className="bg-[#25282C] text-white py-4">
+    <div className="mx-auto bg-[#25282C] text-white py-4 max-w-6xl">
       <div className="container mx-auto text-center">
         <div className="flex justify-center">
           <h2 className="absolute text-[60px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
@@ -241,8 +241,8 @@ const SliderComponent = ({ items }) => {
   return (
     <Slider {...settings}>
       {items.map((item, index) => (
-        <div key={index} className="p-4">
-          <div className="bg-[#3b3b3b] p-6 rounded-3xl shadow-lg">
+        <div key={index} className="p-4 max-w-6xl">
+          <div className="bg-[#3b3b3b] p-6 rounded-3xl shadow-lg max-w-6xl">
             <div className="relative h-48 w-full mb-4 rounded-md overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl p-4">
                 <h3 className="text-lg font-semibold text-white">

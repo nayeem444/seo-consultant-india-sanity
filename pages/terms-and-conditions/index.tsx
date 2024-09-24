@@ -108,8 +108,8 @@ const TermsAndConditionsPage = () => {
           <p className="text-gray-700">
             If you have any questions about these Terms and Conditions, please contact us at:
             <br />
-            <a href="mailto:legal@seoconsultant.com" className="text-blue-500 hover:underline">
-              legal@seoconsultant.com
+            <a href="mailto:hi@shahidshahmiri.com" className="text-blue-500 hover:underline">
+            hi@shahidshahmiri.com
             </a>
           </p>
         </motion.div>

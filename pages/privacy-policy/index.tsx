@@ -76,8 +76,8 @@ const PrivacyPolicyPage = () => {
           <p className="text-gray-700">
             If you have any questions about this Privacy Policy, please contact us at:
             <br />
-            <a href="mailto:privacy@seoconsultant.com" className="text-blue-500 hover:underline">
-              privacy@seoconsultant.com
+            <a href="mailto:hi@shahidshahmiri.com" className="text-blue-500 hover:underline">
+            hi@shahidshahmiri.com
             </a>
           </p>
         </motion.div>

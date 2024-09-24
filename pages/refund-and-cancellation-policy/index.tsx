@@ -99,8 +99,8 @@ const RefundCancellationPage = () => {
           <p className="text-gray-700">
             If you have any questions about our Refund and Cancellation Policy, please contact us at:
             <br />
-            <a href="mailto:support@seoconsultant.com" className="text-blue-500 hover:underline">
-              support@seoconsultant.com
+            <a href="mailto:hi@shahidshahmiri.com" className="text-blue-500 hover:underline">
+            hi@shahidshahmiri.com
             </a>
           </p>
         </motion.div>

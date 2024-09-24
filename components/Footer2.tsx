@@ -29,6 +29,16 @@ const Footer2 = () => {
               <h3 className="text-xl font-semibold mb-4">Address</h3>
               <p>Srinagar, India Office H NO 3. Qamarwari</p>
               <p>2nd Petrol Pump, Near City Mart 190017.</p>
+
+              <div  className='my-4'>
+              <p>UAE Office Al Rawdhat, Al Sunbullah Street,</p>
+              <p>Al Neem Abu Dhabi</p>
+              </div>
+            
+
+
+
+
               <a href='mailto:hi@shahidshahmiri.com'>Email : hi@shahidshahmiri.com</a>
               <div className="flex justify-center md:justify-start space-x-4 mt-4">
                 <Link href="https://www.linkedin.com/in/shahidshahmiri/" className="text-[#2465F5] hover:text-blue-400">

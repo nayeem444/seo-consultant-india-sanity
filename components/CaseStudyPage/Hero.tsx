@@ -10,9 +10,9 @@ const Hero = () => {
   return (
     <>
       <Navbar/>
-      <div className="bg-[#25282C] min-h-screen text-white pt-12">
+      <div className="bg-[#25282C] min-h-screen text-white pt-12 max-w-7xl">
         <div className="flex justify-center align-middle px-4 md:px-0">
-          <h1 className="absolute lg:mt-24 text-4xl md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
+          <h1 className="absolute lg:mt-24 text-4xl md:text-[120px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
             CASE STUDIES
           </h1>
           <p className="mt-36 text-xl md:text-4xl mx-4 md:mx-48 font-bold leading-snug md:leading-[50px]">

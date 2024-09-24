@@ -27,10 +27,15 @@ const Footer2 = () => {
           <div className="flex flex-col md:flex-row justify-between text-center md:text-left">
             <div className="mb-8 md:mb-0">
               <h3 className="text-xl font-semibold mb-4">Address</h3>
+              <div>
+                <p className='font-bold'>India Office</p>
               <p>Srinagar, India Office H NO 3. Qamarwari</p>
               <p>2nd Petrol Pump, Near City Mart 190017.</p>
+              </div>
+              
 
               <div  className='my-4'>
+              <p className='font-bold'>UAE Office</p>
               <p>UAE Office Al Rawdhat, Al Sunbullah Street,</p>
               <p>Al Neem Abu Dhabi</p>
               </div>

@@ -4,26 +4,26 @@ import { PopupButton } from 'react-calendly';
 import Img1 from '../../public/Images/shahid2.jpg';
 import Img2 from '../../public/Images/explore.webp';
 
-const CalendlyPopupButton: React.FC = () => {
-  const [mounted, setMounted] = React.useState(false);
-  const [rootElement, setRootElement] = React.useState<HTMLElement | null>(null);
+// const CalendlyPopupButton: React.FC = () => {
+//   const [mounted, setMounted] = React.useState(false);
+//   const [rootElement, setRootElement] = React.useState<HTMLElement | null>(null);
 
-  React.useEffect(() => {
-    setMounted(true);
-    setRootElement(document.getElementById("__next"));
-  }, []);
+//   React.useEffect(() => {
+//     setMounted(true);
+//     setRootElement(document.getElementById("__next"));
+//   }, []);
 
-  if (!mounted || !rootElement) return null;
+//   if (!mounted || !rootElement) return null;
 
-  return (
-    <PopupButton
-      url="https://calendly.com/d/cpjz-pkk-k6k"
-      rootElement={rootElement}
-      text="Book A Free Consultation Call"
-      className="bg-transparent border-2 border-blue-500 text-white rounded-full px-6 py-2 my-4 hover:bg-blue-500 hover:text-white transition-colors duration-300"
-    />
-  );
-};
+//   return (
+//     <PopupButton
+//       url="https://calendly.com/d/cpjz-pkk-k6k"
+//       rootElement={rootElement}
+//       text="Book A Free Consultation Call"
+//       className="bg-transparent border-2 border-blue-500 text-white rounded-full px-6 py-2 my-4 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+//     />
+//   );
+// };
 
 
 const ExpertiseSection = () => {
@@ -96,9 +96,9 @@ const ExpertiseSection = () => {
   <p className="mb-4">
   With a deep understanding of evolving search intent and a data-driven approach, I ensure your site stays protected from penalties due to core updates. I regularly participate in industry events, webinars, and podcasts to share insights and stay at the forefront of the latest SEO techniques.
   </p>
-  <div className="mt-8">
+  {/* <div className="mt-8">
     <CalendlyPopupButton />
-  </div>
+  </div> */}
 </div>
 
        

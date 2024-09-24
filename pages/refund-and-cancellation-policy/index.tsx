@@ -22,7 +22,7 @@ const CancellationRefundPolicyPage: React.FC = () => {
         <div className="px-6 py-8">
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 flex items-center">
-              <FileText className="mr-2 text-purple-600" size={24} />
+              <FileText className="mr-2 text-blue-600" size={24} />
               1. Introduction
             </h2>
             <p className="text-gray-700">
@@ -32,7 +32,7 @@ const CancellationRefundPolicyPage: React.FC = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 flex items-center">
-              <XCircle className="mr-2 text-purple-600" size={24} />
+              <XCircle className="mr-2 text-blue-600" size={24} />
               2. Service Cancellation
             </h2>
             <div className="space-y-4">
@@ -55,7 +55,7 @@ const CancellationRefundPolicyPage: React.FC = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 flex items-center">
-              <RotateCcw className="mr-2 text-purple-600" size={24} />
+              <RotateCcw className="mr-2 text-blue-600" size={24} />
               3. Refund Policy
             </h2>
             <div className="space-y-4">
@@ -78,7 +78,7 @@ const CancellationRefundPolicyPage: React.FC = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 flex items-center">
-              <CreditCard className="mr-2 text-purple-600" size={24} />
+              <CreditCard className="mr-2 text-blue-600" size={24} />
               4. Payment Disputes
             </h2>
             <div className="space-y-4">
@@ -99,7 +99,7 @@ const CancellationRefundPolicyPage: React.FC = () => {
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 flex items-center">
-              <Mail className="mr-2 text-purple-600" size={24} />
+              <Mail className="mr-2 text-blue-600" size={24} />
               5. Contact Information
             </h2>
             <p className="text-gray-700">
@@ -109,7 +109,7 @@ const CancellationRefundPolicyPage: React.FC = () => {
 
           <section>
             <h2 className="text-2xl font-semibold mb-4 flex items-center">
-              <Edit className="mr-2 text-purple-600" size={24} />
+              <Edit className="mr-2 text-blue-600" size={24} />
               6. Changes to This Policy
             </h2>
             <p className="text-gray-700">

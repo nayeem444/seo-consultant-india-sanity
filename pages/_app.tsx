@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 import { initGA, logPageView } from '../utils/analytics';
 import { ThemeProvider, useTheme } from '../contexts/ThemeContext';
 import Calan from 'components/PopUp';
-import ErrorBoundary from 'components/ErrorBoundary';
+
 
 function AppContent({
   Component,
@@ -103,9 +103,9 @@ function AppContent({
 function App(props: AppProps<{ token: string; title?: string; description?: string }>) {
   return (
     <ThemeProvider>
-      <ErrorBoundary>
+      
       <AppContent {...props} />
-      </ErrorBoundary>
+    
     </ThemeProvider>
   );
 }

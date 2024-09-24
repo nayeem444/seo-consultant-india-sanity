@@ -52,7 +52,7 @@ export default function Home({discription ,title}) {
 
 
 <Navbar2/>
-<Hero2/>
+{/* <Hero2/> */}
 <Clients/>
 <AboutMe/>
 <Explore/>

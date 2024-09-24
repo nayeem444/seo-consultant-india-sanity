@@ -32,7 +32,7 @@ export default function Home({ description, title }) {
         <Link rel="alternate" hrefLang="en-ae" href="https://shahidshahmiri.com/seo-expert-in-uae" />
       </Head>
 
-      {/* Use Next.js Script component to inject JSON-LD */}
+      {/* Use Next.js Script component to inject JSON-LD
       <Script
         id="json-ld"
         type="application/ld+json"
@@ -52,7 +52,7 @@ export default function Home({ description, title }) {
             "areaServed": "AE"
           })
         }}
-      />
+      /> */}
 
       <SpeedInsights />
 

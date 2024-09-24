@@ -53,7 +53,7 @@ export default function Home({discription ,title}) {
 
 <Navbar2/>
 <Hero2/>
-{/* <Clients/> */}
+{/* <Clients/>
 <AboutMe/>
 <Explore/>
 <WorkHistory/>
@@ -65,7 +65,7 @@ export default function Home({discription ,title}) {
 <CaseStudies/>
 <FaqComponent/>
 <TestimonialsCarousel/>
-<Footer2/>
+<Footer2/> */}
    </>
   )
 

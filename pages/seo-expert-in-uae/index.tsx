@@ -22,9 +22,6 @@ import ErrorBoundary from "components/ErrorBoundary";
 export default function Home({discription ,title}) {
   return ( 
    <>
-   <ErrorBoundary>
-    
-   
     <Head>
     <Analytics/>
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -56,7 +53,7 @@ export default function Home({discription ,title}) {
 
 
 <Navbar2/>
-<Hero2/>
+{/* <Hero2/>
 <Clients/>
 <AboutMe/>
 <Explore/>
@@ -69,8 +66,7 @@ export default function Home({discription ,title}) {
 <CaseStudies/>
 <FaqComponent/>
 <TestimonialsCarousel/>
-<Footer2/>
-</ErrorBoundary>
+<Footer2/> */}
    </>
   )
 

@@ -15,7 +15,7 @@ const Hero = () => {
           <h1 className="absolute lg:mt-24 text-4xl md:text-[120px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
             CASE STUDIES
           </h1>
-          <p className="mt-36 text-xl md:text-4xl mx-4 md:mx-48 font-bold leading-snug md:leading-[50px]">
+          <p className="mt-36 text-xl md:text-4xl mx-4 md:mx-48 font-bold leading-snug md:leading-[50px] text-center">
             Success Stories with DR Growth from 0 to 70 and Lead Increase Up to
             90% - Results Speak for Themselves
           </p>

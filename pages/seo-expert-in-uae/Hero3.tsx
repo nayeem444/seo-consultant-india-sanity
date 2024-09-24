@@ -11,7 +11,7 @@ import Google from '../../public/assets/google-white-logo-1 1.svg'
 
 const CalendlyPopupButton: React.FC = () => {
     const [mounted, setMounted] = React.useState(false);
-  
+
     useEffect(() => {
       setMounted(true);
     }, []);

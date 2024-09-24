@@ -17,12 +17,10 @@ import CaseStudies from "components/CaseStudies";
 import FaqComponent from "./FaqComponent";
 import TestimonialsCarousel from "components/TestimonialsCarousel";
 import Footer2 from "components/Footer2";
-import ErrorBoundary from "components/ErrorBoundary";
 
 export default function Home({discription ,title}) {
   return ( 
    <>
-
     <Head>
     <Analytics/>
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -54,7 +52,6 @@ export default function Home({discription ,title}) {
 
 
 <Navbar2/>
-<ErrorBoundary>
 <Hero2/>
 <Clients/>
 <AboutMe/>
@@ -68,7 +65,6 @@ export default function Home({discription ,title}) {
 <CaseStudies/>
 <FaqComponent/>
 <TestimonialsCarousel/>
-</ErrorBoundary>
 <Footer2/>
    </>
   )

@@ -114,7 +114,7 @@ const Footer2 = () => {
        © 2024 Shahid Shahmiri. All rights reserved.
         </span> 
         <span className='ml-4' >Powered by  
-         <a className='ml-2' href='https://marketinglad.io/'> 
+         <a className='ml-2 font-bold' href='https://marketinglad.io/'> 
          Marketing Lad
           </a> 
           </span>

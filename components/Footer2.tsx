@@ -74,6 +74,26 @@ const Footer2 = () => {
                   SEO Glossary
                   </Link>
                 </li>
+                <li>
+                  <Link href="/privacy-policy">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/refund-and-cancellation-policy">
+                    Refund and Cancellation Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="terms-and-conditions">
+                    Terms and Conditions
+                  </Link>
+                </li>
+                <li>
+                  <Link href="shipping-and-delivery-policy">
+                    Shipping and Delivery Policy
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

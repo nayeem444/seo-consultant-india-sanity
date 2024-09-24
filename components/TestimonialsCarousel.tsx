@@ -175,7 +175,13 @@ const TestimonialsSection: React.FC = () => {
   const [activeTestimonial, setActiveTestimonial] = useState<Testimonial>(testimonials[0]);
 
   return (
-    <div className="bg-gray-900 text-white p-8 rounded-3xl mx-auto max-w-7xl">
+    <>
+     <div className="flex justify-center mb-36">
+        <h2 className="absolute top-0 md:top-auto -mt-[50px] text-[40px] md:text-[130px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
+         TESTIMONIALS
+       </h2>
+      </div>
+<div className="bg-gray-900 text-white p-8 rounded-3xl mx-auto max-w-7xl">
       <div className="flex flex-col md:flex-row">
         {/* Sidebar - Testimonial List */}
         <div className="md:w-1/3 pr-0 md:pr-4 mb-4 md:mb-0">
@@ -215,6 +221,8 @@ const TestimonialsSection: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
+   
   );
 };
 

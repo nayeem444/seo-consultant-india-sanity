@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import Head from 'next/head';
 import Link from "next/link";
+import Script from 'next/script'; // Import Next.js Script component
 import Calan from "../../components/PopUp";
 import Hero2 from "./Hero3";
 import ExitPopup from "components/Banner";
@@ -21,15 +21,6 @@ import Footer2 from "components/Footer2";
 import ErrorBoundary from "components/ErrorBoundary";
 
 export default function Home({ description, title }) {
-  const [rendered, setRendered] = useState(false);
-
-  // Ensure this is run only once on the client side
-  useEffect(() => {
-    if (!rendered) {
-      setRendered(true);
-    }
-  }, [rendered]);
-
   return (
     <>
       <Head>
@@ -38,31 +29,30 @@ export default function Home({ description, title }) {
 
         <meta name="description" content={description} />
         <link rel="canonical" href="https://shahidshahmiri.com/" />
-
-        {/* Render JSON-LD script only once on the client side */}
-        {rendered && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "ProfessionalService",
-                "name": "Shahid Shahmiri SEO Expert in UAE",
-                "url": "https://shahidshahmiri.com/seo-expert-in-uae",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressCountry": "AE",
-                  "addressLocality": "Dubai",
-                  "addressRegion": "Dubai"
-                },
-                "areaServed": "AE"
-              }),
-            }}
-          />
-        )}
-
         <Link rel="alternate" hrefLang="en-ae" href="https://shahidshahmiri.com/seo-expert-in-uae" />
       </Head>
+
+      {/* Use Next.js Script component to inject JSON-LD */}
+      <Script
+        id="json-ld"
+        type="application/ld+json"
+        strategy="afterInteractive" // Ensures script runs after page is interactive
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "Shahid Shahmiri SEO Expert in UAE",
+            "url": "https://shahidshahmiri.com/seo-expert-in-uae",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "AE",
+              "addressLocality": "Dubai",
+              "addressRegion": "Dubai"
+            },
+            "areaServed": "AE"
+          })
+        }}
+      />
 
       <SpeedInsights />
 

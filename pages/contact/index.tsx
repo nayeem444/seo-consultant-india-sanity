@@ -96,9 +96,15 @@ const Index = () => {
           <h1 className="text-8xl  font-bold text-gray-700 opacity-10 text-white absolute inset-0 flex justify-center items-center">
             Contact Me
           </h1>
-          <h2 className="relative text-2xl md:text-3xl font-semibold pt-16 pb-2">
+          <div className="relative text-2xl md:text-3xl font-semibold pt-16 pb-2 pt-48">
+
+          <h2 >
             Get Help with SEO Management and Link Building
           </h2>
+          </div >
+
+
+         
           <p className="relative">
             Need expert assistance with SEO management and link-building? I'm here to help!
             Book a FREE 30-minute call for your website's visibility.

@@ -176,7 +176,7 @@ const TestimonialsSection: React.FC = () => {
 
   return (
     <>
-     <div className="flex justify-center mb-36">
+     <div className="flex justify-center mb-36 ">
         <h2 className="absolute top-0 md:top-auto -mt-[50px] text-[40px] md:text-[130px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
          TESTIMONIALS
        </h2>

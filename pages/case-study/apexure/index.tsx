@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import Navbar from 'components/Navbar2'
 import Image from 'next/image'
 import { CheckCircleIcon } from '@heroicons/react/24/solid'

@@ -15,8 +15,13 @@ import Img3 from '../../../public/assets/caseStudy/execution.png'
 const index = () => {
   return (
     <>
+
+<Head>
+        <title>Case Study | Apexure</title>
+        <meta name="description" content="Discover how Aegis Softtech achieved exceptional SEO growth in just 5 months, increasing users by 463% and leads by 460%." />
+      </Head>
       <Navbar />
-      <div className="bg-[#25282C] min-h-screen text-white pt-4 flex flex-col max-w-6xl mx-auto">
+      <div className="bg-[#25282C] min-h-screen text-white pt-4 flex flex-col max-w-8xl mx-auto">
         <div className="container mx-auto text-center px-4">
           <div className="relative flex justify-center">
             <h1 className="absolute text-[60px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none pt-12">

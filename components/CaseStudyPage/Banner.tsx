@@ -22,7 +22,7 @@ const CalendlyPopupButton: React.FC = () => {
 
 const Banner = () => {
   return (
-    <div className='bg-[#2465F5] flex justify-center h-3/5 align-middle items-center flex-col py-4'>
+    <div className='bg-[#2465F5] flex justify-center h-3/5 align-middle items-center flex-col py-4 max-w-8xl'>
         <h1 className='text-center text-5xl font-semibold pt-8'>
         Ready To Take Your SEO To <br/>
         The Next Level

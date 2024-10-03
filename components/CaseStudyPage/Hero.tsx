@@ -66,6 +66,12 @@ const caseStudies = [
     description: 'Apexure online presence has soared with our successful link building campaign. We achieved a DR 48 Domain Rating ',
     imageSrc: 'https://blog.shahidshahmiri.com/wp-content/uploads/2024/07/Screenshot-2024-07-19-at-3.59.27 PM.png',
     link: '/case-study/apexure'
+  },
+  {
+    title: 'Aegis Softtech',
+    description: 'Offshore Software Development Company',
+    imageSrc: '/assets/Agaes.png',
+    link: '/case-study/aegissofttech'
   }
 ];
 

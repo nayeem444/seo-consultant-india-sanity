@@ -80,8 +80,8 @@ export default function PaymentButton({
   // Function to download the existing PDF after payment
   const initiateDownload = () => {
     const link = document.createElement('a');
-    link.href = '/sample.pdf'; // Replace this with the actual path to your PDF file
-    link.download = 'sample.pdf'; // Set the file name for the downloaded file
+    link.href = '/On-Page SEO Checklist - SS.pdf'; // Replace this with the actual path to your PDF file
+    link.download = 'On-Page SEO Checklist - SS.pdf'; // Set the file name for the downloaded file
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

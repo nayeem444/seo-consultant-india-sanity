@@ -132,7 +132,7 @@ const CaseStudyPage = () => {
           </section>
 
           <section className="mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6">3. Monthly Backlink Building Strategy</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6"> Monthly Backlink Building Strategy</h2>
             <div className="flex flex-col sm:flex-row items-start gap-6">
               <div className="w-full sm:w-1/2">
                 <p className="mb-4">For off-page SEO, I adopted an aggressive yet strategic approach, building high-quality backlinks every month:</p>
@@ -167,7 +167,7 @@ const CaseStudyPage = () => {
           </section>
 
           <section className="mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6">4. Targeted Keyword Strategy</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6"> Targeted Keyword Strategy</h2>
             <p className="mb-4">I focused on highly relevant, competitive keywords to drive the right traffic and boost conversions. By concentrating efforts on these search terms, Aegis Softtech now ranks in the top 5 for:</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
               {[

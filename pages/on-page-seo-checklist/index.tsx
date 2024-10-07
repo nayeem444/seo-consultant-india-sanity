@@ -21,7 +21,7 @@ const SeoCheckList: React.FC = () => {
         <title>Your On-Page SEO Success with My Proven Checklist</title>
         <meta name="description" content="Simplify your on-page SEO process with my proven checklist. Learn the exact steps to optimize your website for better Google ranking." />
         <meta name="keywords" content={metaKeywords} />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
       </Head>
     <Navbar/>
     <div className="text-white py-24 px-4 sm:px-6 lg:px-8 mx-auto max-w-6xl">

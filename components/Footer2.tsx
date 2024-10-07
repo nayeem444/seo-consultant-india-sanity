@@ -63,11 +63,13 @@ const Footer2 = () => {
                   UAE
                   </Link>
                 </li>
-
-                <h3 className="text-xl font-semibold my-8">Resources</h3>
+                  <div className='mt-8'>
+                  <h3 className="text-xl font-semibold mt-8 mb-2">Resources</h3>
                 <Link href="/on-page-seo-checklist" className="hover:text-gray-300 ">
                   On Page SEO Checklist
                   </Link>
+                  </div>
+               
               </ul>
             </div>
             <div className="px-12">

@@ -3,6 +3,12 @@ import Image from 'next/image';
 
 const caseStudies = [
   {
+    title: 'Aegis Softtech',
+    description: 'Offshore Software Development Company',
+    imageSrc: '/assets/Agaes.png',
+    link: '/case-study/aegissofttech'
+  },
+  {
     title: 'Prospeo',
     description: 'Prospeo is the most accurate email finder. Find emails from everywhere on the internet with our toolbox. Try it for free now.',
     imageSrc: 'https://blog.shahidshahmiri.com/wp-content/uploads/2024/07/Screenshot-2024-07-19-at-4.03.59 PM.png',

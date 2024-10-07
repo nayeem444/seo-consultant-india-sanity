@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Slider from 'react-slick'; // Import react-slick
 
 const caseStudies = [
   {
@@ -29,6 +30,26 @@ const caseStudies = [
 ];
 
 const CaseStudies = () => {
+  const settings = {
+    dots: true,              // Show dots for navigation
+    infinite: true,          // Enable infinite scrolling
+    speed: 500,              // Transition speed
+    slidesToShow: 3,         // Show 3 slides on large screens
+    slidesToScroll: 1,       // Scroll 1 slide at a time
+    autoplay: true,          // Enable autoplay
+    autoplaySpeed: 3000,     // Autoplay speed
+    arrows: false,           // Hide left/right arrows
+    responsive: [
+      {
+        breakpoint: 1024,    // For tablets or smaller screens
+        settings: {
+          slidesToShow: 1,   // Show 1 slide on small screens
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div className="mx-auto bg-[#25282C] max-w-8xl">
       <div className="flex justify-center relative">
@@ -37,16 +58,20 @@ const CaseStudies = () => {
         </h2>
       </div>
       <h2 className="text-white text-4xl text-center mb-8 pt-24 font-semibold">Case Study</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-24">
-        {caseStudies.map((caseStudy, index) => (
-          <CaseStudy
-            key={index}
-            title={caseStudy.title}
-            description={caseStudy.description}
-            imageSrc={caseStudy.imageSrc}
-            link={caseStudy.link}
-          />
-        ))}
+      
+      {/* Slider */}
+      <div className="px-4 md:px-24">
+        <Slider {...settings}>
+          {caseStudies.map((caseStudy, index) => (
+            <CaseStudy
+              key={index}
+              title={caseStudy.title}
+              description={caseStudy.description}
+              imageSrc={caseStudy.imageSrc}
+              link={caseStudy.link}
+            />
+          ))}
+        </Slider>
       </div>
     </div>
   );

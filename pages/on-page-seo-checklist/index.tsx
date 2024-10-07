@@ -43,7 +43,7 @@ const SeoCheckList: React.FC = () => {
     <div className="w-full lg:w-1/2">
       <div className="relative w-full h-64 sm:h-80 lg:h-96">
         <Image
-          src="/assets/newHero.svg"
+          src="/assets/OnpageCheckList/Buy Baclinks Blog.svg"
           alt="CRO Checklist Preview"
           layout="fill"
           objectFit="contain"

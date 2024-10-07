@@ -49,6 +49,12 @@ const Hero = () => {
 export default Hero
 
 const caseStudies = [
+  {
+    title: 'Aegis Softtech',
+    description: 'Offshore Software Development Company',
+    imageSrc: '/assets/Agaes.png',
+    link: '/case-study/aegissofttech'
+  },
    {
     title: 'Prospeo',
     description: 'Prospeo is the most accurate email finder. Find emails from everywhere on the internet with our toolbox. Try it for free now.',
@@ -67,12 +73,7 @@ const caseStudies = [
     imageSrc: 'https://blog.shahidshahmiri.com/wp-content/uploads/2024/07/Screenshot-2024-07-19-at-3.59.27 PM.png',
     link: '/case-study/apexure'
   },
-  {
-    title: 'Aegis Softtech',
-    description: 'Offshore Software Development Company',
-    imageSrc: '/assets/Agaes.png',
-    link: '/case-study/aegissofttech'
-  }
+
 ];
 
 const CaseStudies = () => {
@@ -98,15 +99,16 @@ const CaseStudy = ({ title, description, imageSrc, link }) => {
     <div className="bg-[#25282C] p-4">
       <div className="bg-[#3b3b3b] p-6 rounded-3xl shadow-lg">
         <div className="relative h-48 w-full mb-4 rounded-md overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl p-4">
+          <div className="absolute inset-0 rounded-3xl p-4">
             <h3 className="text-lg font-semibold text-white">{title}</h3>
           </div>
           <Image 
             src={imageSrc} 
             alt={title} 
-            layout="fill" 
+            width={500}
+            height={500}
             objectFit="contain" 
-            className="rounded-3xl" 
+            className="rounded-xl" 
           />
         </div>
         <h3 className="text-lg font-semibold text-left">{title}</h3>

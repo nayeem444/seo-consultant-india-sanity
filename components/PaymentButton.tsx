@@ -32,7 +32,7 @@ export default function PaymentButton({
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          amount: 100, // Amount in cents (5000 cents = $50)
+          amount: 165000, // Amount in cents (5000 cents = $50)
           currency: 'USD' // Set currency to USD
         }),
       });

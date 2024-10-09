@@ -8,7 +8,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import Navbar from 'components/Navbar2';
 import PaymentButton from 'components/PaymentButton';
 import Footer2 from 'components/Footer2';
-import { title } from 'process';
+import LeadForm from 'components/LeadFrom';
+
 
 
 
@@ -26,8 +27,8 @@ const SeoCheckList: React.FC = () => {
     <Navbar/>
     <div className="text-white py-24 px-4 sm:px-6 lg:px-8 mx-auto max-w-6xl">
   <div className="max-w-7xl mx-auto flex flex-col items-center lg:flex-row lg:items-center lg:justify-between">
-    <div className="w-full lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left">
-      <h1 className="text-4xl sm:text-5xl font-bold mb-4 leading-[49px]">
+    <div className="w-full  lg:mb-0   lg:text-left">
+      <h1 className="text-4xl sm:text-5xl font-bold  leading-[49px]">
       Your On-Page SEO Success with My Proven Checklist
       </h1>
       <p className="text-xl mb-6">
@@ -37,20 +38,13 @@ const SeoCheckList: React.FC = () => {
         My On-Page SEO Checklist simplifies the process, allowing you to focus on the factors that truly matter—based on real-world results.
       </p>
       <div className="flex justify-center lg:justify-start">
-        <PaymentButton customerName={''} customerEmail={''} customerContact={''} />
+        {/* <PaymentButton customerName={''} customerEmail={''} customerContact={''} /> */}
       </div>
     </div>
-    <div className="w-full lg:w-1/2">
-      <div className="relative w-full h-64 sm:h-80 lg:h-96">
-        <Image
-          src="/assets/OnpageCheckList/Buy Baclinks Blog.svg"
-          alt="CRO Checklist Preview"
-          layout="fill"
-          objectFit="contain"
-          className="rounded-lg"
-        />
+    <div className="w-full h-[450px]  ">
+    <LeadForm/>
       </div>
-    </div>
+   
   </div>
 
   <div className="py-12">
@@ -66,7 +60,8 @@ const SeoCheckList: React.FC = () => {
         Whether you’re an SEO professional or a business owner, this checklist gives you the actionable steps to boost your website's visibility and outrank your competition.
       </p>
       <div className="mt-8 flex justify-center">
-        <PaymentButton customerName={''} customerEmail={''} customerContact={''} />
+        <a href="#checklist" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 z-10 flex items-center group">Download CheckList</a>
+      
       </div>
     </div>
   </div>
@@ -84,7 +79,10 @@ const SeoCheckList: React.FC = () => {
           
           Websites I’ve optimized are consistently ranking for competitive keywords, driving significant traffic, and converting visitors into customers. When you use my checklist, you’re leveraging the exact strategies I’ve used to achieve these successes.
           </p>
-        <PaymentButton customerName={''} customerEmail={''} customerContact={''}/>
+          <div className="mt-8 flex justify-center">
+        <a href="#checklist" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 z-10 flex items-center group">Download CheckList</a>
+      
+      </div>
         </div>
         <div className="lg:w-1/2">
           <div className="relative w-full h-64 sm:h-80 lg:h-96">
@@ -113,9 +111,10 @@ const SeoCheckList: React.FC = () => {
 <div className="text-center">
   <p className="mb-4 lg:mx-48 text-xl">
   For just $20, you’re not only getting a checklist—you’re gaining access to the exact tactics I’ve used to get multiple websites to rank on the first page of Google. Apply these proven methods to your site and see the results for yourself.  </p>
-    <div className="mt-8 flex justify-center">
-         <PaymentButton customerName={''} customerEmail={''} customerContact={''}/>    
-  </div>
+  <div className="mt-8 flex justify-center">
+        <a href="#checklist" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 z-10 flex items-center group">Download CheckList</a>
+      
+      </div>
     </div>
   </div>
 
@@ -149,6 +148,7 @@ const SeoCheckList: React.FC = () => {
 <Banner/>
 
 <Footer2/>
+
   </>
   );
 }
@@ -201,10 +201,7 @@ interface CardProps {
         title: "Structured Data", 
         icon: <Database className="w-6 h-6" />
       },
-      { 
-        title: "Analytics Setup", 
-        icon: <BarChart className="w-6 h-6" />
-      },
+    
       { 
         title: "Content Optimization", 
         icon: <FileText className="w-6 h-6" />
@@ -234,8 +231,9 @@ interface CardProps {
         {/* Button overlay */}
         <div className="absolute inset-x-0 bottom-0 h-1/3 flex items-center justify-center">
         <div className="mt-8 flex justify-center">
-         <PaymentButton/>    
-  </div>
+        <a href="#checklist" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 z-10 flex items-center group">Download CheckList</a>
+      
+      </div>
         </div>
       </div>
     );
@@ -331,9 +329,10 @@ const Banner = () => {
         Effective SEO strategies not only elevate a website's visibility but also drive<br/>
         targeted traffic, enhance user experience,
         </p>
-        <div className='m-8'>
-            <PaymentButton/>
-            </div>
+        <div className="mt-8 flex justify-center">
+        <a href="#checklist" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 z-10 flex items-center group">Download CheckList</a>
+      
+      </div>
     </div>
   )
 }

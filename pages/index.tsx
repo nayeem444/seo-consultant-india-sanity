@@ -1,6 +1,7 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react"
 import Head from 'next/head';
+import dynamic from 'next/dynamic'
 import Calan from "../components/PopUp";
 import Hero2 from "components/Hero2";
 import ExitPopup from "components/Banner";
@@ -16,6 +17,10 @@ import CaseStudies from "components/CaseStudies";
 import FaqComponent from "components/FaqComponent";
 import TestimonialsCarousel from "components/TestimonialsCarousel";
 import Footer2 from "components/Footer2";
+
+
+
+
 
 export default function Home({discription ,title}) {
   return ( 

@@ -1,77 +1,137 @@
+
 import React from 'react';
 import Image from 'next/image';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
-// Example client images (replace with your actual client images)
-const clients = [
-  { id: 1, src: '/assets/apexure-logo 1.svg', alt: 'Client 1' },
-  { id: 2, src: '/assets/Beaconstac_Logo-removebg-preview 1.svg', alt: 'Client 2' },
-  { id: 3, src: '/assets/fullfeel_logo_gradient_v1-2048x250 1.svg', alt: 'Client 3' },
-  { id: 4, src: '/assets/Growthink-Logo-2020 1.svg', alt: 'Client 5' },
-  { id: 5, src: '/assets/logo-prospeo-removebg-preview 1.svg', alt: 'Client 6' },
-  // Add more clients as needed
-];
 
 const Clients = () => {
-  const settings = {
-    dots: true,
-    arrows: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  const logos = [
+    { name: 'Logo 1', img: '/assets/logos/LeadGen/1.png' },
+    { name: 'Logo 2', img: '/assets/logos/LeadGen/2.png' },
+    { name: 'Logo 3', img: '/assets/logos/LeadGen/3.png' },
+    { name: 'Logo 4', img: '/assets/logos/LeadGen/4.png' },
+    { name: 'Logo 5', img: '/assets/logos/LeadGen/5.png' },
+    { name: 'Logo 6', img: '/assets/logos/LeadGen/6.png' },
+    { name: 'Logo 8', img: '/assets/logos/LeadGen/7.png' },
+  ];
 
   return (
-    <div className="mx-auto h-1/4 bg-[#191B1D] mt-8 py-8 max-w-8xl">
-      <div className="max-w-8xl mx-auto text-center">
-        <p className="text-[#C0C0C0] mb-8">Clients I've Worked With</p>
-        <Slider {...settings}>
-          {clients.map((client) => (
-            <div key={client.id} className="flex justify-center items-center rounded-md bg-transparent p-2 h-24">
-              <div className="flex justify-center items-center w-full h-full">
-                <Image
-                  src={client.src}
-                  alt={client.alt}
-                  width={150}
-                  height={150}
-                  className="object-contain bg-transparent filter grayscale"
-                />
+    <section className="w-full bg-gray-900 py-12 overflow-hidden">
+      <style jsx>{`
+        @keyframes slide {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+        .slider {
+          display: inline-flex;
+          animation: slide 20s linear infinite;
+        }
+       
+      `}</style>
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center text-white mb-8">Clients I have Worked With</h2>
+        <div className="overflow-hidden whitespace-nowrap">
+          <div className="slider">
+            {[...logos, ...logos].map((logo, index) => (
+              <div key={index} className="inline-block px-4">
+                <div className="relative w-48 h-24">
+                  <Image
+                    layout='fill'
+                    objectFit='cover'
+                    alt={`${logo.name} logo`}
+                    src={logo.img}
+                  />
+                </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default Clients;
+
+
+
+
+
+
+
+// import React from 'react';
+// import Image from 'next/image';
+
+// const Clients = () => {
+//   const logos = [
+//     { name: 'Logo 1', img: '/assets/logos/LeadGen/1.png' },
+//     { name: 'Logo 2', img: '/assets/logos/LeadGen/2.png' },
+//     { name: 'Logo 3', img: '/assets/logos/LeadGen/3.png' },
+//     { name: 'Logo 4', img: '/assets/logos/LeadGen/4.png' },
+//     { name: 'Logo 5', img: '/assets/logos/LeadGen/5.png' },
+//     { name: 'Logo 6', img: '/assets/logos/LeadGen/6.png' },
+//     { name: 'Logo 7', img: '/assets/logos/LeadGen/7.png' },
+//   ];
+
+//   return (
+//     <section className="w-full bg-gray-900 py-12 overflow-hidden">
+//       <style jsx>{`
+//         @keyframes slide {
+//           from {
+//             transform: translateX(0);
+//           }
+//           to {
+//             transform: translateX(-50%);
+//           }
+//         }
+//         .slider {
+//           display: inline-flex;
+//           animation: slide 20s linear infinite;
+//         }
+//         .slider-reverse {
+//           animation-direction: reverse;
+//         }
+//       `}</style>
+//       <div className="container mx-auto px-4">
+//         <h2 className="text-3xl font-bold text-center text-white mb-8">Our Clients</h2>
+//         <div className="overflow-hidden whitespace-nowrap mb-8">
+//           <div className="slider">
+//             {[...logos, ...logos].map((logo, index) => (
+//               <div key={index} className="inline-block px-4">
+//                 <div className="relative w-48 h-24">
+//                   <Image
+//                     layout='fill'
+//                     objectFit='cover'
+//                     alt={`${logo.name} logo`}
+//                     src={logo.img}
+//                   />
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+
+//         <div className="overflow-hidden whitespace-nowrap">
+//           <div className="slider slider-reverse">
+//             {[...logos, ...logos].map((logo, index) => (
+//               <div key={`reverse-${index}`} className="inline-block px-4">
+//                 <div className="relative w-48 h-24">
+//                   <Image
+//                     layout='fill'
+//                     objectFit='cover'
+//                     alt={`${logo.name} logo`}
+//                     src={logo.img}
+//                   />
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Clients;

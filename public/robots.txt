@@ -1,6 +1,7 @@
  # Block all crawlers for /studio
 User-agent: *
-Disallow:https://shahidshahmiri.com/studio
+Disallow : /
+Sitemap: https://shahidshahmiri.com/sitemap.xml
 
 # Allow all crawlers
 User-agent: *

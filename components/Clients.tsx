@@ -26,7 +26,7 @@ const Clients = () => {
         }
         .slider {
           display: inline-flex;
-          animation: slide 20s linear infinite;
+          animation: slide 14s linear infinite;
         }
        
       `}</style>

@@ -50,11 +50,20 @@ const LeadForm = () => {
       );
 
       console.log('Email sent successfully');
-      setSubmissionStatus('Success! Redirecting...');
+      setSubmissionStatus('Success! Downloading PDF and redirecting...');
       
+      // Trigger PDF download
+      const pdfUrl = '/On-Page SEO Checklist - SS .pdf'; // Replace with actual PDF URL
+      const link = document.createElement('a');
+      link.href = pdfUrl;
+      link.download = '/On-Page SEO Checklist - SS .pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
       // Redirect to thank you page
       setTimeout(() => {
-        router.push('on-page-seo-checklist/thankyou');
+        router.push('/on-page-seo-checklist/thankyou');
       }, 2000);
 
     } catch (error) {
@@ -73,6 +82,7 @@ const LeadForm = () => {
             Download the Onpage SEO Checklist
           </h1>
           <form onSubmit={handleSubmit} className="bg-white p-8 shadow-md rounded-lg space-y-4">
+            {/* Form inputs remain the same */}
             <div className="relative">
               <input
                 autoComplete="off"
@@ -131,7 +141,7 @@ const LeadForm = () => {
               </label>
             </div>
             <button type="submit" className="bg-blue-500 text-white rounded-md px-4 py-2 w-full" disabled={loading}>
-              {loading ? 'Sending...' : 'Get Your Free SEO Checklist'}
+              {loading ? 'Processing...' : 'Get Your Free SEO Checklist'}
             </button>
             {submissionStatus && (
               <p className={`text-sm ${submissionStatus.startsWith('Success') ? 'text-green-500' : 'text-red-500'}`}>

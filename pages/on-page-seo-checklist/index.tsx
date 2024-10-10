@@ -101,26 +101,6 @@ const SeoCheckList: React.FC = () => {
 
 <Clients/>
 
-<div className='py-12'>
-      <div className="md:mt-12 text-center">
-  <h3 className="text-4xl font-semibold mb-8">
-  Why $20 is a Steal?
-  </h3>
-</div>
-
-<div className="text-center">
-  <p className="mb-4 lg:mx-48 text-xl">
-  For just $20, you’re not only getting a checklist—you’re gaining access to the exact tactics I’ve used to get multiple websites to rank on the first page of Google. Apply these proven methods to your site and see the results for yourself.  </p>
-  <div className="mt-8 flex justify-center">
-        <a href="#checklist" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 z-10 flex items-center group">Download CheckList</a>
-      
-      </div>
-    </div>
-  </div>
-
-
-
-
 
   <div className='py-12'>
       <div className=" md:mt-12 text-center">

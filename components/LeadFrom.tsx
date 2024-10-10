@@ -78,9 +78,9 @@ const LeadForm = () => {
     <div className="min-h-screen px-4 py-8 sm:px-6 lg:px-8 max-w-6xl mx-auto" id='checklist'>
       <div className="flex flex-wrap justify-center">
         <div className="w-full md:w-[100%] p-4">
-          <h1 className="text-3xl font-bold text-center mb-6">
+          <h2 className="text-3xl font-bold text-center mb-6">
             Download the Onpage SEO Checklist
-          </h1>
+          </h2>
           <form onSubmit={handleSubmit} className="bg-white p-8 shadow-md rounded-lg space-y-4">
             {/* Form inputs remain the same */}
             <div className="relative">
@@ -140,8 +140,8 @@ const LeadForm = () => {
                 Company
               </label>
             </div>
-            <button type="submit" className="bg-blue-500 text-white rounded-md px-4 py-2 w-full" disabled={loading}>
-              {loading ? 'Processing...' : 'Get Your Free SEO Checklist'}
+            <button type="submit" className="bg-blue-500 text-white font-bold rounded-md px-4 py-2 w-full" disabled={loading}>
+              {loading ? 'Processing...' : 'Get Your Checklist'}
             </button>
             {submissionStatus && (
               <p className={`text-sm ${submissionStatus.startsWith('Success') ? 'text-green-500' : 'text-red-500'}`}>

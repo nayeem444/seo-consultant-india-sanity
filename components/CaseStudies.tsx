@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const caseStudies = [
-
   {
-    title: 'Aegis Softtech ',
+    title: 'Aegis Softtech',
     description: 'We have a team of developers, consultants, and testers that will allow businesses to design, develop, and deploy high-quality web, mobile, desktop, and cloud',
     imageSrc: '/ages/Java.png',
     link: '/case-study/',
@@ -27,11 +26,10 @@ const caseStudies = [
     imageSrc: 'https://blog.shahidshahmiri.com/wp-content/uploads/2024/07/Screenshot-2024-07-19-at-3.59.27 PM.png',
     link: '/case-study/apexure',
   },
-
 ];
 
 const CaseStudies = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(1); // Start at 1 for infinite loop
   const [itemsPerPage, setItemsPerPage] = useState(1); // Default to 1 for small screens
   const [isTransitioning, setIsTransitioning] = useState(false);
   const totalSlides = Math.ceil(caseStudies.length / itemsPerPage);
@@ -43,56 +41,62 @@ const CaseStudies = () => {
     ...caseStudies.slice(0, itemsPerPage), // Add the first few items for looping
   ];
 
+  // Handle screen resize to adjust the number of items per slide
   const handleResize = () => {
     if (window.innerWidth >= 1024) {
-      setItemsPerPage(3); // 3 cards per slide on large screens
+      setItemsPerPage(3); // Show 3 cards on larger screens
     } else {
-      setItemsPerPage(1); // 1 card per slide on small screens
+      setItemsPerPage(1); // Show 1 card on smaller screens
     }
   };
 
   useEffect(() => {
-    handleResize(); // Initial check on mount
+    handleResize(); // Initial check
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
-  const handleDotClick = (index) => {
-    setCurrentIndex(index + 1); // Account for extended slides
-  };
+  // Auto-slide every 3 seconds
+  useEffect(() => {
+    const autoSlide = setInterval(() => {
+      goToNextSlide();
+    }, 3000); // Slide every 3 seconds
 
+    return () => clearInterval(autoSlide); // Clean up on unmount
+  }, [itemsPerPage]);
+
+  // Move to next slide
   const goToNextSlide = () => {
     setIsTransitioning(true);
     setCurrentIndex((prevIndex) => prevIndex + 1);
   };
 
+  // Move to previous slide
+  const goToPreviousSlide = () => {
+    setIsTransitioning(true);
+    setCurrentIndex((prevIndex) => prevIndex - 1);
+  };
+
+  // Handle transition end to adjust for infinite loop
   useEffect(() => {
     if (isTransitioning) {
       if (currentIndex === totalSlides + 1) {
-        // After sliding to the last duplicate, reset to the real first slide
         setTimeout(() => {
           setIsTransitioning(false);
-          setCurrentIndex(1);
+          setCurrentIndex(1); // Reset to first real slide
         }, 500);
       } else if (currentIndex === 0) {
-        // After sliding to the first duplicate, reset to the real last slide
         setTimeout(() => {
           setIsTransitioning(false);
-          setCurrentIndex(totalSlides);
+          setCurrentIndex(totalSlides); // Reset to last real slide
         }, 500);
+      } else {
+        setIsTransitioning(false);
       }
     }
   }, [currentIndex, totalSlides, isTransitioning]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      goToNextSlide();
-    }, 3000); // Auto-slide every 3 seconds
-
-    return () => clearInterval(interval); // Cleanup the interval on component unmount
-  }, []);
 
   return (
     <div className="mx-auto bg-[#25282C] max-w-8xl relative overflow-hidden">
@@ -115,8 +119,8 @@ const CaseStudies = () => {
           {extendedCaseStudies.map((caseStudy, index) => (
             <div
               key={index}
-              className={`flex-shrink-0 p-4`}
-              style={{ width: `${100 / itemsPerPage}%` }} // Adjust card width based on itemsPerPage
+              className="flex-shrink-0 p-4"
+              style={{ width: `${100 / itemsPerPage}%` }}
             >
               <CaseStudy
                 title={caseStudy.title}
@@ -134,7 +138,7 @@ const CaseStudies = () => {
             <button
               key={index}
               className={`w-3 h-3 rounded-full ${index + 1 === currentIndex ? 'bg-white' : 'bg-gray-500'}`}
-              onClick={() => handleDotClick(index)}
+              onClick={() => setCurrentIndex(index + 1)} // Adjust for extended slides
             ></button>
           ))}
         </div>

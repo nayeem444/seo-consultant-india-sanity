@@ -442,38 +442,21 @@ const items3 = [
   },
 ]
 
-  return (
-    <div className="mx-auto bg-[#25282C] text-white py-4 max-w-8xl">
-      <div className="container mx-auto text-center">
-        <div className="flex justify-center">
-          <h2 className="absolute text-[60px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
-            EXPLORE
-          </h2>
-        </div>
-        <div className="pt-48">
-          <p className="-mt-20 text-3xl font-semibold">
-            Explore My Content Which Achieves High Rankings On Google
-          </p>
-          <div className="flex justify-center py-12">
-            <Image
-              src={img1}
-              width={300}
-              height={300}
-              alt="Image"
-              style={{
-                filter: 'grayscale(1)',
-              }}
-            />
-          </div>
-          <SliderComponent items={items2} />
-          <div className="flex justify-center py-12">
-            <Image src={img2} width={300} height={300} alt="Image" />
-          </div>
-          <SliderComponent items={items2} />
-        </div>
+return (
+  <div className="mx-auto bg-[#25282C] text-white py-4 max-w-8xl">
+    <div className="container mx-auto text-center">
+      <div className="flex justify-center">
+        <h2 className="absolute text-[60px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
+          EXPLORE
+        </h2>
+      </div>
+      <div className="pt-48">
+        <p className="-mt-20 text-3xl font-semibold">
+          Explore My Content Which Achieves High Rankings On Google
+        </p>
         <div className="flex justify-center py-12">
           <Image
-            src={img3}
+            src={img1}
             width={300}
             height={300}
             alt="Image"
@@ -482,74 +465,92 @@ const items3 = [
             }}
           />
         </div>
-        <SliderComponent items={items3} />
+        <SliderComponent items={items2} />
+        <div className="flex justify-center py-12">
+          <Image src={img2} width={300} height={300} alt="Image" />
+        </div>
+        <SliderComponent items={items2} />
       </div>
+      <div className="flex justify-center py-12">
+        <Image
+          src={img3}
+          width={300}
+          height={300}
+          alt="Image"
+          style={{
+            filter: 'grayscale(1)',
+          }}
+        />
+      </div>
+      <SliderComponent items={items3} />
     </div>
-  )
+  </div>
+)
 }
 
 export default ExploreSection
 
+
+
+
+
 const SliderComponent = ({ items }) => {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [touchStart, setTouchStart] = useState(0)
-  const [touchEnd, setTouchEnd] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(1); // Start at 1 for initial display
+  const [itemsPerView, setItemsPerView] = useState(1); // Default for smaller screens
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === items.length - 3 ? 0 : prevIndex + 1
-    )
-  }
+  // Ensure we have enough items for smooth scrolling
+  const totalItems = items.length;
+  const fillerItemsCount = (itemsPerView - (totalItems % itemsPerView)) % itemsPerView;
+  
+  // Create new array with filler items if necessary
+  const displayItems = [...items];
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? items.length - 3 : prevIndex - 1
-    )
-  }
-
-  const handleTouchStart = (e) => {
-    setTouchStart(e.targetTouches[0].clientX)
-  }
-
-  const handleTouchMove = (e) => {
-    setTouchEnd(e.targetTouches[0].clientX)
-  }
-
-  const handleTouchEnd = () => {
-    if (touchStart - touchEnd > 75) {
-      nextSlide()
-    }
-
-    if (touchStart - touchEnd < -75) {
-      prevSlide()
-    }
+  // Adding filler items to maintain consistent count
+  for (let i = 0; i < fillerItemsCount; i++) {
+    displayItems.push(items[i % totalItems]); // Add duplicates of existing items
   }
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide()
-    }, 5000)
+    const updateItemsPerView = () => {
+      setItemsPerView(window.innerWidth >= 1024 ? 3 : 1);
+    };
 
-    return () => clearInterval(interval)
-  }, [currentIndex])
+    updateItemsPerView(); // Set initial items per view based on current screen size
+    window.addEventListener('resize', updateItemsPerView); // Update on resize
+    return () => window.removeEventListener('resize', updateItemsPerView);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => {
+      return (prevIndex + 1) % displayItems.length; // Adjusted for seamless looping
+    });
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="relative overflow-hidden">
       <div
         className="flex transition-transform duration-300 ease-in-out"
-        style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+        style={{
+          transform: `translateX(-${((currentIndex) * (100 / itemsPerView))}%)`, // Adjust for current index
+        }}
       >
-        {items.map((item, index) => (
-          <div key={index} className="flex-shrink-0 w-full md:w-1/3 p-4">
+        {displayItems.map((item, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 w-full md:w-1/3 p-4"
+            style={{ width: `${100 / itemsPerView}%` }} // Adjust width based on itemsPerView
+          >
             <div className="bg-[#3b3b3b] p-6 rounded-3xl shadow-lg">
               <div className="relative h-48 w-full mb-4 rounded-md overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl p-4">
-                  <h3 className="text-lg font-semibold text-white">
-                    {item.title}
-                  </h3>
+                  <h3 className="text-lg font-semibold text-white">{item.title}</h3>
                   <p className="text-sm text-gray-300 mt-2">{item.keyword}</p>
                 </div>
                 <Image
@@ -560,9 +561,7 @@ const SliderComponent = ({ items }) => {
                   className="rounded-3xl"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-center md:text-left">
-                {item.title}
-              </h3>
+              <h3 className="text-lg font-semibold text-center md:text-left">{item.title}</h3>
               <p className="text-sm text-gray-400 text-center md:text-left py-2">
                 Keyword: {item.keyword}
               </p>
@@ -578,21 +577,20 @@ const SliderComponent = ({ items }) => {
           </div>
         ))}
       </div>
-      <button
-        onClick={prevSlide}
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-r"
-      >
-        &lt;
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-l"
-      >
-        &gt;
-      </button>
+
+      {/* Dots for navigation */}
+      <div className="flex justify-center space-x-2 mt-4">
+        {Array.from({ length: displayItems.length }).map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)} // Set current index directly to the slide
+            className={`h-3 w-3 rounded-full ${
+              currentIndex === index ? 'bg-blue-500' : 'bg-gray-400'
+            }`}
+          />
+        ))}
+      </div>
     </div>
-  )
-}
-
-
+  );
+};
 

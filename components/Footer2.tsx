@@ -120,16 +120,17 @@ const Footer2 = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#55575A] p-4 text-center text-sm text-white flex justify-around gap-8 px-24">
-       <span>
-       © 2024 Shahid Shahmiri. All rights reserved.
-        </span> 
-        <span className='ml-4' >Powered by  
-         <a className='ml-2 font-bold' href='https://marketinglad.io/'> 
-         Marketing Lad
-          </a> 
-          </span>
-      </div>
+      <div className="bg-[#55575A] p-4 text-center text-sm text-white flex flex-col sm:flex-row justify-around items-center sm:gap-8 px-4 sm:px-24">
+  <span className="mb-2 sm:mb-0">
+    © 2024 Shahid Shahmiri. All rights reserved.
+  </span> 
+  <span className="flex items-center">
+    Powered by
+    <a className="ml-2 font-bold" href="https://marketinglad.io/"> 
+      Marketing Lad
+    </a> 
+  </span>
+</div>
     </div>
   );
 };

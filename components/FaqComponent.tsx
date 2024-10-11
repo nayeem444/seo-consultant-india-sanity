@@ -27,23 +27,25 @@ const FaqComponent = () => {
   };
 
   return (
-    <div className=" mx-auto my-10 p-6 md:p-24 max-w-8xl">
-      <h2 className=" -mt-[80px] md:-mt-[130px] text-[40px] md:text-[100px] font-bold text-[#55575A] opacity-[.2] pointer-events-none text-center w-full max-w-6xl">
+    <div className="mx-auto my-10 p-4 sm:p-6 md:p-24 max-w-8xl">
+      <h2 className="-mt-[60px] sm:-mt-[80px] md:-mt-[130px] text-[30px] sm:text-[40px] md:text-[100px] font-bold text-[#55575A] opacity-[.2] pointer-events-none text-center w-full max-w-6xl">
         FAQ's
       </h2>
-      <h2 className="text-4xl font-bold text-center mb-6 -mt-12 md:-mt-0">Any Questions? Look Here</h2>
-      <div className="space-y-4">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 -mt-8 sm:-mt-12 md:-mt-0">
+        Any Questions? Look Here
+      </h2>
+      <div className="space-y-4 max-w-3xl mx-auto">
         {faqData.map((faq, index) => (
           <div key={index} className="border-b border-gray-700">
             <button
               className="w-full text-left py-4 flex justify-between items-center focus:outline-none"
               onClick={() => handleToggle(index)}
             >
-              <span className="text-lg font-medium">{faq.question}</span>
-              <span>{activeIndex === index ? '-' : '+'}</span>
+              <span className="text-base sm:text-lg font-medium pr-4">{faq.question}</span>
+              <span className="text-xl flex-shrink-0">{activeIndex === index ? '-' : '+'}</span>
             </button>
             {activeIndex === index && (
-              <div className="py-2 text-gray-300">
+              <div className="py-2 text-gray-300 text-sm sm:text-base">
                 <p>{faq.answer}</p>
               </div>
             )}

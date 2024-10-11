@@ -23,10 +23,10 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="mx-auto bg-[#25282C] text-white font-montserrat relative w-full border-b border-[#717171] max-w-7xl">
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="">
-            <Image src={img1} width={200} height={90} alt="logo" className="h-14 w-auto " />
+            <Image src={img1} width={200} height={90} alt="logo" className="h-14 w-auto" />
           </Link>
           <div className="flex items-center">
             <div className="hidden lg:flex lg:items-center lg:space-x-8">
@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="lg:hidden">
           <div className="fixed inset-0 z-50 bg-gray-800 bg-opacity-25" onClick={toggleMenu}></div>
-          <nav className="fixed top-0 right-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-l overflow-y-auto z-50">
+          <nav className="fixed top-0 right-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-[#25282C] border-l overflow-y-auto z-50">
             <div className="flex items-center mb-8">
               <Link href="/" className="mr-auto">
                 <Image src={img1} width={120} height={120} alt="logo" className="h-8 w-auto" />
@@ -71,6 +71,11 @@ const Navbar: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
+            </div>
+            <div className="flex flex-col space-y-4">
+              <NavLink href="/">Home</NavLink>
+              <NavLink href="/#services">Services</NavLink>
+              <NavLink href="/case-study">Case Study</NavLink>
             </div>
             <div className="mt-auto">
               <Link

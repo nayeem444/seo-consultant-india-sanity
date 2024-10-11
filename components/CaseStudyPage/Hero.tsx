@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Slider from 'react-slick';
 import Img1 from '../../public/assets/caseStudy/analytics.png';
 import Clients from 'components/Clients';
 import Banner from './Banner';
@@ -49,6 +48,7 @@ const Hero = () => {
 
 export default Hero;
 
+
 const caseStudies = [
   {
     title: 'Aegis Softtech',
@@ -77,54 +77,69 @@ const caseStudies = [
 ];
 
 const CaseStudies = () => {
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+  const [currentIndex, setCurrentIndex] = React.useState(0);
+
+  // Function to go to the next slide
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === caseStudies.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
+  // Function to go to the previous slide
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? caseStudies.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Auto-slide every 3 seconds
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000); // 3 seconds interval
+    return () => clearInterval(interval); // Clean up on unmount
+  }, []);
+
   return (
-    <div className="mx-auto bg-[#25282C] max-w-7xl">
+    <div className="bg-[#25282C] relative overflow-hidden">
       <div className="flex justify-center relative">
         <h2 className="absolute top-0 md:top-auto -mt-[50px] text-[40px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
           CASE STUDY
         </h2>
       </div>
       <h2 className="text-white text-4xl text-center mb-8 pt-24 font-semibold">Case Study</h2>
-      
-      <div className="px-4 md:px-24">
-        <Slider {...settings}>
-          {caseStudies.map((caseStudy, index) => (
-            <CaseStudy
-              key={index}
-              title={caseStudy.title}
-              description={caseStudy.description}
-              imageSrc={caseStudy.imageSrc}
-              link={caseStudy.link}
-            />
-          ))}
-        </Slider>
+
+      {/* Carousel Container */}
+      <div className="flex justify-center items-center relative">
+        <button
+          className="absolute left-0 text-white text-2xl md:text-4xl px-4 focus:outline-none"
+          onClick={prevSlide}
+        >
+          &#10094;
+        </button>
+        <div className="w-full px-4 md:px-24">
+          <div
+            className="flex transition-transform ease-in-out duration-500 lg:w-1/3"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {caseStudies.map((caseStudy, index) => (
+              <CaseStudy
+                key={index}
+                title={caseStudy.title}
+                description={caseStudy.description}
+                imageSrc={caseStudy.imageSrc}
+                link={caseStudy.link}
+              />
+            ))}
+          </div>
+        </div>
+        <button
+          className="absolute right-0 text-white text-2xl md:text-4xl px-4 focus:outline-none"
+          onClick={nextSlide}
+        >
+          &#10095;
+        </button>
       </div>
     </div>
   );
@@ -132,7 +147,7 @@ const CaseStudies = () => {
 
 const CaseStudy = ({ title, description, imageSrc, link }) => {
   return (
-    <div className="p-4">
+    <div className="flex-shrink-0 w-full px-4">
       <div className="bg-[#3b3b3b] p-6 rounded-3xl shadow-lg">
         <div className="relative h-48 w-full mb-4 rounded-md overflow-hidden">
           <Image 
@@ -157,3 +172,5 @@ const CaseStudy = ({ title, description, imageSrc, link }) => {
     </div>
   );
 };
+
+

@@ -6,7 +6,7 @@ import img3 from '../public/Images/pic-1.jpg'
 
 const testimonials = () => {
   return (
-    <section className=" mx-auto bg-white py-12  sm:py-16 lg:py-20 max-w-8xl">
+    <section className=" mx-auto bg-white py-12  sm:py-16 lg:py-20 mx-8 max-w-8xl">
       <div className="mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center">
           <div className="text-center">
@@ -96,7 +96,7 @@ const testimonials = () => {
               </div>
             </div>
 
-            <div className="flex flex-col rounded-xl border border-blue-600 text-center shadow-xl shadow-blue-200">
+            <div className="flex flex-col rounded-xl border border-blue-600 text-center shadow-xl shadow-blue-200 ">
               <div className="relative flex flex-1 flex-col justify-between p-6 lg:py-7 lg:px-5">
                 <span className="absolute -left-5 -top-6 rounded-full border border-blue-600 bg-white  text-5xl">
                   <Image

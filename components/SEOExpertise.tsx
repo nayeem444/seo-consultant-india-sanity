@@ -37,8 +37,8 @@ const ExpertiseSection = () => {
           My Expertise As The SEO Consultant
         </h2>
 
-        <div className="flex flex-col lg:flex-row">
-          <div className="lg:w-1/2">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start">
+          <div className="lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
             <p className="mb-4">
               I have worked with several high-profile clients, including BeaconStac, Unacademy, AMEX GBT, fullfeel, Taxmann, CustomShow, Prospeo, GrowThink, and Dominion.
             </p>
@@ -58,11 +58,11 @@ const ExpertiseSection = () => {
               I passed it on to an outstanding team of more than 20 people and took on the role of an advisor.
             </p>
             <p className="mb-4">
-              I also discovered a deep love for SEO consulting. It's a joy to share the knowledge I’ve gathered over the years – not just the wins, but the failures too – with my clients.
+              I also discovered a deep love for SEO consulting. It's a joy to share the knowledge I've gathered over the years – not just the wins, but the failures too – with my clients.
             </p>
           </div>
           
-          <div className="lg:w-1/2 flex  mt-8 lg:mt-0 flex-col  ml-8 ">
+          <div className="lg:w-1/2 flex flex-col items-center lg:items-start lg:ml-8">
             <Image
               src={Img1}
               alt="SEO Consultant"
@@ -70,7 +70,7 @@ const ExpertiseSection = () => {
               height={300}
               className="object-contain rounded-xl mb-4"
             />
-             <Image
+            <Image
               src={Img2}
               alt="SEO Consultant"
               width={500}
@@ -78,28 +78,25 @@ const ExpertiseSection = () => {
               className="object-contain rounded-xl"
             />
           </div>
-          
-          
         </div>
+
         <div className="mt-12 md:mt-24 text-center">
-  <h3 className="text-4xl font-semibold mb-8">
-    Trusted SEO Consultant in India
-  </h3>
-</div>
+          <h3 className="text-4xl font-semibold mb-8">
+            Trusted SEO Consultant in India
+          </h3>
+        </div>
 
-<div className="text-center mx-auto ">
-  <p className="mb-4">
-    As an SEO specialist, I understand that it can be difficult to trust someone on the internet claiming to be an expert. However, I have a proven track record of helping businesses develop successful digital strategies that increase rankings, drive quality traffic, and generate revenue.
-  </p>
-  <p className="mb-4">
-    My understanding of evolving search intent and data-driven approach helps me avoid penalties from core updates. I actively participate in industry events, webinars, and podcasts to share my knowledge and stay up-to-date on the latest SEO techniques and insights.
-  </p>
-  <div className="mt-8">
-    <CalendlyPopupButton />
-  </div>
-</div>
-
-       
+        <div className="text-center mx-auto max-w-4xl">
+          <p className="mb-4">
+            As an SEO specialist, I understand that it can be difficult to trust someone on the internet claiming to be an expert. However, I have a proven track record of helping businesses develop successful digital strategies that increase rankings, drive quality traffic, and generate revenue.
+          </p>
+          <p className="mb-4">
+            My understanding of evolving search intent and data-driven approach helps me avoid penalties from core updates. I actively participate in industry events, webinars, and podcasts to share my knowledge and stay up-to-date on the latest SEO techniques and insights.
+          </p>
+          <div className="mt-8 flex justify-center">
+            <CalendlyPopupButton />
+          </div>
+        </div>
       </div>
     </div>
   );

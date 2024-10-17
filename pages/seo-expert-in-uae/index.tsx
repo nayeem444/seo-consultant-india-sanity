@@ -32,7 +32,7 @@ export default function Home({discription ,title}) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
-              "name": "Shahid Shahmiri SEO Expert Consultant in India",
+              "name": "Shahid Shahmiri - Your Expert SEO Consultant in Dubai, UAE",
               "url": "https://shahidshahmiri.com/",
               "address": {
                 "@type": "PostalAddress",
@@ -70,7 +70,7 @@ export default function Home({discription ,title}) {
 }
 export async function getStaticProps() {
   const description = " Looking for the #1 SEO consultant in UAE? My proven tactics drive traffic and increase revenue. Schedule a Free consultation.";
-  const title = "Shahid Shahmiri - Your Expert SEO Consultant in UAE"
+  const title = "Shahid Shahmiri - Your Expert SEO Consultant in Dubai, UAE"
   return {
       props: { description,title }, // Pass the description to the component
     };

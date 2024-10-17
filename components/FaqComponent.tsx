@@ -8,7 +8,7 @@ const faqData = [
   { question: "Who is the best SEO Expert in India?", 
   answer: "Shahid Shahmiri, the best SEO expert in India, has left an indelible mark by partnering with prestigious brands such as Unacademy, BeconStac, LeadGen App, and other industry giants. Shahid has successfully scaled their marketing and SEO effort. When you work with Shahid, you can be confident in achieving remarkable growth and outshining the competition." },
   { question: "How much SEO charges in India?", 
-  answer: "SEO charges in India vary depending on the project complexity, duration, and expertise required. On average, hourly rates range from $3,000 to $8,000, while monthly retainers start around $60,000. It’s important to discuss specific requirements and negotiate with SEO professionals and consultants for accurate pricing." },
+  answer: "SEO charges in India vary depending on the project complexity, duration, and expertise required. On average, hourly rates range from $3,000 to $8,000, while monthly retainers start around $6,000. It’s important to discuss specific requirements and negotiate with SEO professionals and consultants for accurate pricing." },
   { question: "Benefits of Hiring an SEO Expert?", 
   answer: "Hiring an SEO expert for your business offers: - Cost-Effective Online Promotion - Precise Audience Tracking - Organic Lead Generation - High Conversion Rates - Increased Brand Visibility" },
   { question: "What are benefits of choosing Your SEO services?", 

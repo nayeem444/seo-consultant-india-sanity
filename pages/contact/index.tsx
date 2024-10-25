@@ -21,7 +21,7 @@ const CalendlyPopupButton: React.FC = () => {
     <div className="w-full h-full">
       <InlineWidget 
         url="https://calendly.com/d/cpjz-pkk-k6k" 
-        styles={{ height: '650px' }}  // Fixed height to match form
+        styles={{ height: '650px' }}  
       />
     </div>
   );
@@ -236,7 +236,9 @@ const Index = () => {
       </div>
 
       <TestimonialsCarousel />
-      <Clients />
+      <div className='my-8'>
+<Clients />
+</div>
       <Footer2 />
     </>
   );

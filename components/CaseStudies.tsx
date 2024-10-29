@@ -66,7 +66,7 @@ const CaseStudies = () => {
   };
 
   return (
-    <div className="mx-auto bg-[#25282C] max-w-8xl relative overflow-hidden px-4 sm:px-6 lg:px-8">
+    <div className="mx-auto bg-[#25282C] max-w-8xl relative overflow-hidden px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="flex justify-center relative">
         <h2 className="absolute top-0 md:top-auto -mt-[50px] text-[40px] md:text-[150px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
           CASE STUDY

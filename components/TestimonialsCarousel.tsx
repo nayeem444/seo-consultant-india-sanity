@@ -57,11 +57,14 @@ const TestimonialsSection: React.FC = () => {
 
   return (
     <>
-     <div className="flex justify-center mb-36 ">
-        <h2 className="absolute top-0 md:top-auto -mt-[50px] text-[40px] md:text-[130px] font-bold text-[#55575A] opacity-[.2] pointer-events-none">
-         TESTIMONIALS
-       </h2>
-      </div>
+   <div className="flex justify-center mb-8 sm:mb-16 md:mb-24 lg:mb-36 m-4 overflow-hidden ">
+  <h2 className="absolute top-0 md:top-auto 
+    -mt-[30px] sm:-mt-[40px] md:-mt-[50px]
+    text-2xl sm:text-5xl md:text-7xl lg:text-[130px]
+    font-bold text-[#55575A] opacity-20 pointer-events-none">
+    TESTIMONIALS
+  </h2>
+</div>
 <div className="bg-gray-900 text-white p-8 rounded-3xl mx-auto max-w-7xl">
       <div className="flex flex-col md:flex-row">
 

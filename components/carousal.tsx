@@ -56,7 +56,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="carousel">
+    <div className="carousel overflow-hidden">
       <div className="carousel-wrapper">
         <div
           className="carousel-inner"

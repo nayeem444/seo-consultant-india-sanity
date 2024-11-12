@@ -40,6 +40,8 @@ function AppContent({
   return (
     <>
       <Head>
+            {/* Google Site Verification Meta Tag */}
+            <meta name="google-adsense-account" content="ca-pub-4456787203259215"/>
         <link rel="canonical" href={`https://shahidshahmiri.com${router.asPath}`} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
@@ -50,6 +52,9 @@ function AppContent({
         {pageProps.description && (
           <meta name="description" content={pageProps.description} />
         )}
+
+
+     
       </Head>
       <main
         className={`font-montserrat ${isDarkMode ? 'bg-[#25282C] text-white' : 'bg-[#25282C] text-white'}`}
@@ -96,12 +101,12 @@ function AppContent({
           }}
         />
          {/* Google AdSense Script */}
-   <Script
+  {/* <Script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4456787203259215"
         crossOrigin="anonymous"
-        strategy="afterInteractive"
-      />
+        strate gy="afterInteractive"
+      /> */}
 
       </main>
     </>

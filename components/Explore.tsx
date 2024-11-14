@@ -325,6 +325,44 @@ import img3 from '../public/assets/fullfeel_logo_gradient_v1-2048x250 1.svg'
 
 const ExploreSection = () => {
 
+    const items1 = [
+    {
+      title: 'Dynamic Presentations – Benefits, Types, and Uses',
+      keyword: 'Dynamic Presentations',
+      imgSrc:
+        'https://www.customshow.com/wp-content/uploads/2023/07/CustomShow-Blogs-2.png',
+      link: 'https://www.customshow.com/dynamic-presentations/',
+    },
+    {
+      title: 'The Art of Ethical Presentations: Conscious Communication',
+      keyword: 'Ethical Presentations',
+      imgSrc:
+        'https://www.customshow.com/wp-content/uploads/2023/12/CustomShow-Blogs-6.png',
+      link: 'https://www.customshow.com/ethical-presentations/',
+    },
+    {
+      title: 'The Importance of Video in Presentations',
+      keyword: 'Importance of video presentations',
+      imgSrc:
+        'https://www.customshow.com/wp-content/uploads/2017/01/The-Importance-of-Video-in-Presentations.png',
+      link: 'https://www.customshow.com/importance-video-presentations/',
+    },
+    {
+      title: 'How to Hand Over A Presentation to the Next Person',
+      keyword: 'How to hand over a presentation to next person',
+      imgSrc:
+        'https://www.customshow.com/wp-content/uploads/2024/02/CustomShow-Blogs-17.png',
+      link: 'https://www.customshow.com/how-to-handover-presentation-to-next-person/',
+    },
+    {
+      title: '10 Types of Presentations: From Elegant to Persuasive',
+      keyword: 'Types of presentations',
+      imgSrc:
+        'https://www.customshow.com/wp-content/uploads/2024/02/CustomShow-Blogs-17.png',
+      link: 'https://www.customshow.com/types-of-presentations/',
+    },
+  ]
+
 const items2 = [
   {
     title: '16 Proven Ethical Link Building Strategies In 2024',
@@ -465,7 +503,7 @@ return (
             }}
           />
         </div>
-        <SliderComponent items={items2} />
+        <SliderComponent items={items1} />
         <div className="flex justify-center py-12">
           <Image src={img2} width={300} height={300} alt="Image" />
         </div>

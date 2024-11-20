@@ -29,7 +29,12 @@ const nextConfig = {
         source: '/blog/affordable-seo-services',
         destination: 'https://blog.shahidshahmiri.com/affordable-seo-services/ ', // Replace with your new URL
         permanent: true, // Set to true for a 308 permanent redirect, false for a 307 temporary redirect
-      }
+      },
+      {
+        source: '/ads.txt',
+        destination: '/ads.txt',
+        permanent: true, // This ensures the file is served directly
+      },
     ];
   },
   poweredByHeader: false,

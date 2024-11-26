@@ -39,10 +39,10 @@ const ExitPopup = () => {
 
                 <div className=" mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6   lg:px-8  flex gap-3 lg:flex-justify lg:flex flex-row lg:flex-row">
                   <div className="sm:text-center lg:text-left">
-                    <h1 className="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl">
+                    <h3 className="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl">
                       <span className="block xl:inline mr-2">Want to see a similar trend </span>
                       <span className="block text-blue-600 xl:inline">in your GSC ?</span>
-                    </h1>
+                    </h3>
                     <p
                       className="mt-3  sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                       Transform Your Web Presence: Advanced Techniques for Increasing Traffic, Impressions, CTR, and Domain Authority.

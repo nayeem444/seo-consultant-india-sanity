@@ -17,6 +17,7 @@ import CaseStudies from "components/CaseStudies";
 import FaqComponent from "components/FaqComponent";
 import TestimonialsCarousel from "components/TestimonialsCarousel";
 import Footer2 from "components/Footer2";
+import RecentBlogs from '../components/RecentBlogs'
 
 
 
@@ -78,6 +79,7 @@ export default function Home({discription ,title}) {
 <Clients/>
 <AboutMe/>
 <Explore/>
+<TestimonialsCarousel/>
 <WorkHistory/>
 <SEOExpertise/>
 <Services/>
@@ -86,7 +88,8 @@ export default function Home({discription ,title}) {
 <ExitPopup/>
 <CaseStudies/>
 <FaqComponent/>
-<TestimonialsCarousel/>
+<RecentBlogs/>
+
 <Footer2/>
    </>
   )

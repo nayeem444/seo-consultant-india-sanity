@@ -353,7 +353,7 @@ export default function BlogCarousel() {
                     </div>
 
                     {/* Read More Link */}
-                    <a
+                    <Link
                       href={post.link}
                       className="mt-3 sm:mt-4 inline-flex items-center text-blue-400 hover:text-blue-300 text-sm sm:text-base"
                       target="_blank"
@@ -373,7 +373,7 @@ export default function BlogCarousel() {
                           d="M9 5l7 7-7 7"
                         />
                       </svg>
-                    </a>
+                    </Link>
                   </div>
                 </article>
               </div>

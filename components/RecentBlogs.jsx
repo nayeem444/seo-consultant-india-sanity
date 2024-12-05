@@ -223,6 +223,22 @@ export default function BlogCarousel() {
     return () => clearInterval(timer);
   }, [blogs.length, visibleBlogs]);
 
+  // const fetchRecentPosts = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       `${WORDPRESS_API_URL}/posts?per_page=6&_embed`
+  //     );
+  //     if (!response.ok) throw new Error('Failed to fetch posts');
+  //     const posts = await response.json();
+  //     setBlogs(posts);
+  //   } catch (error) {
+  //     setError(error.message);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
+
   const fetchRecentPosts = async () => {
     try {
       const response = await fetch(
@@ -230,7 +246,16 @@ export default function BlogCarousel() {
       );
       if (!response.ok) throw new Error('Failed to fetch posts');
       const posts = await response.json();
-      setBlogs(posts);
+  
+      // Filter out posts from October 7, 2024
+      const filteredPosts = posts.filter(post => {
+        const postDate = new Date(post.date);
+        return !(postDate.getFullYear() === 2024 && 
+                 postDate.getMonth() === 9 && // JavaScript months are 0-based
+                 postDate.getDate() === 7);
+      });
+  
+      setBlogs(filteredPosts);
     } catch (error) {
       setError(error.message);
     } finally {

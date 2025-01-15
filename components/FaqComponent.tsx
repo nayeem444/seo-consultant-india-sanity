@@ -3,7 +3,7 @@ import { useState } from 'react';
 const faqData = [
   {
     question: "Why Hire an SEO Expert for Your Business?",
-    answer: "In today's competitive business landscape, a strong online presence is crucial for reaching customers. Hiring an SEO expert offers these key benefits: - Boost Brand Awareness: Improve website visibility and build trust with potential customers. - Generate More Leads: SEO generates organic leads, leading to increased sales and revenue. - Increase Sales: Higher search engine rankings attract active customers, boosting sales. - Stay Ahead of Competitors: In a competitive market, staying ahead with effective SEO is essential."
+    answer: "A strong online presence is crucial for reaching customers. Hiring an SEO expert offers these key benefits: - Boost Brand Awareness: Improve website visibility and build trust with potential customers. - Generate More Leads: SEO generates organic leads, leading to increased sales and revenue. - Increase Sales: Higher search engine rankings attract active customers, boosting sales. - Stay Ahead of Competitors: In a competitive market, staying ahead with effective SEO is essential."
   },
   { question: "Who is the best SEO Expert in India?", 
   answer: "Shahid Shahmiri, the best SEO expert in India, has left an indelible mark by partnering with prestigious brands such as Unacademy, BeconStac, LeadGen App, and other industry giants. Shahid has successfully scaled their marketing and SEO effort. When you work with Shahid, you can be confident in achieving remarkable growth and outshining the competition." },

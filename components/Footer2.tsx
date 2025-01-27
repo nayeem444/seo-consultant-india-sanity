@@ -176,6 +176,9 @@ const Footer2 = () => {
               <div className="hover:text-gray-300">
                 Phone : +91 6005105758
               </div>
+              <div className="hover:text-gray-300">
+                Phone : +971 557320409
+              </div>
 
               <div className="flex justify-center md:justify-start space-x-4 mt-4">
                 <Link href="https://www.linkedin.com/in/shahidshahmiri/" 

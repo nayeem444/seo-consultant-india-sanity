@@ -174,10 +174,10 @@ const Footer2 = () => {
                 Email: hi@shahidshahmiri.com
               </a>
               <div className="hover:text-gray-300">
-                Phone : +91 6005105758
+                Phone 1 : +91 6005105758
               </div>
               <div className="hover:text-gray-300">
-                Phone : +971 557320409
+                Phone 2 : +971 557320409
               </div>
 
               <div className="flex justify-center md:justify-start space-x-4 mt-4">

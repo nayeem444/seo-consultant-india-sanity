@@ -15,6 +15,7 @@ import CaseStudies from "components/CaseStudies";
 import FaqComponent from "./FaqComponent";
 import TestimonialsCarousel from "components/TestimonialsCarousel";
 import Footer2 from "components/Footer2";
+import WhatsAppChat from './chat';
 
 export default function Home({discription ,title}) {
   debugger
@@ -62,6 +63,7 @@ export default function Home({discription ,title}) {
 <CaseStudies/>
 <FaqComponent/>
 <TestimonialsCarousel/>
+<WhatsAppChat/>
 <Footer2/>
    </>
   )

@@ -18,6 +18,7 @@ import FaqComponent from "components/FaqComponent";
 import TestimonialsCarousel from "components/TestimonialsCarousel";
 import Footer2 from "components/Footer2";
 import RecentBlogs from '../components/RecentBlogs'
+import WhatsAppChat from "components/chat";
 
 
 
@@ -89,7 +90,7 @@ export default function Home({discription ,title}) {
 <CaseStudies/>
 <FaqComponent/>
 <RecentBlogs/>
-
+<WhatsAppChat/>
 <Footer2/>
    </>
   )

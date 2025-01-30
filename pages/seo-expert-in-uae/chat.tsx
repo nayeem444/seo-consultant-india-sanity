@@ -19,9 +19,9 @@ const WhatsAppChat = () => {
     <div className="fixed bottom-4 right-4 z-50">
       <div className="relative">
         {isOpen && (
-          <div className="absolute bottom-20 right-0 rounded-2xl shadow-2xl w-96 overflow-hidden transform transition-all duration-300 ease-in-out hover:scale-[1.02]">
+          <div className="absolute bottom-12 right-0 rounded-2xl shadow-2xl w-96 overflow-hidden transform transition-all duration-300 ease-in-out hover:scale-[1.02]">
             {/* Header */}
-            <div className="bg-[#0022D2] p-6">
+            <div className="bg-blue-600 p-6">
               <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
@@ -45,10 +45,10 @@ const WhatsAppChat = () => {
             <div className="bg-gray-700 h-96 p-6 overflow-y-auto">
               <div className="space-y-4">
                 <div className="flex items-end space-x-2">
-                  <div className="w-8 h-8 rounded-full bg-[#0022D2] flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
                     <MessageCircle className="text-white" size={16} />
                   </div>
-                  <div className="bg-[#0022D2]/10 backdrop-blur-sm rounded-2xl rounded-bl-none p-4 max-w-[80%]">
+                  <div className="bg-blue-600/10 backdrop-blur-sm rounded-2xl rounded-bl-none p-4 max-w-[80%]">
                     <p className="text-white">👋 Hi! How can I help you today?</p>
                   </div>
                 </div>
@@ -56,7 +56,7 @@ const WhatsAppChat = () => {
             </div>
 
             {/* Input Area */}
-            <div className="bg-[#0022D2] p-4">
+            <div className="bg-blue-600 p-4">
               <form onSubmit={handleSubmit} className="relative">
                 <input
                   type="text"
@@ -79,7 +79,7 @@ const WhatsAppChat = () => {
         {/* Toggle Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="bg-[#0022D2] p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-110 mb-16"
+          className="bg-blue-600 p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-110 mb-16"
         >
           <MessageCircle className="text-white" size={24} />
         </button>

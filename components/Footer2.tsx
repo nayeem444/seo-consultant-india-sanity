@@ -99,7 +99,7 @@ const Footer2 = () => {
       {/* Copyright Section */}
       <div className="bg-[#55575A] py-4 px-4 text-center text-sm text-white">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-4">
-          <span>© 2024 Shahid Shahmiri. All rights reserved.</span>
+          <span>© 2025 Shahid Shahmiri. All rights reserved.</span>
           <span className="flex items-center">
             Powered by
             <a className="ml-2 font-bold hover:text-gray-300" href="https://marketinglad.io/">

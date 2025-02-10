@@ -2,17 +2,17 @@ import { useState } from 'react';
 
 const faqData = [
   {
-    question: "Why Hire an SEO Expert for Your Business?",
-    answer: "A strong online presence is crucial for reaching customers. Hiring an SEO expert offers these key benefits: - Boost Brand Awareness: Improve website visibility and build trust with potential customers. - Generate More Leads: SEO generates organic leads, leading to increased sales and revenue. - Increase Sales: Higher search engine rankings attract active customers, boosting sales. - Stay Ahead of Competitors: In a competitive market, staying ahead with effective SEO is essential."
+    question: "What can I expect from an SEO consultation ?",
+    answer: "An SEO consultation includes a detailed analysis of your website's performance, keyword strategy, technical issues, and backlink profile. You'll receive personalized recommendations to improve rankings, traffic, and conversions."
   },
-  { question: "Who is the best SEO Expert in India?", 
-  answer: "Shahid Shahmiri, the best SEO expert in India, has left an indelible mark by partnering with prestigious brands such as Unacademy, BeconStac, LeadGen App, and other industry giants. Shahid has successfully scaled their marketing and SEO effort. When you work with Shahid, you can be confident in achieving remarkable growth and outshining the competition." }, 
-  { question: "Benefits of Hiring an SEO Expert?", 
-  answer: "Hiring an SEO expert for your business offers: - Cost-Effective Online Promotion - Precise Audience Tracking - Organic Lead Generation - High Conversion Rates - Increased Brand Visibility" },
-  { question: "Can the assistance of SEO experts be beneficial?",
-  answer: "SEO experts play a vital role in achieving brand recognition for a website. Their dedication and expertise help to establish trust in a company, elevating its identity to the highest level. Thanks to the efforts of these professionals, a company’s brand can be enhanced significantly." },
-  { question: "How much does it cost to hire an SEO consultant?", 
-  answer: "The cost to hire an SEO consultant varies based on factors like scope, industry, and expertise. Hourly rates can range from $100 to $300+, while project-based fees start around $1,000. Let’s discuss your needs for an accurate quote. Remember, investing in an SEO consultant brings long-term benefits for online visibility and business growth." },
+  { question: "How long does it take to see SEO results?", 
+  answer: "SEO is a long-term strategy, and results typically start appearing within 3 to 6 months. However, factors like competition, website structure, and content quality influence the timeline." },
+  { question: "Do you provide a customized SEO strategy for my business?", 
+  answer: "Yes! Every business is unique, and I create a tailored SEO strategy based on your industry, competitors, and goals to maximize your online visibility." },
+  { question: "Is SEO consultation a one-time service, or do you offer ongoing support?",
+  answer: "I offer both one-time consultations and ongoing SEO management to help you continuously improve your rankings and stay ahead of algorithm updates." },
+  { question: "How do I get started with your SEO consultation?", 
+  answer: "Simply book a consultation through this page, and I'll guide you through the process step by step." },
 ];
 
 const FaqComponent = () => {
